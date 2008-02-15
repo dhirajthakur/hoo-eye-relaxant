@@ -26,8 +26,8 @@ namespace Hush.Relaxant {
     static class RelaxantManager {
 
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        private static RuningForm _formManager;
-        public static RuningForm FormManager {
+        private static RunningForm _formManager;
+        public static RunningForm FormManager {
             get { return _formManager; }
             set { _formManager = value; }
         }
@@ -46,8 +46,10 @@ namespace Hush.Relaxant {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            FormManager = new RuningForm();
-            Application.Run(FormManager);
+            RunningControl manger = new RunningControl();
+            manger.Start(); //TODO
+            //FormManager = new RunningForm();
+            //Application.Run(FormManager);
             
         }
 

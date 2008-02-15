@@ -11,25 +11,48 @@ namespace Hush.Relaxant {
     public partial class BreakingForm : Form {
 
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        private RuningForm manager;
-        private int breakingSeconds;
-        private MediaFile music;
 
+        private MediaFile music = null;
+
+        public RunningControl Manager { get; private set; }
+        
         #region Form initialize and events
 
-        public BreakingForm() {
+
+
+        public BreakingForm(RunningControl pManager) {
+            this.Manager = pManager;
             InitializeComponent();
-            manager = RelaxantManager.FormManager;
+
+            
 #if DEBUG
             WindowState = FormWindowState.Normal;
 
 #endif
             this.Text = AboutBox.AssemblyProduct + " " + AboutBox.AssemblyVersion;
 
-            breakingSeconds = Settings.Default.BreakingMinutes * 60;
-            breakingSpanBar.Properties.Maximum = breakingSeconds;
-            breakingSpanBar.Position = breakingSeconds;
+            breakingSpanBar.Properties.Maximum = Manager.PlannedSeconds;
+            breakingSpanBar.Position = Manager.PendingSeconds;
 
+            Manager.SecondTick += new EventHandler(Manager_SecondTick);
+            Manager.BreakingTerminating += new EventHandler(Manager_BreakingTerminating);
+            Manager.BreakingDelaying += new EventHandler(Manager_BreakingDelaying);
+
+        }
+
+        void Manager_BreakingDelaying(object sender, EventArgs e) {
+            this.Close();
+        }
+
+        void Manager_BreakingTerminating(object sender, EventArgs e) {
+            this.Close();
+        }
+
+
+        void Manager_SecondTick(object sender, EventArgs e) {
+            TimeSpan breakingSpan = TimeSpan.FromSeconds(Manager.PendingSeconds);
+            breakingSpanLabel.Text = breakingSpan.ToString();
+            breakingSpanBar.Increment(-1);
         }
 
             
@@ -42,13 +65,11 @@ namespace Hush.Relaxant {
                 this.ResumeLayout();
                 this.PerformLayout();
             }
-            if (Settings.Default.MaxDelayMinutes * 60 <= manager.DelayedSeconds) {
+            if (Settings.Default.MaxDelayMinutes * 60 <= Manager.DelayedSeconds) {
                 delayButton.Enabled = false;
                 delayToolStripMenuItem.Enabled = false;
             }
 
-
-            breakingTimer.Start();
             PlayMusic();
 
             
@@ -57,20 +78,14 @@ namespace Hush.Relaxant {
             }
         }
 
+        private void BreakingForm_FormClosing(object sender, FormClosingEventArgs e) {
+            MonitorController.TurnOn();
+            StopMusic();
+        }
         #endregion
 
 
-        private void breakingTimer_Tick(object sender, EventArgs e) {
-            breakingSeconds--;
-            TimeSpan breakingSpan = TimeSpan.FromSeconds(breakingSeconds);
-            breakingSpanLabel.Text = breakingSpan.ToString();
-            breakingSpanBar.Increment(-1);
-
-            if (breakingSeconds <= 0) {
-                CloseEx();
-
-            }
-        }
+  
 
         #region private methods
 
@@ -105,31 +120,25 @@ namespace Hush.Relaxant {
             }
         }
 
-        private void CloseEx() {
-            MonitorController.TurnOn();
-            StopMusic();
-            breakingTimer.Stop();
-            Close();
-            manager.StartWorking();
-        }
+     
 
-        private void Delay(int delaySeconds) {
-            int maxSeconds = Settings.Default.MaxDelayMinutes * 60;
-            int availableSeconds = maxSeconds - manager.DelayedSeconds;
+        private void Delay(int seconds) {
+            int maxSeconds = Manager.MaxDelaySeconds;
+            int availableSeconds = maxSeconds - Manager.DelayedSeconds;
 
             if(availableSeconds <=0) {
                 MessageBox.Show("You could not delay any longer untill a full seconds breaking!","Invalided Action",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return;
-            } else if (availableSeconds < delaySeconds) {
+            } else if (availableSeconds < seconds) {
                 string msg = StringUtil.Join("You only have %1 seconds to delay before a full seconds breaking. Do you still want to delay?", availableSeconds);
                 if (MessageBox.Show(msg, "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes) {
-                    delaySeconds = availableSeconds;
+                    seconds = availableSeconds;
                 } else {
                     return;
                 }
             }
             Close();
-            manager.DelayBreaking(delaySeconds);
+            Manager.DelayBreaking(seconds);
             
         }
 
@@ -138,7 +147,8 @@ namespace Hush.Relaxant {
         #region Context Menu
 
          private void closeButton_Click(object sender, EventArgs e) {            
-            CloseEx();
+            Close();
+            Manager.TerminateBreaking();
         }
 
 
@@ -154,11 +164,12 @@ namespace Hush.Relaxant {
         }
 
         private void closeToolStripMenuItem_Click(object sender, EventArgs e) {
-            CloseEx();
+            Close();
+            Manager.TerminateBreaking();
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e) {
-            Application.Exit();
+            Manager.QuitApplication();
         }
 
         private void delay1ToolStripMenuItem_Click(object sender, EventArgs e) {
@@ -186,6 +197,8 @@ namespace Hush.Relaxant {
         }
 
         #endregion
+
+       
 
 
 
