@@ -27,7 +27,6 @@ namespace Hush.Relaxant {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BreakingForm));
             this.closeButton = new System.Windows.Forms.Button();
             this.breakingSpanLabel = new System.Windows.Forms.Label();
-            this.breakingTimer = new System.Windows.Forms.Timer(this.components);
             this.messageLabel = new System.Windows.Forms.Label();
             this.delayButton = new System.Windows.Forms.Button();
             this.breakingSpanBar = new DevExpress.XtraEditors.ProgressBarControl();
@@ -59,7 +58,6 @@ namespace Hush.Relaxant {
             this.closeButton.Text = "&Close";
             this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
-            
             // 
             // breakingSpanLabel
             // 
@@ -73,11 +71,6 @@ namespace Hush.Relaxant {
             this.breakingSpanLabel.TabIndex = 2;
             this.breakingSpanLabel.Text = "00:00:00";
             this.breakingSpanLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // breakingTimer
-            // 
-            this.breakingTimer.Interval = 1000;
-            this.breakingTimer.Tick += new System.EventHandler(this.breakingTimer_Tick);
             // 
             // messageLabel
             // 
@@ -108,7 +101,6 @@ namespace Hush.Relaxant {
             this.delayButton.Text = "&Delay";
             this.delayButton.UseVisualStyleBackColor = false;
             this.delayButton.Click += new System.EventHandler(this.delayButton_Click);
-            
             // 
             // breakingSpanBar
             // 
@@ -223,6 +215,7 @@ namespace Hush.Relaxant {
             this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.BreakingForm_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BreakingForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.breakingSpanBar.Properties)).EndInit();
             this.contextMenu.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -234,7 +227,6 @@ namespace Hush.Relaxant {
 
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Label breakingSpanLabel;
-        private System.Windows.Forms.Timer breakingTimer;
         private System.Windows.Forms.Label messageLabel;
         private System.Windows.Forms.Button delayButton;
         

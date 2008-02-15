@@ -1,5 +1,5 @@
 ﻿namespace Hush.Relaxant {
-    partial class RuningForm {
+    partial class RunningForm {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -24,7 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RuningForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RunningForm));
             this.eyesNotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.mainMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.previewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -32,7 +32,6 @@
             this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.workingTimer = new System.Windows.Forms.Timer(this.components);
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,20 +92,15 @@
             this.aboutToolStripMenuItem.Text = "A&bout";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
-            // workingTimer
-            // 
-            this.workingTimer.Interval = 1000;
-            this.workingTimer.Tick += new System.EventHandler(this.workingTimer_Tick);
-            // 
-            // RuningForm
+            // RunningForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(292, 263);
             this.ControlBox = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "RuningForm";
-            this.Text = "RuningForm";
+            this.Name = "RunningForm";
+            this.Text = "Hush Eye Relaxant Running Form";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.RuningForm_Load);
             this.mainMenu.ResumeLayout(false);
@@ -122,7 +116,6 @@
         private System.Windows.Forms.ToolStripMenuItem settingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.Timer workingTimer;
         private System.Windows.Forms.ToolStripMenuItem restartToolStripMenuItem;
     }
 }

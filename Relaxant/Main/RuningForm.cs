@@ -10,94 +10,57 @@ using Hush.Common;
 namespace Hush.Relaxant {
 
 
-    public partial class RuningForm : Form {
+    public partial class RunningForm : Form {
 
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        private BreakingForm _breakingForm;
-        private SettingForm _settingForm;
+        public RunningControl Manager { get; private set; }
 
-        private bool _onDelaying = false;
-
-        public int WorkingSeconds { get; set; }
-        public int DelayedSeconds{ get; set; }
-
-      
-	
-
-        public RuningForm() {
-            InitializeComponent();
-            DelayedSeconds = 0;
-        }
-
-        /// <summary>
-        /// Exit breaking status and return working status.
-        /// The breaking form will be closed.
-        /// </summary>
-        public void StartWorking() {
-            _onDelaying = false;
-            DelayedSeconds = 0;
-            StartWorking(Settings.Default.WorkingMinutes * 60);
-        }
-
-        private void StartWorking(int seconds) {
-            WorkingSeconds = seconds;
-            workingTimer.Start();
-        }
-
-        /// <summary>
-        /// Exit breaking status and return working status. It will reenter breaking status after specified seconds.
-        /// 
-        /// </summary>
-        /// <param name="seconds"></param>
-        /// <returns></returns>
-        public bool DelayBreaking(int seconds) {
-            int maxSeconds =  Settings.Default.MaxDelayMinutes * 60;
-            int availableSeconds = maxSeconds - DelayedSeconds;
-            if (availableSeconds >= seconds) {
-                _onDelaying = true;
-                StartWorking(seconds);
-                return true;
-            } else {
-                log.Error("No enough seconds for delaying!");
-                throw new Exception(StringUtil.Join("You have delayed over %1 minutes, you could only delay %2 more minutes. ", DelayedSeconds, availableSeconds));
-            }
-        }
-
-      
-        /// <summary>
-        /// Pause working status and enter breaking status. Generally, a breaking form will be displayed.
-        /// 
-        /// </summary>
-        private void StartBreaking() {
-            workingTimer.Stop();
-            ShowBreakingForm();
+        private RunningForm() {
+            throw new NotImplementedException();
         }
 
         private void RuningForm_Load(object sender, EventArgs e) {
             if (Settings.Default.Resctriction4Quit == RestrictionLevels.Forbidden)
                 quitToolStripMenuItem.Enabled = false;
-            
+
             this.Hide();
-            StartWorking();
+            
         }
 
-        #region Context Menu
+
+        public RunningForm(RunningControl pManager) {
+            this.Manager = pManager;
+            InitializeComponent();
+            Manager.SecondTick += new EventHandler(Manager_SecondTick);
+            Manager.BreakingStarted += new EventHandler(Manager_BreakingStarted);
+        }
+
+        void Manager_SecondTick(object sender, EventArgs e) {
+            TimeSpan span = TimeSpan.FromSeconds(Manager.PendingSeconds);
+            eyesNotifyIcon.BalloonTipText = "Next break will start after:\n " + span.ToString();
+        }
+
+        void Manager_BreakingStarted(object sender, EventArgs e) {
+            ShowBreakingForm();
+        }
+
+        #region Form Process
 
         private void previewToolStripMenuItem_Click(object sender, EventArgs e) {
             ShowBreakingForm();
         }
 
         private void restartToolStripMenuItem_Click(object sender, EventArgs e) {
-            StartWorking();
+            Manager.CompleteBreaking(); //TODO check
         }
 
         private void settingToolStripMenuItem_Click(object sender, EventArgs e) {
-            ShowSettingForm();
+            Manager.ShowSettingForm();
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e) {
-            QuitApplication();
+            Manager.QuitApplication();
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e) {
@@ -107,50 +70,21 @@ namespace Hush.Relaxant {
 
         #endregion
 
+        
         /// <summary>
         /// Open breaking form when enter breaking status
         /// </summary>
-        public void ShowBreakingForm() {
-            workingTimer.Stop();            
+        private void ShowBreakingForm() {
+            BreakingForm frm = new BreakingForm(this.Manager);
 
-            if (_breakingForm == null || _breakingForm.IsDisposed) {
-                _breakingForm = new BreakingForm();
+            if (frm == null || frm.IsDisposed) {
+                frm = new BreakingForm(this.Manager); //TODO add manager
             }
 
-            _breakingForm.ShowDialog(this);
+            frm.ShowDialog(this);
 
         }
-
-        /// <summary>
-        /// Open setting form to configure runtime settings
-        /// </summary>
-        public void ShowSettingForm() {
-            if (_breakingForm != null) {
-                _breakingForm.Close();
-            }
-
-            if (_settingForm == null || _settingForm.IsDisposed) {
-                _settingForm = new SettingForm();               
-            }
-            _settingForm.Show(this);
-        }
-
-        public void QuitApplication() {
-            if (Settings.Default.Resctriction4Quit == RestrictionLevels.Forbidden) return;
-
-            Application.Exit();
-        }
-
-        private void workingTimer_Tick(object sender, EventArgs e) {
-            WorkingSeconds--;
-            if (_onDelaying) DelayedSeconds++;
-            TimeSpan span = TimeSpan.FromSeconds(WorkingSeconds);
-            eyesNotifyIcon.BalloonTipText = "Next break will start after:\n " + span.ToString();
-            if (WorkingSeconds <= 0) {
-                StartBreaking();
-
-            }
-        }
+        
 
         private void eyesNotifyIcon_MouseClick(object sender, MouseEventArgs e) {
             if (e.Button == MouseButtons.Left) {
@@ -158,7 +92,13 @@ namespace Hush.Relaxant {
             }
         }
 
+
+
+
+
+
         
+
 
 
     }

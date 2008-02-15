@@ -104,6 +104,8 @@
     <Compile Include="Main\BreakingForm.Designer.cs">
       <DependentUpon>BreakingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main\RunningControl.cs">
+    </Compile>
     <Compile Include="RelaxantManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Main\AboutBox.resx">
