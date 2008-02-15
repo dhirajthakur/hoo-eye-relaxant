@@ -1,0 +1,36 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Hush.Relaxant.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="WorkingMinutes" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="MusicFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sound\sample.mp3</Value>
+    </Setting>
+    <Setting Name="AdminPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1234</Value>
+    </Setting>
+    <Setting Name="Resctriction4Configuration" Type="Hush.Relaxant.RestrictionLevels" Scope="User">
+      <Value Profile="(Default)">Free</Value>
+    </Setting>
+    <Setting Name="Resctriction4TerminateBreaking" Type="Hush.Relaxant.RestrictionLevels" Scope="User">
+      <Value Profile="(Default)">Free</Value>
+    </Setting>
+    <Setting Name="AdminMode" Type="Hush.Relaxant.AdminModes" Scope="Application">
+      <Value Profile="(Default)">Password</Value>
+    </Setting>
+    <Setting Name="MaxDelayMinutes" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="ShutdownMonitor" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="BreakingMinutes" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="Resctriction4Quit" Type="Hush.Relaxant.RestrictionLevels" Scope="User">
+      <Value Profile="(Default)">Free</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
