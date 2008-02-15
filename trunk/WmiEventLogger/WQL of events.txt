@@ -1,0 +1,29 @@
+root\cimv2
+User Session: SELECT * FROM __InstanceOperationEvent WITHIN 60 WHERE TargetInstance ISA "Win32_Session"
+
+User Logon Session: SELECT * FROM __InstanceOperationEvent WITHIN 60 WHERE TargetInstance ISA "Win32_LogonSession"
+
+My computer: SELECT * FROM __InstanceOperationEvent WITHIN 60 WHERE TargetInstance ISA "Win32_ComputerSystem"
+
+NT Event Log Events: SELECT * FROM __InstanceOperationEvent WITHIN 60 WHERE TargetInstance ISA "Win32_NTLogEvent"
+
+Operation Systems: SELECT * FROM __InstanceOperationEvent WITHIN 60 WHERE TargetInstance ISA "Win32_OperatingSystem"
+
+CCM_ComputerSystem: SELECT * FROM __InstanceOperationEvent WITHIN 60 WHERE TargetInstance ISA "CCM_ComputerSystem"
+
+CIM Computer Systems: SELECT * FROM __InstanceOperationEvent WITHIN 60 WHERE TargetInstance ISA "CIM_ComputerSystem"
+
+External : 
+SELECT * FROM Win32_ComputerShutdownEvent
+
+SELECT * FROM Win32_ComputerSystemEvent
+
+SELECT * FROM Win32_SystemTrace
+
+SELECT * FROM __SystemEvent
+
+SELECT * FROM __InstanceOperationEvent WITHIN 60 WHERE TargetInstance ISA "Win32_DesktopMonitor"
+
+SELECT * FROM __InstanceOperationEvent WITHIN 60 WHERE TargetInstance ISA "CIM_Display"
+
+SELECT * FROM __InstanceOperationEvent WITHIN 60 WHERE TargetInstance ISA "CIM_DesktopMonitor"
