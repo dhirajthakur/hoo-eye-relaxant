@@ -292,6 +292,7 @@ namespace Hoo.Relaxant {
             this.breakingCompletingWarnningEdit.Size = new System.Drawing.Size(301, 20);
             this.breakingCompletingWarnningEdit.TabIndex = 17;
             this.breakingCompletingWarnningEdit.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.breakingCompletingWarnningEdit_ButtonClick);
+            this.breakingCompletingWarnningEdit.Validating += new System.ComponentModel.CancelEventHandler(this.breakingCompletingWarnningEdit_Validating);
             // 
             // label1
             // 
