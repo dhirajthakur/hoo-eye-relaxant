@@ -20,9 +20,9 @@ namespace Hoo.MonitorService.SENS {
 
         //...SensLogonInterop goes here
         private class SensLogonInterop : ISensLogon, IDisposable {
-            private const string SubscriptionViewerName = "Hush.SystemEventProvider.SENS.SensLogonInterop";
+            private const string SubscriptionViewerName = "Hoo.SystemEventProvider.SENS.SensLogonInterop";
             private static string SubscriptionViewerID = "{" + typeof(SensLogonInterop).GUID.ToString().ToUpper() + "}"; // generate a subscriptionID 
-            private const string SubscriptionViewerDesc = "Hush.SystemEventProvider.SENS Event Subscriber";
+            private const string SubscriptionViewerDesc = "Hoo.SystemEventProvider.SENS Event Subscriber";
 
             private bool registered;
 
