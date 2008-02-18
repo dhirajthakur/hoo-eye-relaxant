@@ -5,7 +5,7 @@ using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace Hush.Relaxant {
+namespace Hoo.Relaxant {
     public class BackGroundworkerForm  {
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
 

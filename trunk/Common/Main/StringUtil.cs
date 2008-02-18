@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Hush.Common {
+namespace Hoo.Common {
     public class StringUtil {
 
         /// <summary>

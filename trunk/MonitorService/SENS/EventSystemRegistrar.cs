@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using EventSystemLib;
 using System.Runtime.InteropServices;
-namespace Hush.MonitorService.SENS {
+namespace Hoo.MonitorService.SENS {
 
     #region Usage of EventSystemLib
     [ComImport, Guid("4E14FBA2-2E22-11D1-9964-00C04FBBB345")]

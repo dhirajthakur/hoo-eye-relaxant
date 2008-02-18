@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Hush.Relaxant.Properties {
+namespace Hoo.Relaxant.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -62,9 +62,9 @@ namespace Hush.Relaxant.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Free")]
-        public global::Hush.Relaxant.RestrictionLevels Resctriction4Configuration {
+        public global::Hoo.Relaxant.RestrictionLevels Resctriction4Configuration {
             get {
-                return ((global::Hush.Relaxant.RestrictionLevels)(this["Resctriction4Configuration"]));
+                return ((global::Hoo.Relaxant.RestrictionLevels)(this["Resctriction4Configuration"]));
             }
             set {
                 this["Resctriction4Configuration"] = value;
@@ -74,9 +74,9 @@ namespace Hush.Relaxant.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Free")]
-        public global::Hush.Relaxant.RestrictionLevels Resctriction4TerminateBreaking {
+        public global::Hoo.Relaxant.RestrictionLevels Resctriction4TerminateBreaking {
             get {
-                return ((global::Hush.Relaxant.RestrictionLevels)(this["Resctriction4TerminateBreaking"]));
+                return ((global::Hoo.Relaxant.RestrictionLevels)(this["Resctriction4TerminateBreaking"]));
             }
             set {
                 this["Resctriction4TerminateBreaking"] = value;
@@ -86,9 +86,9 @@ namespace Hush.Relaxant.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Password")]
-        public global::Hush.Relaxant.AdminModes AdminMode {
+        public global::Hoo.Relaxant.AdminModes AdminMode {
             get {
-                return ((global::Hush.Relaxant.AdminModes)(this["AdminMode"]));
+                return ((global::Hoo.Relaxant.AdminModes)(this["AdminMode"]));
             }
         }
         
@@ -131,9 +131,9 @@ namespace Hush.Relaxant.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Free")]
-        public global::Hush.Relaxant.RestrictionLevels Resctriction4Quit {
+        public global::Hoo.Relaxant.RestrictionLevels Resctriction4Quit {
             get {
-                return ((global::Hush.Relaxant.RestrictionLevels)(this["Resctriction4Quit"]));
+                return ((global::Hoo.Relaxant.RestrictionLevels)(this["Resctriction4Quit"]));
             }
             set {
                 this["Resctriction4Quit"] = value;

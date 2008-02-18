@@ -1,11 +1,11 @@
 using System;
-using Hush.MonitorService;
+using Hoo.MonitorService;
 using System.Threading;
-using Hush.MonitorService.Test;
+using Hoo.MonitorService.Test;
 
 // Configure log4net using the .config file
 [assembly: log4net.Config.XmlConfigurator(Watch = true)]
-namespace Hush.Relaxant {
+namespace Hoo.Relaxant {
     
     public class ConsoleTest {
 

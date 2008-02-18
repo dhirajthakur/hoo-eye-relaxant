@@ -3,9 +3,9 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Reflection;
 using System.Collections.Generic;
-using Hush.Common;
+using Hoo.Common;
 
-namespace Hush.InputDevice {
+namespace Hoo.InputDevice {
     public class KeyboardHook : InputDeviceHook {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         public override bool DisableDevice { get; set; }

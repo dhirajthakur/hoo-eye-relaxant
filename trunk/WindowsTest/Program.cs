@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 
 [assembly: log4net.Config.XmlConfigurator(Watch = true)]
-namespace Hush.Relaxant {
+namespace Hoo.Relaxant {
     static class Program {
         /// <summary>
         /// The main entry point for the application.

@@ -1,4 +1,4 @@
-namespace Hush.Relaxant {
+namespace Hoo.Relaxant {
     partial class BreakingForm {
         /// <summary>
         /// Required designer variable.

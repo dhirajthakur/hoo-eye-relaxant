@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace Hush.InputDevice {
+namespace Hoo.InputDevice {
     #region Î¯ÍÐ¶¨Òå
 
     /// <summary>

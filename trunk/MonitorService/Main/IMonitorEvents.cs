@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Hush.MonitorService {
+namespace Hoo.MonitorService {
     
     public class MonitorEventArgs : EventArgs {
         public MonitorEventArgs(String pUserName) {

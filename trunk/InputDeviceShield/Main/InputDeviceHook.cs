@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Reflection;
 
-namespace Hush.InputDevice {
+namespace Hoo.InputDevice {
     public abstract class InputDeviceHook {
        
         /// <summary>

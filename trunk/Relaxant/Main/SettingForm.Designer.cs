@@ -1,4 +1,4 @@
-namespace Hush.Relaxant {
+namespace Hoo.Relaxant {
     partial class SettingForm {
         /// <summary>
         /// Required designer variable.
@@ -224,13 +224,13 @@ namespace Hush.Relaxant {
             // 
             // terminateBreakingRadioes
             // 
-            this.terminateBreakingRadioes.EditValue = Hush.Relaxant.RestrictionLevels.Forbidden;
+            this.terminateBreakingRadioes.EditValue = Hoo.Relaxant.RestrictionLevels.Forbidden;
             this.terminateBreakingRadioes.Location = new System.Drawing.Point(106, 11);
             this.terminateBreakingRadioes.Name = "terminateBreakingRadioes";
             this.terminateBreakingRadioes.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(Hush.Relaxant.RestrictionLevels.Free, "Yes"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(Hush.Relaxant.RestrictionLevels.Forbidden, "No"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(Hush.Relaxant.RestrictionLevels.Restricted, "Restricted")});
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(Hoo.Relaxant.RestrictionLevels.Free, "Yes"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(Hoo.Relaxant.RestrictionLevels.Forbidden, "No"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(Hoo.Relaxant.RestrictionLevels.Restricted, "Restricted")});
             this.terminateBreakingRadioes.Size = new System.Drawing.Size(222, 22);
             this.terminateBreakingRadioes.TabIndex = 14;
             // 

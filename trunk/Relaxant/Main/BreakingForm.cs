@@ -1,12 +1,12 @@
 
 using System;
 using System.Windows.Forms;
-using Hush.MonitorService;
-using Hush.Common;
-using Hush.Relaxant.Properties;
+using Hoo.MonitorService;
+using Hoo.Common;
+using Hoo.Relaxant.Properties;
 using Org.Mentalis.Multimedia;
 
-namespace Hush.Relaxant {
+namespace Hoo.Relaxant {
 
     public partial class BreakingForm : Form {
 
@@ -16,9 +16,7 @@ namespace Hush.Relaxant {
 
         public RunningControl Manager { get; private set; }
         
-        #region Form initialize and events
-
-
+        #region Form initialize and manager event handlers
 
         public BreakingForm(RunningControl pManager) {
             this.Manager = pManager;
@@ -57,36 +55,9 @@ namespace Hush.Relaxant {
 
             
 
-        private void BreakingForm_Load(object sender, EventArgs e) {
-            if (Settings.Default.Resctriction4TerminateBreaking == RestrictionLevels.Forbidden) {
-                closeButton.Enabled = false;
-                closeToolStripMenuItem.Enabled = false;
-                closeButton.ForeColor = System.Drawing.Color.DimGray;
-                this.ResumeLayout();
-                this.PerformLayout();
-            }
-            if (Settings.Default.MaxDelayMinutes * 60 <= Manager.DelayedSeconds) {
-                delayButton.Enabled = false;
-                delayToolStripMenuItem.Enabled = false;
-            }
-
-            PlayMusic();
-
-            
-            if (Settings.Default.ShutdownMonitor) {
-                TurnOffMonitor();
-            }
-        }
-
-        private void BreakingForm_FormClosing(object sender, FormClosingEventArgs e) {
-            MonitorController.TurnOn();
-            StopMusic();
-        }
+        
         #endregion
-
-
-  
-
+        
         #region private methods
 
         private void TurnOffMonitor() {
@@ -144,7 +115,30 @@ namespace Hush.Relaxant {
 
         #endregion
 
-        #region Context Menu
+        #region  Form events and Context Menu
+        private void BreakingForm_Load(object sender, EventArgs e) {
+            if (Settings.Default.Resctriction4TerminateBreaking == RestrictionLevels.Forbidden) {
+                closeButton.Enabled = false;
+                closeToolStripMenuItem.Enabled = false;
+                closeButton.ForeColor = System.Drawing.Color.DimGray;
+            }
+            if (Settings.Default.MaxDelayMinutes * 60 <= Manager.DelayedSeconds) {
+                delayButton.Enabled = false;
+                delayToolStripMenuItem.Enabled = false;
+            }
+
+            PlayMusic();
+
+
+            if (Settings.Default.ShutdownMonitor) {
+                TurnOffMonitor();
+            }
+        }
+
+        private void BreakingForm_FormClosing(object sender, FormClosingEventArgs e) {
+            MonitorController.TurnOn();
+            StopMusic();
+        }
 
          private void closeButton_Click(object sender, EventArgs e) {            
             Close();
@@ -199,9 +193,6 @@ namespace Hush.Relaxant {
         #endregion
 
        
-
-
-
 
 
     }

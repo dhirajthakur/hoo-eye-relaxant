@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using Hush.InputDevice.Test;
+using Hoo.InputDevice.Test;
 // Configure log4net using the .config file
 [assembly: log4net.Config.XmlConfigurator(Watch = true)]
-namespace Hush.InputDevice
+namespace Hoo.InputDevice
 {
     static class Program
     {

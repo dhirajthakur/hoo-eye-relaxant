@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Management;
 using System.Threading;
-namespace Hush.MonitorService.WMI {
+namespace Hoo.MonitorService.WMI {
     class MonitorPower {
 
 
