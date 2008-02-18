@@ -1,4 +1,4 @@
-namespace Hush.Relaxant {
+namespace Hoo.Relaxant {
     partial class AboutBox {
         /// <summary>
         /// Required designer variable.

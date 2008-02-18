@@ -7,7 +7,7 @@
     <ProjectGuid>{D9A1AD4D-1630-4652-8427-45BE8D5761B4}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Hush.ConsoleTest</RootNamespace>
+    <RootNamespace>Hoo.ConsoleTest</RootNamespace>
     <AssemblyName>ConsoleTest</AssemblyName>
     <StartupObject>
     </StartupObject>

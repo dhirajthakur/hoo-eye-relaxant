@@ -7,9 +7,9 @@
     <ProjectGuid>{8836AC36-8C24-4AA7-8399-4CBA4B8AA033}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Hush.Relaxant</RootNamespace>
-    <AssemblyName>Hush Eye Relaxant</AssemblyName>
-    <StartupObject>Hush.Relaxant.RelaxantManager</StartupObject>
+    <RootNamespace>Hoo.Relaxant</RootNamespace>
+    <AssemblyName>Hoo Eye Relaxant</AssemblyName>
+    <StartupObject>Hoo.Relaxant.RunningControl</StartupObject>
     <ApplicationIcon>Camera.ico</ApplicationIcon>
     <ManifestCertificateThumbprint>1A18AE1CBD1AD4637D5CD471135BE1168130E855</ManifestCertificateThumbprint>
     <ManifestKeyFile>Hush RelaxEyes_TemporaryKey.pfx</ManifestKeyFile>
@@ -106,7 +106,6 @@
     </Compile>
     <Compile Include="Main\RunningControl.cs">
     </Compile>
-    <Compile Include="RelaxantManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Main\AboutBox.resx">
       <SubType>Designer</SubType>

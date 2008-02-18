@@ -7,7 +7,7 @@
     <ProjectGuid>{8DDBF67C-656A-4840-A825-954863FA6D45}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Hush.Relaxant</RootNamespace>
+    <RootNamespace>Hoo.Relaxant</RootNamespace>
     <AssemblyName>WindowsTest</AssemblyName>
     <FileUpgradeFlags>
     </FileUpgradeFlags>

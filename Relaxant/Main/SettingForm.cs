@@ -6,9 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
-using Hush.Relaxant.Properties;
+using Hoo.Relaxant.Properties;
 
-namespace Hush.Relaxant {
+namespace Hoo.Relaxant {
     public partial class SettingForm : Form {
         private int workingMinutes = Settings.Default.WorkingMinutes;
         private int breakingMinutes = Settings.Default.BreakingMinutes;

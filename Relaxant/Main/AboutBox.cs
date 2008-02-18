@@ -5,7 +5,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Reflection;
 
-namespace Hush.Relaxant {
+namespace Hoo.Relaxant {
     partial class AboutBox : Form {
         public AboutBox() {
             InitializeComponent();

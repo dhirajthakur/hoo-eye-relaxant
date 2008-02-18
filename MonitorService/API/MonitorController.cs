@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Runtime.InteropServices;
 using System.Threading;
-namespace Hush.MonitorService {
+namespace Hoo.MonitorService {
     public class MonitorController {
 
         [DllImport("user32.dll")]

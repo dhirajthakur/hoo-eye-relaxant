@@ -1,4 +1,4 @@
-namespace Hush.InputDevice.Test {
+namespace Hoo.InputDevice.Test {
     partial class TraceForm {
         /// <summary>
         /// Required designer variable.

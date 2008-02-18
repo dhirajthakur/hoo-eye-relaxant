@@ -7,7 +7,7 @@
     <ProjectGuid>{57B37972-E5B1-4A43-AFD9-1E74175ABC51}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Hush.MonitorService</RootNamespace>
+    <RootNamespace>Hoo.MonitorService</RootNamespace>
     <AssemblyName>MonitorService</AssemblyName>
     <StartupObject>
     </StartupObject>

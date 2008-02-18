@@ -4,7 +4,7 @@ using System.Text;
 using System.Runtime.InteropServices;
 using System.Threading;
 
-namespace Hush.Relaxant {
+namespace Hoo.Relaxant {
     
 
     class DisplayController {

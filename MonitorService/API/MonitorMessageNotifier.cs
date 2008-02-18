@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 using System.Windows.Forms;
-namespace Hush.MonitorService {
+namespace Hoo.MonitorService {
 
     public class MonitorMessageNotifier : IMonitorEvents {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
@@ -9,35 +9,13 @@ namespace Hush.MonitorService {
         Thread listenThread;
         MessageListenForm listenForm;
 
-        private static bool _isMonitorShutdown;
-        public static bool IsMonitorShutdown {
-            get {
-                return _isMonitorShutdown;
-            }
-            internal set {
-                _isMonitorShutdown = value;
-            }
-        }
+        public static bool IsMonitorShutdown { get; set; }
 
-        private static bool _isMonitorLocked;
-        public static bool IsMonitorLocked {
-            get {
-                return _isMonitorLocked;
-            }
-            internal set {
-                _isMonitorLocked = value;
-            }
-        }
+   
+        public static bool IsMonitorLocked { get; set; }
 
-        private static bool _isSreenSaverRuning;
-        public static bool IsSreenSaverRuning {
-            get {
-                return _isSreenSaverRuning;
-            }
-            internal set {
-                _isSreenSaverRuning = value;
-            }
-        }
+
+        public static bool IsSreenSaverRuning { get; set; }
 
         #region Throw monitor events
 

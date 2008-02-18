@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Management;
 
-namespace Hush.MonitorService {
+namespace Hoo.MonitorService {
 
     
     // This example shows synchronous consumption of events. 

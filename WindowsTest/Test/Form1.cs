@@ -3,7 +3,7 @@ using System.Threading;
 using System.Windows.Forms;
 
 
-namespace Hush.Relaxant {
+namespace Hoo.Relaxant {
     public partial class Form1 : Form {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 

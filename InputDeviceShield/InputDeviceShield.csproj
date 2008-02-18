@@ -7,7 +7,7 @@
     <ProjectGuid>{02CE0BC2-94CC-4346-9031-7FC6B8C165C5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Hush.InputDevice</RootNamespace>
+    <RootNamespace>Hoo.InputDevice</RootNamespace>
     <AssemblyName>InputDeviceShield</AssemblyName>
     <ManifestCertificateThumbprint>78E388CA5618FE4120E5B1579851B98BAD8EE3C8</ManifestCertificateThumbprint>
     <ManifestKeyFile>KeyboardHook_TemporaryKey.pfx</ManifestKeyFile>

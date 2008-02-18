@@ -6,9 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Threading;
-using Hush.InputDevice;
+using Hoo.InputDevice;
 
-namespace Hush.InputDevice.Test {
+namespace Hoo.InputDevice.Test {
     public partial class TraceForm : Form {
         private MouseHook _mouseHook = null;
         private KeyboardHook _keyboardHook = null;
