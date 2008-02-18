@@ -144,8 +144,26 @@ namespace Hoo.Relaxant {
                     e.Cancel = true;
                     return;
                 }
+                string ext = f.Extension.ToLower();
+                if (ext != ".wav" && ext != ".mp3" && ext != ".wma") {       
+                    
+                    e.Cancel = true;
+                    return;
+                }
+            }
+        }
 
-                if (f.Extension != "wav" && f.Extension != "mp3" && f.Extension != "wma") {
+        private void breakingCompletingWarnningEdit_Validating(object sender, CancelEventArgs e) {
+            //Check whether the file's full path is correct or not
+            if (breakingCompletingWarnningEdit.Text.Trim() != "") {
+                FileInfo f = new FileInfo(breakingCompletingWarnningEdit.Text.Trim());
+                if (!f.Exists) {
+                    e.Cancel = true;
+                    return;
+                }
+                string ext = f.Extension.ToLower();
+                if (ext != ".wav" && ext != ".mp3" && ext != ".wma") {
+
                     e.Cancel = true;
                     return;
                 }
