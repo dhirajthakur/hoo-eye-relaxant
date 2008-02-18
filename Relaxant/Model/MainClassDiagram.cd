@@ -23,48 +23,48 @@
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="Hush.Relaxant.Properties.Resources" Collapsed="true">
+  <Class Name="Hoo.Relaxant.Properties.Resources" Collapsed="true">
     <Position X="4.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="Hush.Relaxant.Properties.Settings" Collapsed="true">
+  <Class Name="Hoo.Relaxant.Properties.Settings" Collapsed="true">
     <Position X="4.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <FileName>Settings.cs</FileName>
       <HashCode>AAAAAAAAAAAAAgAMAAAAIAAAAAAJAAAAAAAAAAgACAA=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="Hush.Relaxant.AboutBox" Collapsed="true">
+  <Class Name="Hoo.Relaxant.AboutBox" Collapsed="true">
     <Position X="3" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <FileName>Source\Relaxant\AboutBox.cs</FileName>
       <HashCode>kIAAAAgAACAgCAUAAACAAAADAAAAEIAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="Hush.Relaxant.BreakingForm" Collapsed="true">
+  <Class Name="Hoo.Relaxant.BreakingForm" Collapsed="true">
     <Position X="4.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <FileName>Source\Relaxant\BreakingForm.cs</FileName>
       <HashCode>DAAEBAAQwLABAIQAAACSQAUCAIAEAAAQAIBBAQIAABA=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="Hush.Relaxant.RuningForm" Collapsed="true">
+  <Class Name="Hoo.Relaxant.RuningForm" Collapsed="true">
     <Position X="6.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <FileName>Source\Relaxant\RuningForm.cs</FileName>
       <HashCode>gAgABAAAASgQAAYACACSAAgCAAEAkAAAAAhAAAEgAIA=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="Hush.Relaxant.SettingForm" Collapsed="true">
+  <Class Name="Hoo.Relaxant.SettingForm" Collapsed="true">
     <Position X="3" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <FileName>Source\Relaxant\SettingForm.cs</FileName>
       <HashCode>BAhAAAAAAKQAABAAAAqACAACEAAIAgAACEAQUBEAAAA=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="Hush.Relaxant.RelaxantManager" Collapsed="true">
+  <Class Name="Hoo.Relaxant.RelaxantManager" Collapsed="true">
     <Position X="3" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <FileName>RelaxantManager.cs</FileName>

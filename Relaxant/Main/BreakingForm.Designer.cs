@@ -211,7 +211,7 @@ namespace Hoo.Relaxant {
             this.Name = "BreakingForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Hush Relax Your Eyes {Project.Version}";
+            this.Text = "Hoo Relax Your Eyes {Project.Version}";
             this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.BreakingForm_Load);

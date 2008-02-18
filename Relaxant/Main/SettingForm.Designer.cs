@@ -41,6 +41,8 @@ namespace Hoo.Relaxant {
             this.xtraTabs = new DevExpress.XtraTab.XtraTabControl();
             this.generalTab = new DevExpress.XtraTab.XtraTabPage();
             this.breakingTab = new DevExpress.XtraTab.XtraTabPage();
+            this.breakingCompletingWarnningEdit = new DevExpress.XtraEditors.ButtonEdit();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.workingNumeric.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.breakingNumeric.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxDelayNumeric.Properties)).BeginInit();
@@ -50,6 +52,7 @@ namespace Hoo.Relaxant {
             this.xtraTabs.SuspendLayout();
             this.generalTab.SuspendLayout();
             this.breakingTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.breakingCompletingWarnningEdit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // saveButton
@@ -269,6 +272,8 @@ namespace Hoo.Relaxant {
             // 
             // breakingTab
             // 
+            this.breakingTab.Controls.Add(this.breakingCompletingWarnningEdit);
+            this.breakingTab.Controls.Add(this.label1);
             this.breakingTab.Controls.Add(this.terminateBreakingLable);
             this.breakingTab.Controls.Add(this.musicFileEdit);
             this.breakingTab.Controls.Add(this.terminateBreakingRadioes);
@@ -277,6 +282,25 @@ namespace Hoo.Relaxant {
             this.breakingTab.Name = "breakingTab";
             this.breakingTab.Size = new System.Drawing.Size(621, 169);
             this.breakingTab.Text = "Breaking Options";
+            // 
+            // breakingCompletingWarnningEdit
+            // 
+            this.breakingCompletingWarnningEdit.Location = new System.Drawing.Point(156, 69);
+            this.breakingCompletingWarnningEdit.Name = "breakingCompletingWarnningEdit";
+            this.breakingCompletingWarnningEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.breakingCompletingWarnningEdit.Size = new System.Drawing.Size(301, 20);
+            this.breakingCompletingWarnningEdit.TabIndex = 17;
+            this.breakingCompletingWarnningEdit.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.breakingCompletingWarnningEdit_ButtonClick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 72);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(147, 13);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Breaking Completing Warning";
             // 
             // SettingForm
             // 
@@ -305,6 +329,7 @@ namespace Hoo.Relaxant {
             this.generalTab.PerformLayout();
             this.breakingTab.ResumeLayout(false);
             this.breakingTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.breakingCompletingWarnningEdit.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -328,5 +353,7 @@ namespace Hoo.Relaxant {
         private DevExpress.XtraTab.XtraTabControl xtraTabs;
         private DevExpress.XtraTab.XtraTabPage generalTab;
         private DevExpress.XtraTab.XtraTabPage breakingTab;
+        private DevExpress.XtraEditors.ButtonEdit breakingCompletingWarnningEdit;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -35,7 +35,7 @@ namespace Hoo.Relaxant {
             Manager.SecondTick += new EventHandler(Manager_SecondTick);
             Manager.BreakingTerminating += new EventHandler(Manager_BreakingTerminating);
             Manager.BreakingDelaying += new EventHandler(Manager_BreakingDelaying);
-
+            
         }
 
         void Manager_BreakingDelaying(object sender, EventArgs e) {
@@ -43,6 +43,7 @@ namespace Hoo.Relaxant {
         }
 
         void Manager_BreakingTerminating(object sender, EventArgs e) {
+            if (!Manager.IsForceTeminate) PlayWarningSound();
             this.Close();
         }
 
@@ -50,7 +51,7 @@ namespace Hoo.Relaxant {
         void Manager_SecondTick(object sender, EventArgs e) {
             TimeSpan breakingSpan = TimeSpan.FromSeconds(Manager.PendingSeconds);
             breakingSpanLabel.Text = breakingSpan.ToString();
-            breakingSpanBar.Increment(-1);
+            breakingSpanBar.Decrement(1);
         }
 
             
@@ -88,6 +89,18 @@ namespace Hoo.Relaxant {
                 music.Stop();
                 music.Dispose();
                 music = null;
+            }
+        }
+
+        private void PlayWarningSound() {
+            String soundFile = Properties.Settings.Default.Sound4CompletingBreaking;
+            if (soundFile != "") {
+                try {
+                    SoundFile sound = new SoundFile(soundFile);                    
+                    sound.Play();                    
+                } catch (Exception ex) {
+                    log.Error("Could not play music!", ex);
+                }
             }
         }
 

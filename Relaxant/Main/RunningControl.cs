@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using Hoo.Relaxant.Properties;
 using Hoo.Common;
+using Hoo.MonitorService;
 
 // Configure log4net using the .config file
 [assembly: log4net.Config.XmlConfigurator(Watch = true)]
@@ -63,7 +64,7 @@ namespace Hoo.Relaxant {
 
         public event EventHandler BreakingTerminating;
         public event EventHandler BreakingTerminated;
-        public event EventHandler BreakingStarting;
+        //public event EventHandler BreakingStarting;
         public event EventHandler BreakingStarted;        
         public event EventHandler BreakingDelaying;        
 
@@ -120,7 +121,7 @@ namespace Hoo.Relaxant {
         #endregion
 
         private System.Windows.Forms.Timer RunningTimer;
-
+        private MonitorMessageNotifier monitor;
 
         public RunningControl() {
             Settings.Default.PropertyChanged += new PropertyChangedEventHandler(
@@ -132,9 +133,35 @@ namespace Hoo.Relaxant {
             this.RunningTimer.Interval = 1000;
             this.RunningTimer.Tick += new System.EventHandler(this.runningTimer_Tick);
 
-            RefreshSettings();
+            monitor = new MonitorMessageNotifier();
+            monitor.MonitorLocked += new EventHandler<MonitorEventArgs>(monitor_MonitorLocked);
+            monitor.MonitorUnlocked += new EventHandler<MonitorEventArgs>(monitor_MonitorUnlocked);
+            monitor.Start();
 
+            RefreshSettings();            
             CompleteBreaking();
+
+
+        }
+
+        ~RunningControl() {
+            monitor.Stop();
+            monitor = null;
+        }
+
+        void monitor_MonitorUnlocked(object sender, MonitorEventArgs e) {
+            log.Debug("Computer unlocked!");
+            TimeSpan span = System.DateTime.Now - LockedTime;
+            log.Debug("Locked Seconds : " + span.TotalSeconds);
+            if (span.TotalSeconds >= BreakingSeconds) {
+                CompleteBreaking();
+            }
+        }
+
+        private DateTime LockedTime { get; set; }
+        void monitor_MonitorLocked(object sender, MonitorEventArgs e) {
+            log.Debug("Computer locked!");
+            LockedTime = System.DateTime.Now;            
         }
 
         
@@ -200,8 +227,8 @@ namespace Hoo.Relaxant {
         }
 
         public void QuitApplication() {
-            if (Settings.Default.Resctriction4Quit == RestrictionLevels.Forbidden) return;
-
+            if (Settings.Default.Resctriction4Quit == RestrictionLevels.Forbidden) return;           
+            
             Application.Exit();
         }
 
