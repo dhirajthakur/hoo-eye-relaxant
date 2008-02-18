@@ -152,9 +152,6 @@
     <Content Include="Hush.ico" />
     <None Include="app.config" />
     <None Include="Model\MainClassDiagram.cd" />
-    <None Include="Sound\sample.mp3">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="Sound\benchmark.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

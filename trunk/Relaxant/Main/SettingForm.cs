@@ -60,6 +60,7 @@ namespace Hoo.Relaxant {
 
             //Breaking Settings
             musicFileEdit.Text = Settings.Default.MusicFile;
+            breakingCompletingWarnningEdit.Text = Settings.Default.Sound4CompletingBreaking;
             shutdownCheck.Checked = Settings.Default.ShutdownMonitor;
             terminateBreakingRadioes.EditValue = Settings.Default.Resctriction4TerminateBreaking;
 
@@ -76,7 +77,8 @@ namespace Hoo.Relaxant {
 
             Settings.Default.Resctriction4TerminateBreaking = (RestrictionLevels)terminateBreakingRadioes.EditValue;
             Settings.Default.MusicFile = musicFileEdit.Text;            
-            Settings.Default.ShutdownMonitor = shutdownCheck.Checked; 
+            Settings.Default.ShutdownMonitor = shutdownCheck.Checked;
+            Settings.Default.Sound4CompletingBreaking = breakingCompletingWarnningEdit.Text;
 
 
             Settings.Default.Save();
@@ -127,6 +129,13 @@ namespace Hoo.Relaxant {
             musicFileEdit.Text = fileDialog.FileName;
         }
 
+        private void breakingCompletingWarnningEdit_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e) {
+            fileDialog.InitialDirectory = Application.ExecutablePath;
+            fileDialog.FileName = breakingCompletingWarnningEdit.Text;
+            fileDialog.ShowDialog(this);
+            breakingCompletingWarnningEdit.Text = fileDialog.FileName;
+        }
+
         private void musicFileEdit_Validating(object sender, CancelEventArgs e) {
             //Check whether the file's full path is correct or not
             if (musicFileEdit.Text.Trim() != "") {
@@ -142,6 +151,8 @@ namespace Hoo.Relaxant {
                 }
             }
         }
+
+       
 
         
 

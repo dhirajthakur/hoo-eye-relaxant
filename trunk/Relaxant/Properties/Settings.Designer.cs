@@ -37,18 +37,6 @@ namespace Hoo.Relaxant.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("sound\\sample.mp3")]
-        public string MusicFile {
-            get {
-                return ((string)(this["MusicFile"]));
-            }
-            set {
-                this["MusicFile"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1234")]
         public string AdminPassword {
             get {
@@ -137,6 +125,30 @@ namespace Hoo.Relaxant.Properties {
             }
             set {
                 this["Resctriction4Quit"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("sound\\track.wma")]
+        public string MusicFile {
+            get {
+                return ((string)(this["MusicFile"]));
+            }
+            set {
+                this["MusicFile"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Sound\\benchmark.wav")]
+        public string Sound4CompletingBreaking {
+            get {
+                return ((string)(this["Sound4CompletingBreaking"]));
+            }
+            set {
+                this["Sound4CompletingBreaking"] = value;
             }
         }
     }

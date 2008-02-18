@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Hush Eyes Relaxant")]
+[assembly: AssemblyTitle("Hoo Eye Relaxant")]
 [assembly: AssemblyDescription("Take a breaking and relax your eyes after continous working")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("EDS")]
-[assembly: AssemblyProduct("Hush Eyes Relaxant")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("Hoo Eye Relaxant")]
 [assembly: AssemblyCopyright("Welkin Hu")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

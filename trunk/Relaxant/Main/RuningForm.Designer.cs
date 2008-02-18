@@ -41,8 +41,8 @@
             // eyesNotifyIcon
             // 
             this.eyesNotifyIcon.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.eyesNotifyIcon.BalloonTipText = "Welcome!\r\nThis is Hush";
-            this.eyesNotifyIcon.BalloonTipTitle = "Hush Relaxant";
+            this.eyesNotifyIcon.BalloonTipText = "Welcome!\r\nThis is Hoo";
+            this.eyesNotifyIcon.BalloonTipTitle = "Hoo Relaxant";
             this.eyesNotifyIcon.ContextMenuStrip = this.mainMenu;
             this.eyesNotifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("eyesNotifyIcon.Icon")));
             this.eyesNotifyIcon.Text = "Relax Eyes";

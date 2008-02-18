@@ -36,12 +36,13 @@ namespace Hoo.Relaxant {
             Manager.SecondTick += new EventHandler(Manager_SecondTick);
             Manager.BreakingStarted += new EventHandler(Manager_BreakingStarted);
             Manager.BreakingTerminated += new EventHandler(Manager_BreakingTerminated);
-
+            
             Manager_BreakingTerminated(this, null);
         }
 
         
         void Manager_BreakingTerminated(object sender, EventArgs e) {
+               
             TimeSpan span = TimeSpan.FromSeconds(Manager.PendingSeconds);
             spanLabel.Text = span.ToString();
             spanBar.Properties.Maximum = Manager.PlannedSeconds;
