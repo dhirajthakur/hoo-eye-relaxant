@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Hoo.MonitorService</RootNamespace>
-    <AssemblyName>MonitorService</AssemblyName>
+    <AssemblyName>Hoo.MonitorService</AssemblyName>
     <StartupObject>
     </StartupObject>
     <FileUpgradeFlags>

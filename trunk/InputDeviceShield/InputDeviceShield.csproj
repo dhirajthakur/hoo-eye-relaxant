@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Hoo.InputDevice</RootNamespace>
-    <AssemblyName>InputDeviceShield</AssemblyName>
+    <AssemblyName>Hoo.InputDeviceShield</AssemblyName>
     <ManifestCertificateThumbprint>78E388CA5618FE4120E5B1579851B98BAD8EE3C8</ManifestCertificateThumbprint>
     <ManifestKeyFile>KeyboardHook_TemporaryKey.pfx</ManifestKeyFile>
     <GenerateManifests>false</GenerateManifests>

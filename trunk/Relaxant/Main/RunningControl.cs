@@ -65,8 +65,8 @@ namespace Hoo.Relaxant {
         public event EventHandler BreakingTerminating;
         public event EventHandler BreakingTerminated;
         //public event EventHandler BreakingStarting;
-        public event EventHandler BreakingStarted;        
-        public event EventHandler BreakingDelaying;        
+        public event EventHandler BreakingStarted;
+        public event EventHandler BreakingDelaying;
 
         #endregion
 
@@ -137,8 +137,10 @@ namespace Hoo.Relaxant {
             monitor.MonitorLocked += new EventHandler<MonitorEventArgs>(monitor_MonitorLocked);
             monitor.MonitorUnlocked += new EventHandler<MonitorEventArgs>(monitor_MonitorUnlocked);
             monitor.Start();
+            
+         
 
-            RefreshSettings();            
+            RefreshSettings();
             CompleteBreaking();
 
 
@@ -161,10 +163,10 @@ namespace Hoo.Relaxant {
         private DateTime LockedTime { get; set; }
         void monitor_MonitorLocked(object sender, MonitorEventArgs e) {
             log.Debug("Computer locked!");
-            LockedTime = System.DateTime.Now;            
+            LockedTime = System.DateTime.Now;
         }
 
-        
+
         /// <summary>
         /// Pause working status and enter breaking status. Generally, a breaking form will be displayed.
         /// 
@@ -186,7 +188,7 @@ namespace Hoo.Relaxant {
             if (BreakingTerminating != null) BreakingTerminating(this, new EventArgs());
             UnderDelay = false;
             IsForceTeminate = false;
-            DelayedSeconds = 0;            
+            DelayedSeconds = 0;
             StartWorking(WorkingSeconds);
         }
 
@@ -204,31 +206,32 @@ namespace Hoo.Relaxant {
         /// 
         /// </summary>
         /// <param name="seconds"></param>
-        /// <returns></returns>
-        public void DelayBreaking(int seconds) {            
-            if (AllowDelay(seconds)) {
+        /// <exception cref="Exception">Available delay seconds is less than reqeust delay seconds</exception>
+        /// 
+        public void DelayBreaking(int seconds) {
+            //In principle, delay seconds should not more than available delay seconds.
+            //However, adding five seconds to available delay seconds could avoid potential program clock error.
+            if (seconds <= AvailableDelaySeconds + 5) {
                 if (BreakingDelaying != null) BreakingDelaying(this, new EventArgs());
                 UnderDelay = true;
                 StartWorking(seconds);
 
             } else {
                 log.Error("No enough seconds for delaying!");
-                throw new Exception(StringUtil.Join("You have delayed over %1 minutes, you could only delay %2 minutes. ", DelayedSeconds, seconds));
+                throw new Exception(StringUtil.Join("There are %1 available delay, you could not delay %2 seconds. ", AvailableDelaySeconds, seconds));
             }
         }
 
-        public bool AllowDelay(int seconds) {
-            int availableSeconds = MaxDelaySeconds - DelayedSeconds;
-            if (availableSeconds >= seconds) {
-                return true;
-            } else {
-                return false;
+        public int AvailableDelaySeconds {
+            get {
+                return (MaxDelaySeconds - DelayedSeconds);
             }
         }
+        
 
         public void QuitApplication() {
-            if (Settings.Default.Resctriction4Quit == RestrictionLevels.Forbidden) return;           
-            
+            if (Settings.Default.Resctriction4Quit == RestrictionLevels.Forbidden) return;
+
             Application.Exit();
         }
 
@@ -243,7 +246,7 @@ namespace Hoo.Relaxant {
 
         private void runningTimer_Tick(object sender, EventArgs e) {
             PendingSeconds--;
-            if (UnderDelay) DelayedSeconds++;
+            if (UnderDelay & State == RuningStates.Working ) DelayedSeconds++;
 
             if (PendingSeconds <= 0) {
                 switch (this.State) {

@@ -106,9 +106,8 @@ namespace Hoo.Relaxant {
 
      
 
-        private void Delay(int seconds) {
-            int maxSeconds = Manager.MaxDelaySeconds;
-            int availableSeconds = maxSeconds - Manager.DelayedSeconds;
+        private void Delay(int seconds) {            
+            int availableSeconds = Manager.AvailableDelaySeconds;
 
             if(availableSeconds <=0) {
                 MessageBox.Show("You could not delay any longer untill a full seconds breaking!","Invalided Action",MessageBoxButtons.OK,MessageBoxIcon.Error);
