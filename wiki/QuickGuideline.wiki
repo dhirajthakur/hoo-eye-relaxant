@@ -1,12 +1,12 @@
-#summary One-sentence summary of this page.
 #labels Phase-Support
+#A brief guildline to this application.
 
 = Quick Guideline =
 
 This is a green program. There are serveral simple steps to run it.
 
-# Download and unzip newest version of "Hoo Eye Relaxant".
-# Download third party DLL: "3P.zip"
+* Download and unzip newest version of "Hoo Eye Relaxant".
+* Download third party DLL: "3P.zip"
 # Unzip "3P.zip" to "Hoo Eye Relaxant" folder too.
 # Execute "Hoo Eye Relaxant.exe"
 # One notify icon will be laughed.
