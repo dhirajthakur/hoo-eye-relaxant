@@ -1,6 +1,4 @@
 #labels Phase-Support
-#Quick guideline
-
 = Quick guideline =
 
 This is a green program. There are serveral simple steps to run it.
