@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Input Device (Keyboard & Mouse) Shield")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Hush")]
-[assembly: AssemblyProduct("InputDeviceShield")]
-[assembly: AssemblyCopyright("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("Hoo")]
+[assembly: AssemblyCopyright("Welkin Hu")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

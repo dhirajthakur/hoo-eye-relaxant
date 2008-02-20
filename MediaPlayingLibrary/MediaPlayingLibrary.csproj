@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Hoo.MediaPlayingLibrary</RootNamespace>
-    <AssemblyName>MediaPlayingLibrary</AssemblyName>
+    <AssemblyName>Hoo.MediaPlayingLibrary</AssemblyName>
     <StartupObject>
     </StartupObject>
     <FileUpgradeFlags>

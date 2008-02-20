@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("SystemEventProvider")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("EDS")]
-[assembly: AssemblyProduct("SystemEventProvider")]
-[assembly: AssemblyCopyright("Copyright © EDS 2008")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("Hoo")]
+[assembly: AssemblyCopyright("Welkin Hu")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
