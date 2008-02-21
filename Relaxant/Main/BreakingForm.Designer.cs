@@ -215,6 +215,7 @@ namespace Hoo.Relaxant {
             this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.BreakingForm_Load);
+            this.Shown += new System.EventHandler(this.BreakingForm_Shown);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BreakingForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.breakingSpanBar.Properties)).EndInit();
             this.contextMenu.ResumeLayout(false);
