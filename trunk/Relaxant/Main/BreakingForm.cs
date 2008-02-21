@@ -145,6 +145,18 @@ namespace Hoo.Relaxant {
             if (Settings.Default.ShutdownMonitor) {
                 TurnOffMonitor();
             }
+
+            this.Activate();
+            this.Focus();
+            this.Select();
+
+        }
+
+        private void BreakingForm_Shown(object sender, EventArgs e) {
+            this.Activate();
+            this.Focus();
+            this.Select();
+
         }
 
         private void BreakingForm_FormClosing(object sender, FormClosingEventArgs e) {
@@ -203,6 +215,8 @@ namespace Hoo.Relaxant {
         }
 
         #endregion
+
+        
 
        
 
