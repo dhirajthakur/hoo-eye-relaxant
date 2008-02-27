@@ -40,6 +40,8 @@ namespace Hoo.Relaxant {
             this.terminateBreakingLable = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabs = new DevExpress.XtraTab.XtraTabControl();
             this.generalTab = new DevExpress.XtraTab.XtraTabPage();
+            this.languageCombo = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.label2 = new System.Windows.Forms.Label();
             this.breakingTab = new DevExpress.XtraTab.XtraTabPage();
             this.breakingCompletingWarnningEdit = new DevExpress.XtraEditors.ButtonEdit();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,66 +53,63 @@ namespace Hoo.Relaxant {
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabs)).BeginInit();
             this.xtraTabs.SuspendLayout();
             this.generalTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.languageCombo.Properties)).BeginInit();
             this.breakingTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.breakingCompletingWarnningEdit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // saveButton
             // 
-            this.saveButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.saveButton.Location = new System.Drawing.Point(184, 224);
+            this.saveButton.AccessibleDescription = null;
+            this.saveButton.AccessibleName = null;
+            resources.ApplyResources(this.saveButton, "saveButton");
+            this.saveButton.BackgroundImage = null;
+            this.saveButton.Font = null;
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(74, 31);
-            this.saveButton.TabIndex = 0;
-            this.saveButton.Text = "&Save";
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // workingLabel
             // 
-            this.workingLabel.AutoSize = true;
-            this.workingLabel.Location = new System.Drawing.Point(9, 19);
+            this.workingLabel.AccessibleDescription = null;
+            this.workingLabel.AccessibleName = null;
+            resources.ApplyResources(this.workingLabel, "workingLabel");
+            this.workingLabel.Font = null;
             this.workingLabel.Name = "workingLabel";
-            this.workingLabel.Size = new System.Drawing.Size(137, 13);
-            this.workingLabel.TabIndex = 1;
-            this.workingLabel.Text = "Continous Working Minutes";
             // 
             // breakingLabel
             // 
-            this.breakingLabel.AutoSize = true;
-            this.breakingLabel.Location = new System.Drawing.Point(222, 19);
+            this.breakingLabel.AccessibleDescription = null;
+            this.breakingLabel.AccessibleName = null;
+            resources.ApplyResources(this.breakingLabel, "breakingLabel");
+            this.breakingLabel.Font = null;
             this.breakingLabel.Name = "breakingLabel";
-            this.breakingLabel.Size = new System.Drawing.Size(89, 13);
-            this.breakingLabel.TabIndex = 2;
-            this.breakingLabel.Text = "Breaking Minutes";
             // 
             // cancelButton
             // 
-            this.cancelButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.cancelButton.AccessibleDescription = null;
+            this.cancelButton.AccessibleName = null;
+            resources.ApplyResources(this.cancelButton, "cancelButton");
+            this.cancelButton.BackgroundImage = null;
             this.cancelButton.CausesValidation = false;
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelButton.Location = new System.Drawing.Point(304, 224);
+            this.cancelButton.Font = null;
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(74, 31);
-            this.cancelButton.TabIndex = 0;
-            this.cancelButton.Text = "&Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // fileDialog
             // 
-            this.fileDialog.Filter = "All sound files(*.wav;*.mp3;*.wma)|*.wav;*.mp3;*.wma|Wave files(*.wav)|*.wav|MP3 " +
-                "files(*.mp3)|*.mp3|Windows Media Files(*.wma)|*.wma";
+            resources.ApplyResources(this.fileDialog, "fileDialog");
             // 
             // workingNumeric
             // 
-            this.workingNumeric.EditValue = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
-            this.workingNumeric.Location = new System.Drawing.Point(154, 15);
+            resources.ApplyResources(this.workingNumeric, "workingNumeric");
+            this.workingNumeric.BackgroundImage = null;
             this.workingNumeric.Name = "workingNumeric";
+            this.workingNumeric.Properties.AccessibleDescription = null;
+            this.workingNumeric.Properties.AccessibleName = null;
+            this.workingNumeric.Properties.AutoHeight = ((bool)(resources.GetObject("workingNumeric.Properties.AutoHeight")));
             this.workingNumeric.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.workingNumeric.Properties.Increment = new decimal(new int[] {
@@ -119,7 +118,15 @@ namespace Hoo.Relaxant {
             0,
             0});
             this.workingNumeric.Properties.IsFloatValue = false;
-            this.workingNumeric.Properties.Mask.EditMask = "N00";
+            this.workingNumeric.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("workingNumeric.Properties.Mask.AutoComplete")));
+            this.workingNumeric.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("workingNumeric.Properties.Mask.BeepOnError")));
+            this.workingNumeric.Properties.Mask.EditMask = resources.GetString("workingNumeric.Properties.Mask.EditMask");
+            this.workingNumeric.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("workingNumeric.Properties.Mask.IgnoreMaskBlank")));
+            this.workingNumeric.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("workingNumeric.Properties.Mask.MaskType")));
+            this.workingNumeric.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("workingNumeric.Properties.Mask.PlaceHolder")));
+            this.workingNumeric.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("workingNumeric.Properties.Mask.SaveLiteral")));
+            this.workingNumeric.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("workingNumeric.Properties.Mask.ShowPlaceHolders")));
+            this.workingNumeric.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("workingNumeric.Properties.Mask.UseMaskAsDisplayFormat")));
             this.workingNumeric.Properties.MaxLength = 3;
             this.workingNumeric.Properties.MaxValue = new decimal(new int[] {
             129,
@@ -131,23 +138,28 @@ namespace Hoo.Relaxant {
             0,
             0,
             0});
-            this.workingNumeric.Size = new System.Drawing.Size(47, 20);
-            this.workingNumeric.TabIndex = 7;
             this.workingNumeric.Spin += new DevExpress.XtraEditors.Controls.SpinEventHandler(this.workingNumeric_Spin);
             // 
             // breakingNumeric
             // 
-            this.breakingNumeric.EditValue = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.breakingNumeric.Location = new System.Drawing.Point(320, 15);
+            resources.ApplyResources(this.breakingNumeric, "breakingNumeric");
+            this.breakingNumeric.BackgroundImage = null;
             this.breakingNumeric.Name = "breakingNumeric";
+            this.breakingNumeric.Properties.AccessibleDescription = null;
+            this.breakingNumeric.Properties.AccessibleName = null;
+            this.breakingNumeric.Properties.AutoHeight = ((bool)(resources.GetObject("breakingNumeric.Properties.AutoHeight")));
             this.breakingNumeric.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.breakingNumeric.Properties.IsFloatValue = false;
-            this.breakingNumeric.Properties.Mask.EditMask = "N00";
+            this.breakingNumeric.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("breakingNumeric.Properties.Mask.AutoComplete")));
+            this.breakingNumeric.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("breakingNumeric.Properties.Mask.BeepOnError")));
+            this.breakingNumeric.Properties.Mask.EditMask = resources.GetString("breakingNumeric.Properties.Mask.EditMask");
+            this.breakingNumeric.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("breakingNumeric.Properties.Mask.IgnoreMaskBlank")));
+            this.breakingNumeric.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("breakingNumeric.Properties.Mask.MaskType")));
+            this.breakingNumeric.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("breakingNumeric.Properties.Mask.PlaceHolder")));
+            this.breakingNumeric.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("breakingNumeric.Properties.Mask.SaveLiteral")));
+            this.breakingNumeric.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("breakingNumeric.Properties.Mask.ShowPlaceHolders")));
+            this.breakingNumeric.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("breakingNumeric.Properties.Mask.UseMaskAsDisplayFormat")));
             this.breakingNumeric.Properties.MaxLength = 2;
             this.breakingNumeric.Properties.MaxValue = new decimal(new int[] {
             60,
@@ -159,119 +171,173 @@ namespace Hoo.Relaxant {
             0,
             0,
             0});
-            this.breakingNumeric.Size = new System.Drawing.Size(47, 20);
-            this.breakingNumeric.TabIndex = 8;
             // 
             // maxDelayNumeric
             // 
-            this.maxDelayNumeric.EditValue = new decimal(new int[] {
-            8,
-            0,
-            0,
-            0});
-            this.maxDelayNumeric.Location = new System.Drawing.Point(533, 15);
+            resources.ApplyResources(this.maxDelayNumeric, "maxDelayNumeric");
+            this.maxDelayNumeric.BackgroundImage = null;
             this.maxDelayNumeric.Name = "maxDelayNumeric";
+            this.maxDelayNumeric.Properties.AccessibleDescription = null;
+            this.maxDelayNumeric.Properties.AccessibleName = null;
+            this.maxDelayNumeric.Properties.AutoHeight = ((bool)(resources.GetObject("maxDelayNumeric.Properties.AutoHeight")));
             this.maxDelayNumeric.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.maxDelayNumeric.Properties.IsFloatValue = false;
-            this.maxDelayNumeric.Properties.Mask.EditMask = "N00";
+            this.maxDelayNumeric.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("maxDelayNumeric.Properties.Mask.AutoComplete")));
+            this.maxDelayNumeric.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("maxDelayNumeric.Properties.Mask.BeepOnError")));
+            this.maxDelayNumeric.Properties.Mask.EditMask = resources.GetString("maxDelayNumeric.Properties.Mask.EditMask");
+            this.maxDelayNumeric.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("maxDelayNumeric.Properties.Mask.IgnoreMaskBlank")));
+            this.maxDelayNumeric.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("maxDelayNumeric.Properties.Mask.MaskType")));
+            this.maxDelayNumeric.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("maxDelayNumeric.Properties.Mask.PlaceHolder")));
+            this.maxDelayNumeric.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("maxDelayNumeric.Properties.Mask.SaveLiteral")));
+            this.maxDelayNumeric.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("maxDelayNumeric.Properties.Mask.ShowPlaceHolders")));
+            this.maxDelayNumeric.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("maxDelayNumeric.Properties.Mask.UseMaskAsDisplayFormat")));
             this.maxDelayNumeric.Properties.MaxLength = 2;
             this.maxDelayNumeric.Properties.MaxValue = new decimal(new int[] {
             20,
             0,
             0,
             0});
-            this.maxDelayNumeric.Size = new System.Drawing.Size(47, 20);
-            this.maxDelayNumeric.TabIndex = 10;
             // 
             // maxDelayLable
             // 
-            this.maxDelayLable.AutoSize = true;
-            this.maxDelayLable.Location = new System.Drawing.Point(397, 19);
+            this.maxDelayLable.AccessibleDescription = null;
+            this.maxDelayLable.AccessibleName = null;
+            resources.ApplyResources(this.maxDelayLable, "maxDelayLable");
+            this.maxDelayLable.Font = null;
             this.maxDelayLable.Name = "maxDelayLable";
-            this.maxDelayLable.Size = new System.Drawing.Size(121, 13);
-            this.maxDelayLable.TabIndex = 9;
-            this.maxDelayLable.Text = "Maximum Delay Minutes";
             // 
             // shutdownCheck
             // 
-            this.shutdownCheck.AutoSize = true;
+            this.shutdownCheck.AccessibleDescription = null;
+            this.shutdownCheck.AccessibleName = null;
+            resources.ApplyResources(this.shutdownCheck, "shutdownCheck");
+            this.shutdownCheck.BackgroundImage = null;
             this.shutdownCheck.Checked = true;
             this.shutdownCheck.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.shutdownCheck.Location = new System.Drawing.Point(345, 14);
+            this.shutdownCheck.Font = null;
             this.shutdownCheck.Name = "shutdownCheck";
-            this.shutdownCheck.Size = new System.Drawing.Size(112, 17);
-            this.shutdownCheck.TabIndex = 11;
-            this.shutdownCheck.Text = "Shutdown Monitor";
             this.shutdownCheck.UseVisualStyleBackColor = true;
             // 
             // musicFileLabel
             // 
-            this.musicFileLabel.AutoSize = true;
-            this.musicFileLabel.Location = new System.Drawing.Point(3, 46);
+            this.musicFileLabel.AccessibleDescription = null;
+            this.musicFileLabel.AccessibleName = null;
+            resources.ApplyResources(this.musicFileLabel, "musicFileLabel");
+            this.musicFileLabel.Font = null;
             this.musicFileLabel.Name = "musicFileLabel";
-            this.musicFileLabel.Size = new System.Drawing.Size(58, 13);
-            this.musicFileLabel.TabIndex = 12;
-            this.musicFileLabel.Text = "Play Music";
             // 
             // musicFileEdit
             // 
-            this.musicFileEdit.Location = new System.Drawing.Point(80, 43);
+            resources.ApplyResources(this.musicFileEdit, "musicFileEdit");
+            this.musicFileEdit.BackgroundImage = null;
+            this.musicFileEdit.EditValue = null;
             this.musicFileEdit.Name = "musicFileEdit";
+            this.musicFileEdit.Properties.AccessibleDescription = null;
+            this.musicFileEdit.Properties.AccessibleName = null;
+            this.musicFileEdit.Properties.AutoHeight = ((bool)(resources.GetObject("musicFileEdit.Properties.AutoHeight")));
             this.musicFileEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.musicFileEdit.Size = new System.Drawing.Size(377, 20);
-            this.musicFileEdit.TabIndex = 13;
+            this.musicFileEdit.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("musicFileEdit.Properties.Mask.AutoComplete")));
+            this.musicFileEdit.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("musicFileEdit.Properties.Mask.BeepOnError")));
+            this.musicFileEdit.Properties.Mask.EditMask = resources.GetString("musicFileEdit.Properties.Mask.EditMask");
+            this.musicFileEdit.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("musicFileEdit.Properties.Mask.IgnoreMaskBlank")));
+            this.musicFileEdit.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("musicFileEdit.Properties.Mask.MaskType")));
+            this.musicFileEdit.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("musicFileEdit.Properties.Mask.PlaceHolder")));
+            this.musicFileEdit.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("musicFileEdit.Properties.Mask.SaveLiteral")));
+            this.musicFileEdit.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("musicFileEdit.Properties.Mask.ShowPlaceHolders")));
+            this.musicFileEdit.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("musicFileEdit.Properties.Mask.UseMaskAsDisplayFormat")));
             this.musicFileEdit.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.musicFileEdit_ButtonClick);
             this.musicFileEdit.Validating += new System.ComponentModel.CancelEventHandler(this.musicFileEdit_Validating);
             // 
             // terminateBreakingRadioes
             // 
-            this.terminateBreakingRadioes.EditValue = Hoo.Relaxant.RestrictionLevels.Forbidden;
-            this.terminateBreakingRadioes.Location = new System.Drawing.Point(106, 11);
+            resources.ApplyResources(this.terminateBreakingRadioes, "terminateBreakingRadioes");
+            this.terminateBreakingRadioes.BackgroundImage = null;
             this.terminateBreakingRadioes.Name = "terminateBreakingRadioes";
+            this.terminateBreakingRadioes.Properties.AccessibleDescription = null;
+            this.terminateBreakingRadioes.Properties.AccessibleName = null;
             this.terminateBreakingRadioes.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(Hoo.Relaxant.RestrictionLevels.Free, "Yes"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(Hoo.Relaxant.RestrictionLevels.Forbidden, "No"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(Hoo.Relaxant.RestrictionLevels.Restricted, "Restricted")});
-            this.terminateBreakingRadioes.Size = new System.Drawing.Size(222, 22);
-            this.terminateBreakingRadioes.TabIndex = 14;
             // 
             // terminateBreakingLable
             // 
-            this.terminateBreakingLable.Location = new System.Drawing.Point(3, 16);
+            this.terminateBreakingLable.AccessibleDescription = null;
+            this.terminateBreakingLable.AccessibleName = null;
+            resources.ApplyResources(this.terminateBreakingLable, "terminateBreakingLable");
             this.terminateBreakingLable.Name = "terminateBreakingLable";
-            this.terminateBreakingLable.Size = new System.Drawing.Size(81, 13);
-            this.terminateBreakingLable.TabIndex = 15;
-            this.terminateBreakingLable.Text = "Allow Terminate?";
             // 
             // xtraTabs
             // 
-            this.xtraTabs.Dock = System.Windows.Forms.DockStyle.Top;
-            this.xtraTabs.Location = new System.Drawing.Point(0, 0);
+            this.xtraTabs.AccessibleDescription = null;
+            this.xtraTabs.AccessibleName = null;
+            resources.ApplyResources(this.xtraTabs, "xtraTabs");
+            this.xtraTabs.BackgroundImage = null;
+            this.xtraTabs.Font = null;
+            this.xtraTabs.Images = null;
             this.xtraTabs.Name = "xtraTabs";
             this.xtraTabs.SelectedTabPage = this.generalTab;
-            this.xtraTabs.Size = new System.Drawing.Size(630, 200);
-            this.xtraTabs.TabIndex = 16;
             this.xtraTabs.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.generalTab,
             this.breakingTab});
-            this.xtraTabs.Text = "xtraTabControl1";
             // 
             // generalTab
             // 
+            this.generalTab.AccessibleDescription = null;
+            this.generalTab.AccessibleName = null;
+            resources.ApplyResources(this.generalTab, "generalTab");
+            this.generalTab.BackgroundImage = null;
+            this.generalTab.Controls.Add(this.languageCombo);
+            this.generalTab.Controls.Add(this.label2);
             this.generalTab.Controls.Add(this.workingNumeric);
             this.generalTab.Controls.Add(this.workingLabel);
             this.generalTab.Controls.Add(this.breakingLabel);
             this.generalTab.Controls.Add(this.breakingNumeric);
             this.generalTab.Controls.Add(this.maxDelayLable);
             this.generalTab.Controls.Add(this.maxDelayNumeric);
+            this.generalTab.Font = null;
             this.generalTab.Name = "generalTab";
-            this.generalTab.Size = new System.Drawing.Size(621, 169);
-            this.generalTab.Text = "General";
+            // 
+            // languageCombo
+            // 
+            resources.ApplyResources(this.languageCombo, "languageCombo");
+            this.languageCombo.BackgroundImage = null;
+            this.languageCombo.Name = "languageCombo";
+            this.languageCombo.Properties.AccessibleDescription = null;
+            this.languageCombo.Properties.AccessibleName = null;
+            this.languageCombo.Properties.AutoHeight = ((bool)(resources.GetObject("languageCombo.Properties.AutoHeight")));
+            this.languageCombo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.languageCombo.Properties.Items.AddRange(new object[] {
+            resources.GetString("languageCombo.Properties.Items"),
+            resources.GetString("languageCombo.Properties.Items1"),
+            resources.GetString("languageCombo.Properties.Items2")});
+            this.languageCombo.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("languageCombo.Properties.Mask.AutoComplete")));
+            this.languageCombo.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("languageCombo.Properties.Mask.BeepOnError")));
+            this.languageCombo.Properties.Mask.EditMask = resources.GetString("languageCombo.Properties.Mask.EditMask");
+            this.languageCombo.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("languageCombo.Properties.Mask.IgnoreMaskBlank")));
+            this.languageCombo.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("languageCombo.Properties.Mask.MaskType")));
+            this.languageCombo.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("languageCombo.Properties.Mask.PlaceHolder")));
+            this.languageCombo.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("languageCombo.Properties.Mask.SaveLiteral")));
+            this.languageCombo.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("languageCombo.Properties.Mask.ShowPlaceHolders")));
+            this.languageCombo.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("languageCombo.Properties.Mask.UseMaskAsDisplayFormat")));
+            // 
+            // label2
+            // 
+            this.label2.AccessibleDescription = null;
+            this.label2.AccessibleName = null;
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Font = null;
+            this.label2.Name = "label2";
             // 
             // breakingTab
             // 
+            this.breakingTab.AccessibleDescription = null;
+            this.breakingTab.AccessibleName = null;
+            resources.ApplyResources(this.breakingTab, "breakingTab");
+            this.breakingTab.BackgroundImage = null;
             this.breakingTab.Controls.Add(this.breakingCompletingWarnningEdit);
             this.breakingTab.Controls.Add(this.label1);
             this.breakingTab.Controls.Add(this.terminateBreakingLable);
@@ -279,45 +345,55 @@ namespace Hoo.Relaxant {
             this.breakingTab.Controls.Add(this.terminateBreakingRadioes);
             this.breakingTab.Controls.Add(this.musicFileLabel);
             this.breakingTab.Controls.Add(this.shutdownCheck);
+            this.breakingTab.Font = null;
             this.breakingTab.Name = "breakingTab";
-            this.breakingTab.Size = new System.Drawing.Size(621, 169);
-            this.breakingTab.Text = "Breaking Options";
             // 
             // breakingCompletingWarnningEdit
             // 
-            this.breakingCompletingWarnningEdit.Location = new System.Drawing.Point(156, 69);
+            resources.ApplyResources(this.breakingCompletingWarnningEdit, "breakingCompletingWarnningEdit");
+            this.breakingCompletingWarnningEdit.BackgroundImage = null;
+            this.breakingCompletingWarnningEdit.EditValue = null;
             this.breakingCompletingWarnningEdit.Name = "breakingCompletingWarnningEdit";
+            this.breakingCompletingWarnningEdit.Properties.AccessibleDescription = null;
+            this.breakingCompletingWarnningEdit.Properties.AccessibleName = null;
+            this.breakingCompletingWarnningEdit.Properties.AutoHeight = ((bool)(resources.GetObject("breakingCompletingWarnningEdit.Properties.AutoHeight")));
             this.breakingCompletingWarnningEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.breakingCompletingWarnningEdit.Size = new System.Drawing.Size(301, 20);
-            this.breakingCompletingWarnningEdit.TabIndex = 17;
+            this.breakingCompletingWarnningEdit.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("breakingCompletingWarnningEdit.Properties.Mask.AutoComplete")));
+            this.breakingCompletingWarnningEdit.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("breakingCompletingWarnningEdit.Properties.Mask.BeepOnError")));
+            this.breakingCompletingWarnningEdit.Properties.Mask.EditMask = resources.GetString("breakingCompletingWarnningEdit.Properties.Mask.EditMask");
+            this.breakingCompletingWarnningEdit.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("breakingCompletingWarnningEdit.Properties.Mask.IgnoreMaskBlank")));
+            this.breakingCompletingWarnningEdit.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("breakingCompletingWarnningEdit.Properties.Mask.MaskType")));
+            this.breakingCompletingWarnningEdit.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("breakingCompletingWarnningEdit.Properties.Mask.PlaceHolder")));
+            this.breakingCompletingWarnningEdit.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("breakingCompletingWarnningEdit.Properties.Mask.SaveLiteral")));
+            this.breakingCompletingWarnningEdit.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("breakingCompletingWarnningEdit.Properties.Mask.ShowPlaceHolders")));
+            this.breakingCompletingWarnningEdit.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("breakingCompletingWarnningEdit.Properties.Mask.UseMaskAsDisplayFormat")));
             this.breakingCompletingWarnningEdit.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.breakingCompletingWarnningEdit_ButtonClick);
             this.breakingCompletingWarnningEdit.Validating += new System.ComponentModel.CancelEventHandler(this.breakingCompletingWarnningEdit_Validating);
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 72);
+            this.label1.AccessibleDescription = null;
+            this.label1.AccessibleName = null;
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Font = null;
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 13);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Breaking Completing Warning";
             // 
             // SettingForm
             // 
             this.AcceptButton = this.saveButton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AccessibleDescription = null;
+            this.AccessibleName = null;
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(630, 271);
+            this.BackgroundImage = null;
             this.ControlBox = false;
             this.Controls.Add(this.xtraTabs);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.saveButton);
+            this.Font = null;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SettingForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SettingForm";
             this.Load += new System.EventHandler(this.SettingForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.workingNumeric.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.breakingNumeric.Properties)).EndInit();
@@ -328,6 +404,7 @@ namespace Hoo.Relaxant {
             this.xtraTabs.ResumeLayout(false);
             this.generalTab.ResumeLayout(false);
             this.generalTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.languageCombo.Properties)).EndInit();
             this.breakingTab.ResumeLayout(false);
             this.breakingTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.breakingCompletingWarnningEdit.Properties)).EndInit();
@@ -356,5 +433,7 @@ namespace Hoo.Relaxant {
         private DevExpress.XtraTab.XtraTabPage breakingTab;
         private DevExpress.XtraEditors.ButtonEdit breakingCompletingWarnningEdit;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private DevExpress.XtraEditors.ComboBoxEdit languageCombo;
     }
 }

@@ -130,7 +130,7 @@ namespace Hoo.Relaxant.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("sound\\track.wma")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string MusicFile {
             get {
                 return ((string)(this["MusicFile"]));
@@ -142,13 +142,25 @@ namespace Hoo.Relaxant.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Sound\\benchmark.wav")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string Sound4CompletingBreaking {
             get {
                 return ((string)(this["Sound4CompletingBreaking"]));
             }
             set {
                 this["Sound4CompletingBreaking"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Chinese (Simplified)")]
+        public global::System.Globalization.CultureInfo Language {
+            get {
+                return ((global::System.Globalization.CultureInfo)(this["Language"]));
+            }
+            set {
+                this["Language"] = value;
             }
         }
     }

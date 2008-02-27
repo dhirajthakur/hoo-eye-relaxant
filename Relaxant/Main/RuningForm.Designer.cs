@@ -41,16 +41,17 @@
             // eyesNotifyIcon
             // 
             this.eyesNotifyIcon.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.eyesNotifyIcon.BalloonTipText = "Welcome!\r\nThis is Hoo";
-            this.eyesNotifyIcon.BalloonTipTitle = "Hoo Relaxant";
+            resources.ApplyResources(this.eyesNotifyIcon, "eyesNotifyIcon");
             this.eyesNotifyIcon.ContextMenuStrip = this.mainMenu;
-            this.eyesNotifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("eyesNotifyIcon.Icon")));
-            this.eyesNotifyIcon.Text = "Relax Eyes";
-            this.eyesNotifyIcon.Visible = true;
             this.eyesNotifyIcon.MouseClick += new System.Windows.Forms.MouseEventHandler(this.eyesNotifyIcon_MouseClick);
             // 
             // mainMenu
             // 
+            this.mainMenu.AccessibleDescription = null;
+            this.mainMenu.AccessibleName = null;
+            resources.ApplyResources(this.mainMenu, "mainMenu");
+            this.mainMenu.BackgroundImage = null;
+            this.mainMenu.Font = null;
             this.mainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.previewToolStripMenuItem,
             this.restartToolStripMenuItem,
@@ -58,93 +59,104 @@
             this.quitToolStripMenuItem,
             this.aboutToolStripMenuItem});
             this.mainMenu.Name = "mainMenu";
-            this.mainMenu.Size = new System.Drawing.Size(150, 114);
             // 
             // previewToolStripMenuItem
             // 
+            this.previewToolStripMenuItem.AccessibleDescription = null;
+            this.previewToolStripMenuItem.AccessibleName = null;
+            resources.ApplyResources(this.previewToolStripMenuItem, "previewToolStripMenuItem");
+            this.previewToolStripMenuItem.BackgroundImage = null;
             this.previewToolStripMenuItem.Name = "previewToolStripMenuItem";
-            this.previewToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.previewToolStripMenuItem.Text = "&Breaking Now";
+            this.previewToolStripMenuItem.ShortcutKeyDisplayString = null;
             this.previewToolStripMenuItem.Click += new System.EventHandler(this.previewToolStripMenuItem_Click);
             // 
             // restartToolStripMenuItem
             // 
+            this.restartToolStripMenuItem.AccessibleDescription = null;
+            this.restartToolStripMenuItem.AccessibleName = null;
+            resources.ApplyResources(this.restartToolStripMenuItem, "restartToolStripMenuItem");
+            this.restartToolStripMenuItem.BackgroundImage = null;
             this.restartToolStripMenuItem.Name = "restartToolStripMenuItem";
-            this.restartToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.restartToolStripMenuItem.Text = "Restart &Work";
+            this.restartToolStripMenuItem.ShortcutKeyDisplayString = null;
             this.restartToolStripMenuItem.Click += new System.EventHandler(this.restartToolStripMenuItem_Click);
             // 
             // settingToolStripMenuItem
             // 
+            this.settingToolStripMenuItem.AccessibleDescription = null;
+            this.settingToolStripMenuItem.AccessibleName = null;
+            resources.ApplyResources(this.settingToolStripMenuItem, "settingToolStripMenuItem");
+            this.settingToolStripMenuItem.BackgroundImage = null;
             this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
-            this.settingToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.settingToolStripMenuItem.Text = "&Setting";
+            this.settingToolStripMenuItem.ShortcutKeyDisplayString = null;
             this.settingToolStripMenuItem.Click += new System.EventHandler(this.settingToolStripMenuItem_Click);
             // 
             // quitToolStripMenuItem
             // 
+            this.quitToolStripMenuItem.AccessibleDescription = null;
+            this.quitToolStripMenuItem.AccessibleName = null;
+            resources.ApplyResources(this.quitToolStripMenuItem, "quitToolStripMenuItem");
+            this.quitToolStripMenuItem.BackgroundImage = null;
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.quitToolStripMenuItem.Text = "&Quit";
+            this.quitToolStripMenuItem.ShortcutKeyDisplayString = null;
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
+            this.aboutToolStripMenuItem.AccessibleDescription = null;
+            this.aboutToolStripMenuItem.AccessibleName = null;
+            resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
+            this.aboutToolStripMenuItem.BackgroundImage = null;
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.aboutToolStripMenuItem.Text = "A&bout";
+            this.aboutToolStripMenuItem.ShortcutKeyDisplayString = null;
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // spanBar
             // 
+            resources.ApplyResources(this.spanBar, "spanBar");
+            this.spanBar.BackgroundImage = null;
             this.spanBar.CausesValidation = false;
-            this.spanBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.spanBar.EditValue = "50";
-            this.spanBar.Location = new System.Drawing.Point(0, 83);
             this.spanBar.Name = "spanBar";
+            this.spanBar.Properties.AccessibleDescription = null;
+            this.spanBar.Properties.AccessibleName = null;
             this.spanBar.Properties.Appearance.BackColor = System.Drawing.Color.DimGray;
             this.spanBar.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
             this.spanBar.Properties.Appearance.Options.UseBackColor = true;
             this.spanBar.Properties.Appearance.Options.UseForeColor = true;
+            this.spanBar.Properties.AutoHeight = ((bool)(resources.GetObject("spanBar.Properties.AutoHeight")));
             this.spanBar.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.spanBar.Properties.EndColor = System.Drawing.Color.Firebrick;
             this.spanBar.Properties.StartColor = System.Drawing.SystemColors.HotTrack;
             this.spanBar.Properties.Step = 1;
             this.spanBar.ShowToolTips = false;
-            this.spanBar.Size = new System.Drawing.Size(184, 10);
-            this.spanBar.TabIndex = 11;
             // 
             // spanLabel
             // 
-            this.spanLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.spanLabel.AutoSize = true;
-            this.spanLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spanLabel.AccessibleDescription = null;
+            this.spanLabel.AccessibleName = null;
+            resources.ApplyResources(this.spanLabel, "spanLabel");
             this.spanLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.spanLabel.Location = new System.Drawing.Point(2, 20);
             this.spanLabel.Name = "spanLabel";
-            this.spanLabel.Size = new System.Drawing.Size(164, 42);
-            this.spanLabel.TabIndex = 10;
-            this.spanLabel.Text = "00:00:00";
-            this.spanLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // RunningForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AccessibleDescription = null;
+            this.AccessibleName = null;
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = null;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(184, 93);
             this.ControlBox = false;
             this.Controls.Add(this.spanBar);
             this.Controls.Add(this.spanLabel);
+            this.Font = null;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = null;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RunningForm";
             this.Opacity = 0.7;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Time to Next Break";
             this.TopMost = true;
             this.Deactivate += new System.EventHandler(this.RunningForm_Deactivate);
             this.Load += new System.EventHandler(this.RuningForm_Load);

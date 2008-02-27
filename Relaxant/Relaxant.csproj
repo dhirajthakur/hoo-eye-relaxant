@@ -10,21 +10,23 @@
     <RootNamespace>Hoo.Relaxant</RootNamespace>
     <AssemblyName>Hoo Eye Relaxant</AssemblyName>
     <StartupObject>Hoo.Relaxant.RunningControl</StartupObject>
-    <ApplicationIcon>swan.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
     <ManifestCertificateThumbprint>1A18AE1CBD1AD4637D5CD471135BE1168130E855</ManifestCertificateThumbprint>
     <ManifestKeyFile>Hush RelaxEyes_TemporaryKey.pfx</ManifestKeyFile>
     <GenerateManifests>true</GenerateManifests>
-    <SignManifests>true</SignManifests>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SignManifests>false</SignManifests>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>2.0</OldToolsVersion>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <PublishUrl>E:\Welkin Programs\Release\</PublishUrl>
+    <SignAssembly>false</SignAssembly>
+    <PublishUrl>http://code.google.com/p/hoo-eye-relaxant/</PublishUrl>
     <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
+    <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
@@ -32,10 +34,13 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
+    <SupportUrl>http://code.google.com/p/hoo-eye-relaxant/</SupportUrl>
+    <ProductName>Hoo Eye Relaxant</ProductName>
+    <PublisherName>Welkin Hu</PublisherName>
     <AutorunEnabled>true</AutorunEnabled>
     <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <UseApplicationTrust>false</UseApplicationTrust>
+    <UseApplicationTrust>true</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -116,6 +121,18 @@
       <SubType>Designer</SubType>
       <DependentUpon>BreakingForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Main\BreakingForm.zh-CHS.resx">
+      <DependentUpon>BreakingForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\RuningForm.zh-CHS.resx">
+      <DependentUpon>RuningForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\SettingForm.zh-CHS.resx">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Main\RuningForm.resx">
       <SubType>Designer</SubType>
@@ -156,7 +173,7 @@
     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
       <Visible>False</Visible>
       <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
-      <Install>true</Install>
+      <Install>false</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
       <Visible>False</Visible>
@@ -166,7 +183,7 @@
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5</ProductName>
-      <Install>false</Install>
+      <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
@@ -182,9 +199,6 @@
       <Project>{57B37972-E5B1-4A43-AFD9-1E74175ABC51}</Project>
       <Name>MonitorService</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="swan.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

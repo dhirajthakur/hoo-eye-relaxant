@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using Hoo.Relaxant.Properties;
+using System.Globalization;
 
 namespace Hoo.Relaxant {
     public partial class SettingForm : Form {
@@ -21,34 +22,8 @@ namespace Hoo.Relaxant {
 
 
 
-
-
-        //private void workingText_Validating(object sender, CancelEventArgs e) {
-            
-        //    if (!Int32.TryParse(workingText.Text, out workingMinutes)) {
-        //        e.Cancel = true;
-        //        MessageBox.Show("The inputed working minutes is not a numeric!","Working minutes validation fail", MessageBoxButtons.OK);
-        //    } else if (workingMinutes < 1 | workingMinutes > 120) {
-        //        e.Cancel = true;
-        //        MessageBox.Show("The inputed working minutes should between 1 and 120.", "Working minutes validation fail", MessageBoxButtons.OK);
-        //    }
-        //}
-
-        //private void breakingText_Validating(object sender, CancelEventArgs e) {
-
-        //    if (!Int32.TryParse(breakingText.Text, out breakingMinutes)) {
-        //        e.Cancel = true;
-        //        MessageBox.Show("The inputed breaking minutes is not a numeric!", "Breaking minutes validation fail", MessageBoxButtons.OK);
-        //    } else if (breakingMinutes < 1 | breakingMinutes > 30) {
-        //        e.Cancel = true;
-        //        MessageBox.Show("The inputed breaking minutes should between 1 and 30.", "Breaking minutes validation fail", MessageBoxButtons.OK);
-        //    }
-        //}
-
         private void cancelButton_Click(object sender, EventArgs e) {
             musicFileEdit.CausesValidation = false;
-            //workingText.CausesValidation = false;
-            //breakingText.CausesValidation = false;
             this.Close();
         }
 
@@ -58,13 +33,24 @@ namespace Hoo.Relaxant {
             breakingNumeric.Value = Settings.Default.BreakingMinutes;
             maxDelayNumeric.Value = Settings.Default.MaxDelayMinutes;
 
+            languageCombo.Properties.Items.Clear();
+            languageCombo.Properties.Items.AddRange(new object[] {
+            new MyCultureInfo(""), new MyCultureInfo("en"),new MyCultureInfo("zh-CN")});
+            MyCultureInfo current = new MyCultureInfo(Settings.Default.Language);
+            languageCombo.EditValue = current;
+
+
             //Breaking Settings
             musicFileEdit.Text = Settings.Default.MusicFile;
             breakingCompletingWarnningEdit.Text = Settings.Default.Sound4CompletingBreaking;
             shutdownCheck.Checked = Settings.Default.ShutdownMonitor;
             terminateBreakingRadioes.EditValue = Settings.Default.Resctriction4TerminateBreaking;
-
+            
+    
         }
+
+
+        
 
         private void saveButton_Click(object sender, EventArgs e) {
             
@@ -72,6 +58,7 @@ namespace Hoo.Relaxant {
             Settings.Default.WorkingMinutes = (int)workingNumeric.Value;
             Settings.Default.BreakingMinutes = (int)breakingNumeric.Value;
             Settings.Default.MaxDelayMinutes = (int)maxDelayNumeric.Value;
+            Settings.Default.Language = ((MyCultureInfo)languageCombo.SelectedItem).Culture;
 
             //Breaking Settings
 
@@ -82,6 +69,9 @@ namespace Hoo.Relaxant {
 
 
             Settings.Default.Save();
+
+            MessageBox.Show("Save Sucessfully, Some settings perhaps maybe not work until restart this program.", "", MessageBoxButtons.OK);
+
             
             this.Close();
         }
@@ -170,10 +160,31 @@ namespace Hoo.Relaxant {
             }
         }
 
-       
 
-        
 
+
+        /// <summary>
+        /// Rewrite ToString() to fit DevExpress ComboBoxEdit's item display text.
+        /// </summary>
+        private class MyCultureInfo {
+
+            public CultureInfo Culture { get; set; }
+
+            public MyCultureInfo(string cultureName) {
+                Culture = new CultureInfo(cultureName);
+            }
+
+            public MyCultureInfo(CultureInfo culture) {
+                Culture = culture;
+            }
+
+            public override string ToString() {
+                if (Culture.Name == "") return "System Default";
+                return Culture.NativeName;
+            }
+
+
+        }
 
         
     }
