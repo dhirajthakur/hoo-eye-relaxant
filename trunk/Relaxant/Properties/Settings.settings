@@ -30,10 +30,13 @@
       <Value Profile="(Default)">Free</Value>
     </Setting>
     <Setting Name="MusicFile" Type="System.String" Scope="User">
-      <Value Profile="(Default)">sound\track.wma</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Sound4CompletingBreaking" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Sound\benchmark.wav</Value>
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Language" Type="System.Globalization.CultureInfo" Scope="User">
+      <Value Profile="(Default)">Chinese (Simplified)</Value>
     </Setting>
   </Settings>
 </SettingsFile>

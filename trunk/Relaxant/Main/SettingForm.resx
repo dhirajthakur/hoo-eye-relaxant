@@ -117,10 +117,361 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="fileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="&gt;&gt;maxDelayLable.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="maxDelayLable.Location" type="System.Drawing.Point, System.Drawing">
+    <value>397, 19</value>
+  </data>
+  <data name="&gt;&gt;fileDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="generalTab.Text" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="breakingCompletingWarnningEdit.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="maxDelayNumeric.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="terminateBreakingLable.Text" xml:space="preserve">
+    <value>Allow Terminate?</value>
+  </data>
+  <data name="breakingTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>621, 169</value>
+  </data>
+  <data name="&gt;&gt;workingLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="maxDelayNumeric.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 20</value>
+  </data>
+  <data name="workingLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="shutdownCheck.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 17</value>
+  </data>
+  <data name="workingNumeric.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="musicFileEdit.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;musicFileLabel.Name" xml:space="preserve">
+    <value>musicFileLabel</value>
+  </data>
+  <data name="&gt;&gt;maxDelayLable.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="xtraTabs.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="maxDelayNumeric.EditValue" type="System.Decimal, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="terminateBreakingRadioes.EditValue" xml:space="preserve">
+    <value>Free</value>
+  </data>
+  <data name="&gt;&gt;musicFileLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="terminateBreakingLable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 13</value>
+  </data>
+  <data name="&gt;&gt;shutdownCheck.Parent" xml:space="preserve">
+    <value>breakingTab</value>
+  </data>
+  <data name="&gt;&gt;breakingTab.Parent" xml:space="preserve">
+    <value>xtraTabs</value>
+  </data>
+  <data name="&gt;&gt;xtraTabs.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;languageCombo.Parent" xml:space="preserve">
+    <value>generalTab</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="languageCombo.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="musicFileLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;breakingLabel.Name" xml:space="preserve">
+    <value>breakingLabel</value>
+  </data>
+  <data name="saveButton.Text" xml:space="preserve">
+    <value>&amp;Save</value>
+  </data>
+  <data name="languageCombo.Properties.Items2" xml:space="preserve">
+    <value>Chinese</value>
+  </data>
+  <data name="breakingNumeric.Properties.Mask.EditMask" xml:space="preserve">
+    <value>N00</value>
+  </data>
+  <data name="maxDelayLable.Text" xml:space="preserve">
+    <value>Maximum Delay Minutes</value>
+  </data>
+  <data name="&gt;&gt;terminateBreakingLable.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="languageCombo.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="terminateBreakingRadioes.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="generalTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>621, 169</value>
+  </data>
+  <data name="musicFileEdit.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="maxDelayNumeric.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="breakingTab.Text" xml:space="preserve">
+    <value>Breaking Options</value>
+  </data>
+  <data name="maxDelayLable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 13</value>
+  </data>
+  <data name="workingNumeric.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="breakingCompletingWarnningEdit.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;shutdownCheck.Name" xml:space="preserve">
+    <value>shutdownCheck</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 72</value>
+  </data>
+  <data name="languageCombo.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="breakingCompletingWarnningEdit.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;musicFileEdit.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v7.3" name="DevExpress.XtraEditors.v7.3, Version=7.3.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1" />
+  <data name="workingNumeric.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v7.3">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;breakingLabel.Parent" xml:space="preserve">
+    <value>generalTab</value>
+  </data>
+  <data name="maxDelayNumeric.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="musicFileEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>80, 43</value>
+  </data>
+  <data name="workingNumeric.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;saveButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="saveButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="breakingNumeric.Location" type="System.Drawing.Point, System.Drawing">
+    <value>320, 15</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>SettingForm</value>
+  </data>
+  <data name="&gt;&gt;breakingNumeric.Name" xml:space="preserve">
+    <value>breakingNumeric</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 13</value>
+  </data>
+  <data name="musicFileEdit.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v7.3">
+    <value>Default</value>
+  </data>
+  <data name="workingNumeric.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;terminateBreakingRadioes.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.RadioGroup, DevExpress.XtraEditors.v7.3, Version=7.3.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Breaking Completing Warning</value>
+  </data>
+  <data name="languageCombo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 50</value>
+  </data>
+  <data name="workingNumeric.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Hoo Eye Relaxant Settings</value>
+  </data>
+  <data name="&gt;&gt;breakingLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="breakingLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;maxDelayNumeric.Parent" xml:space="preserve">
+    <value>generalTab</value>
+  </data>
+  <data name="breakingLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>222, 19</value>
+  </data>
+  <data name="&gt;&gt;maxDelayLable.Parent" xml:space="preserve">
+    <value>generalTab</value>
+  </data>
+  <data name="&gt;&gt;xtraTabs.Name" xml:space="preserve">
+    <value>xtraTabs</value>
+  </data>
+  <data name="breakingNumeric.EditValue" type="System.Decimal, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="maxDelayNumeric.Location" type="System.Drawing.Point, System.Drawing">
+    <value>533, 15</value>
+  </data>
+  <data name="&gt;&gt;fileDialog.Name" xml:space="preserve">
+    <value>fileDialog</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="musicFileLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;maxDelayNumeric.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v7.3, Version=7.3.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+  </data>
+  <data name="&gt;&gt;breakingNumeric.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v7.3, Version=7.3.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+  </data>
+  <data name="languageCombo.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;generalTab.Parent" xml:space="preserve">
+    <value>xtraTabs</value>
+  </data>
+  <data name="breakingCompletingWarnningEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="languageCombo.Properties.Items" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="musicFileLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="&gt;&gt;xtraTabs.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;saveButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>breakingTab</value>
+  </data>
+  <data name="cancelButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="workingNumeric.EditValue" type="System.Decimal, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="languageCombo.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="shutdownCheck.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;xtraTabs.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabControl, DevExpress.XtraEditors.v7.3, Version=7.3.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+  </data>
+  <data name="&gt;&gt;shutdownCheck.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="musicFileEdit.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="maxDelayNumeric.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="saveButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>184, 224</value>
+  </data>
+  <data name="musicFileLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 46</value>
+  </data>
+  <data name="&gt;&gt;languageCombo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;languageCombo.Name" xml:space="preserve">
+    <value>languageCombo</value>
+  </data>
+  <data name="xtraTabs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>630, 200</value>
+  </data>
+  <data name="&gt;&gt;terminateBreakingLable.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v7.3, Version=7.3.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="maxDelayNumeric.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="maxDelayLable.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="breakingLabel.Text" xml:space="preserve">
+    <value>Breaking Minutes</value>
+  </data>
+  <data name="cancelButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>304, 224</value>
+  </data>
+  <data name="languageCombo.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v7.3">
+    <value>None</value>
+  </data>
+  <data name="cancelButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 31</value>
+  </data>
+  <data name="workingNumeric.Properties.Mask.EditMask" xml:space="preserve">
+    <value>N00</value>
+  </data>
+  <data name="breakingCompletingWarnningEdit.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;terminateBreakingRadioes.Parent" xml:space="preserve">
+    <value>breakingTab</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAB
@@ -149,4 +500,373 @@
         AAAEIAAAAAAAAAAAAAAAAAAAgAEAAMADAAA=
 </value>
   </data>
+  <data name="&gt;&gt;breakingCompletingWarnningEdit.Parent" xml:space="preserve">
+    <value>breakingTab</value>
+  </data>
+  <data name="maxDelayLable.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;maxDelayNumeric.Name" xml:space="preserve">
+    <value>maxDelayNumeric</value>
+  </data>
+  <data name="&gt;&gt;breakingCompletingWarnningEdit.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="saveButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="&gt;&gt;breakingCompletingWarnningEdit.Name" xml:space="preserve">
+    <value>breakingCompletingWarnningEdit</value>
+  </data>
+  <data name="&gt;&gt;breakingTab.Name" xml:space="preserve">
+    <value>breakingTab</value>
+  </data>
+  <data name="musicFileEdit.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;cancelButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="breakingCompletingWarnningEdit.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;shutdownCheck.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="languageCombo.Properties.Items1" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="workingNumeric.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v7.3">
+    <value>Numeric</value>
+  </data>
+  <data name="cancelButton.Text" xml:space="preserve">
+    <value>&amp;Cancel</value>
+  </data>
+  <data name="workingLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 19</value>
+  </data>
+  <data name="maxDelayNumeric.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v7.3">
+    <value>Numeric</value>
+  </data>
+  <data name="&gt;&gt;breakingTab.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v7.3, Version=7.3.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+  </data>
+  <data name="musicFileEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>377, 20</value>
+  </data>
+  <data name="languageCombo.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="breakingNumeric.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="breakingNumeric.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;generalTab.Name" xml:space="preserve">
+    <value>generalTab</value>
+  </data>
+  <data name="languageCombo.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="workingLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;musicFileLabel.Parent" xml:space="preserve">
+    <value>breakingTab</value>
+  </data>
+  <data name="maxDelayNumeric.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="&gt;&gt;workingNumeric.Name" xml:space="preserve">
+    <value>workingNumeric</value>
+  </data>
+  <data name="maxDelayNumeric.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;terminateBreakingLable.Parent" xml:space="preserve">
+    <value>breakingTab</value>
+  </data>
+  <data name="&gt;&gt;saveButton.Name" xml:space="preserve">
+    <value>saveButton</value>
+  </data>
+  <data name="breakingCompletingWarnningEdit.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;generalTab.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="breakingNumeric.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;musicFileEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ButtonEdit, DevExpress.XtraEditors.v7.3, Version=7.3.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+  </data>
+  <data name="breakingNumeric.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;workingNumeric.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="cancelButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;workingLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="breakingCompletingWarnningEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>156, 69</value>
+  </data>
+  <data name="breakingCompletingWarnningEdit.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="musicFileEdit.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="languageCombo.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 53</value>
+  </data>
+  <data name="&gt;&gt;terminateBreakingRadioes.Name" xml:space="preserve">
+    <value>terminateBreakingRadioes</value>
+  </data>
+  <data name="&gt;&gt;breakingNumeric.Parent" xml:space="preserve">
+    <value>generalTab</value>
+  </data>
+  <data name="xtraTabs.Text" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="workingNumeric.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 20</value>
+  </data>
+  <data name="musicFileEdit.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="musicFileEdit.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="terminateBreakingLable.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="workingNumeric.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="terminateBreakingLable.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 16</value>
+  </data>
+  <data name="workingNumeric.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="&gt;&gt;musicFileEdit.Name" xml:space="preserve">
+    <value>musicFileEdit</value>
+  </data>
+  <data name="workingLabel.Text" xml:space="preserve">
+    <value>Continous Working Minutes</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="xtraTabs.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;breakingNumeric.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="breakingNumeric.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="shutdownCheck.Text" xml:space="preserve">
+    <value>Shutdown Monitor</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>630, 271</value>
+  </data>
+  <data name="breakingNumeric.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="xtraTabs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="musicFileLabel.Text" xml:space="preserve">
+    <value>Play Music</value>
+  </data>
+  <data name="&gt;&gt;terminateBreakingLable.Name" xml:space="preserve">
+    <value>terminateBreakingLable</value>
+  </data>
+  <data name="maxDelayNumeric.Properties.Mask.EditMask" xml:space="preserve">
+    <value>N00</value>
+  </data>
+  <data name="&gt;&gt;musicFileLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;workingNumeric.Parent" xml:space="preserve">
+    <value>generalTab</value>
+  </data>
+  <data name="workingLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 13</value>
+  </data>
+  <data name="terminateBreakingRadioes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>222, 22</value>
+  </data>
+  <data name="languageCombo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 20</value>
+  </data>
+  <data name="workingNumeric.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 15</value>
+  </data>
+  <data name="&gt;&gt;workingNumeric.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v7.3, Version=7.3.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+  </data>
+  <data name="&gt;&gt;breakingTab.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="breakingCompletingWarnningEdit.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v7.3">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;maxDelayLable.Name" xml:space="preserve">
+    <value>maxDelayLable</value>
+  </data>
+  <data name="breakingCompletingWarnningEdit.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v7.3">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;breakingLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="languageCombo.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v7.3">
+    <value>Default</value>
+  </data>
+  <data name="languageCombo.EditValue" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;musicFileEdit.Parent" xml:space="preserve">
+    <value>breakingTab</value>
+  </data>
+  <data name="workingNumeric.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="breakingNumeric.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;workingLabel.Name" xml:space="preserve">
+    <value>workingLabel</value>
+  </data>
+  <data name="breakingLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="maxDelayNumeric.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;maxDelayNumeric.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="breakingCompletingWarnningEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>301, 20</value>
+  </data>
+  <data name="&gt;&gt;terminateBreakingRadioes.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;generalTab.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v7.3, Version=7.3.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+  </data>
+  <data name="shutdownCheck.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>generalTab</value>
+  </data>
+  <data name="breakingLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 13</value>
+  </data>
+  <data name="maxDelayNumeric.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v7.3">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;workingLabel.Parent" xml:space="preserve">
+    <value>generalTab</value>
+  </data>
+  <data name="musicFileEdit.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="languageCombo.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="breakingNumeric.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v7.3">
+    <value>Default</value>
+  </data>
+  <data name="musicFileEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="terminateBreakingRadioes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>106, 11</value>
+  </data>
+  <data name="&gt;&gt;cancelButton.Name" xml:space="preserve">
+    <value>cancelButton</value>
+  </data>
+  <data name="&gt;&gt;languageCombo.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v7.3, Version=7.3.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+  </data>
+  <data name="shutdownCheck.Location" type="System.Drawing.Point, System.Drawing">
+    <value>345, 14</value>
+  </data>
+  <data name="&gt;&gt;cancelButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="breakingNumeric.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="saveButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 31</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="fileDialog.Filter" xml:space="preserve">
+    <value>All sound files(*.wav;*.mp3;*.wma)|*.wav;*.mp3;*.wma|Wave files(*.wav)|*.wav|MP3 files(*.mp3)|*.mp3|Windows Media Files(*.wma)|*.wma</value>
+  </data>
+  <data name="breakingCompletingWarnningEdit.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="breakingNumeric.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v7.3">
+    <value>Numeric</value>
+  </data>
+  <data name="breakingNumeric.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 20</value>
+  </data>
+  <data name="&gt;&gt;breakingCompletingWarnningEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ButtonEdit, DevExpress.XtraEditors.v7.3, Version=7.3.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+  </data>
+  <data name="musicFileEdit.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v7.3">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;saveButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cancelButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="fileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Chinese (Simplified)</value>
+  </metadata>
 </root>

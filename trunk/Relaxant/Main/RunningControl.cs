@@ -1,13 +1,10 @@
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 using Hoo.Relaxant.Properties;
 using Hoo.Common;
 using Hoo.MonitorService;
+using System.Globalization;
 
 // Configure log4net using the .config file
 [assembly: log4net.Config.XmlConfigurator(Watch = true)]
@@ -47,6 +44,10 @@ namespace Hoo.Relaxant {
         /// </summary>
         [STAThread]
         static void Main() {
+
+            CultureInfo culture = Properties.Settings.Default.Language;            
+            log.Debug(StringUtil.Join("Current culture is %1", culture.Name));            
+            System.Threading.Thread.CurrentThread.CurrentUICulture = culture;                
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             ManagerForm = new RunningForm(new RunningControl());
@@ -133,7 +134,7 @@ namespace Hoo.Relaxant {
             this.RunningTimer.Interval = 1000;
             this.RunningTimer.Tick += new System.EventHandler(this.runningTimer_Tick);
 
-            monitor = new MonitorMessageNotifier();
+            monitor = MonitorMessageNotifier.getInstance();
             monitor.MonitorLocked += new EventHandler<MonitorEventArgs>(monitor_MonitorLocked);
             monitor.MonitorUnlocked += new EventHandler<MonitorEventArgs>(monitor_MonitorUnlocked);
             monitor.Start();

@@ -6,9 +6,12 @@ using Hoo.Common;
 using Hoo.Relaxant.Properties;
 using Org.Mentalis.Multimedia;
 
-namespace Hoo.Relaxant {
 
-    public partial class BreakingForm : Form {
+namespace Hoo.Relaxant {
+    /// <summary>
+    /// When breaking, show this form with full screen model.
+    /// </summary>
+    partial class BreakingForm : Form {
 
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
@@ -160,6 +163,7 @@ namespace Hoo.Relaxant {
         }
 
         private void BreakingForm_FormClosing(object sender, FormClosingEventArgs e) {
+            
             MonitorController.TurnOn();
             StopMusic();
         }
