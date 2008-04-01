@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Hoo Monitor Controller")]
-[assembly: AssemblyDescription("Provides API to control monitor")]
+[assembly: AssemblyTitle("MarqueeControlLibrary")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Hoo")]
-[assembly: AssemblyProduct("Hoo")]
-[assembly: AssemblyCopyright("Welkin Hu")]
-[assembly: AssemblyTrademark("Welkin Hu")]
+[assembly: AssemblyCompany("EDS")]
+[assembly: AssemblyProduct("MarqueeControlLibrary")]
+[assembly: AssemblyCopyright("Copyright © EDS 2008")]
+[assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("6e325de4-90d5-4eb8-8aed-fe407bd347d2")]
+[assembly: Guid("ddbf0381-a707-49c8-a69d-cd6c0f8bc998")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -29,9 +29,8 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-// You can specify all the values or you can default the Revision and Build Numbers 
+// You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
-
-[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("Relaxant UnitTest")]

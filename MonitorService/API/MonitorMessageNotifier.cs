@@ -1,13 +1,48 @@
 ﻿using System;
 using System.Threading;
 using System.Windows.Forms;
-namespace Hoo.MonitorService {
+namespace Hoo.Device.Monitor {
 
     public class MonitorMessageNotifier : IMonitorEvents {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
+
+        #region Singleton pattern code
+
+        private static MonitorMessageNotifier _instance = null;
+        /// <summary>
+        /// Implements Singleton pattern
+        /// </summary>
+        /// <returns></returns>
+        public static MonitorMessageNotifier getInstance() {
+            if (_instance == null) {
+                _instance = new MonitorMessageNotifier();
+            }
+
+            return _instance;
+        }
+
+        /// <summary>
+        /// This constructor could not be called externally.
+        /// </summary>
+        private MonitorMessageNotifier() {
+            IsWorking = false;
+        }
+
+        ~MonitorMessageNotifier() {
+            if(IsWorking)   Stop();
+        }
+
+
+        #endregion
+        
         Thread listenThread;
         MessageListenForm listenForm;
+
+        /// <summary>
+        /// Indicates whether MonitorMessageNotifier is watching monitor events or not.
+        /// </summary>
+        private bool IsWorking { get; set; }
 
         public static bool IsMonitorShutdown { get; set; }
 
@@ -99,6 +134,7 @@ namespace Hoo.MonitorService {
                 }
             );
             listenThread.Start();
+            IsWorking = true;
         }
 
 
@@ -131,6 +167,8 @@ namespace Hoo.MonitorService {
                     listenThread.Join();
                 }
                 listenThread = null;
+
+                IsWorking = false;
             } catch (System.Exception ex) {
                 log.Error("There are some errors when stop listening!", ex);
             }

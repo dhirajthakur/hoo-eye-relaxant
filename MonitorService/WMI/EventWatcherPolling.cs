@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Management;
 
-namespace Hoo.MonitorService {
+namespace Hoo.Device.Monitor {
 
     
     // This example shows synchronous consumption of events. 

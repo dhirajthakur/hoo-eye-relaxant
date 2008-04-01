@@ -3,14 +3,17 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Reflection;
 
-namespace Hoo.InputDevice {
+namespace Hoo.Device.Keyboard {
+
+   
+
     public abstract class InputDeviceHook {
        
         /// <summary>
         /// Type ID of hook, such as WH_KEYBOARD_LL or WH_MOUSE_LL;
         /// Every concrete class should define it.
         /// </summary> 
-        protected HookTypeID _hookType;
+        protected HookTypeID HookType {get; set;}
 
 
         /// <summary>
@@ -28,8 +31,12 @@ namespace Hoo.InputDevice {
         /// 详细请参见MSDN中关于 CallbackOnCollectedDelegate 的描述
         /// </remarks>
         protected HookProc _hookHandler;
+               
 
-
+        ~InputDeviceHook() {
+            UnInstallHook();
+        }
+        
         public virtual bool DisableDevice { get; set; }
        
 
@@ -53,7 +60,7 @@ namespace Hoo.InputDevice {
 
             if (this._hook == IntPtr.Zero) {
                 this._hookHandler = new HookProc(HookProc);
-                this._hook = Win32API.SetWindowsHookEx(_hookType, this._hookHandler, pInstance, 0);
+                this._hook = Win32Helper.SetWindowsHookEx(HookType, this._hookHandler, pInstance, 0);
                 if (this._hook == IntPtr.Zero) {
                     this.UnInstallHook();
                     return false;
@@ -70,7 +77,7 @@ namespace Hoo.InputDevice {
         public virtual bool UnInstallHook() {
             bool result = true;        
             if (this._hook != IntPtr.Zero) {
-                result = (Win32API.UnhookWindowsHookEx(this._hook) && result);
+                result = (Win32Helper.UnhookWindowsHookEx(this._hook) && result);
                 this._hook = IntPtr.Zero;
             }
 

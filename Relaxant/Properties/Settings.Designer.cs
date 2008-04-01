@@ -71,24 +71,15 @@ namespace Hoo.Relaxant.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Password")]
-        public global::Hoo.Relaxant.AdminModes AdminMode {
-            get {
-                return ((global::Hoo.Relaxant.AdminModes)(this["AdminMode"]));
-            }
-        }
-        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2")]
-        public int MaxDelayMinutes {
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        public int DelayMinutes {
             get {
-                return ((int)(this["MaxDelayMinutes"]));
+                return ((int)(this["DelayMinutes"]));
             }
             set {
-                this["MaxDelayMinutes"] = value;
+                this["DelayMinutes"] = value;
             }
         }
         
@@ -161,6 +152,78 @@ namespace Hoo.Relaxant.Properties {
             }
             set {
                 this["Language"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("50")]
+        public int MaxWorkingMinutes {
+            get {
+                return ((int)(this["MaxWorkingMinutes"]));
+            }
+            set {
+                this["MaxWorkingMinutes"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2")]
+        public int MinBreakingMinutes {
+            get {
+                return ((int)(this["MinBreakingMinutes"]));
+            }
+            set {
+                this["MinBreakingMinutes"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("20")]
+        public int MaxDelayMinutes {
+            get {
+                return ((int)(this["MaxDelayMinutes"]));
+            }
+            set {
+                this["MaxDelayMinutes"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.1")]
+        public decimal MinBreakingPercent {
+            get {
+                return ((decimal)(this["MinBreakingPercent"]));
+            }
+            set {
+                this["MinBreakingPercent"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("F12")]
+        public global::System.Windows.Forms.Keys ShutdownMonitorHotkey {
+            get {
+                return ((global::System.Windows.Forms.Keys)(this["ShutdownMonitorHotkey"]));
+            }
+            set {
+                this["ShutdownMonitorHotkey"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2")]
+        public int Resctrition4RestartWorking {
+            get {
+                return ((int)(this["Resctrition4RestartWorking"]));
+            }
+            set {
+                this["Resctrition4RestartWorking"] = value;
             }
         }
     }

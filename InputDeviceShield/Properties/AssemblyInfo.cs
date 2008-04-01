@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Input Device (Keyboard & Mouse) Shield")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Provide API to control keyboard and mouse")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Hoo")]
 [assembly: AssemblyProduct("Hoo")]
 [assembly: AssemblyCopyright("Welkin Hu")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("Welkin Hu")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 

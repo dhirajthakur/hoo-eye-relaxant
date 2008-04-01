@@ -125,10 +125,10 @@
     <value>56, 118</value>
   </data>
   <data name="messageLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>600, 25</value>
+    <value>579, 25</value>
   </data>
   <data name="messageLabel.Text" xml:space="preserve">
-    <value>你已经连续使用电脑很长时间，现在请休息一下，已放松眼睛！</value>
+    <value>你已经连续使用电脑很长时间，现在请休息一下，放松眼睛！</value>
   </data>
   <data name="delayButton.Text" xml:space="preserve">
     <value>推迟（&amp;D）</value>

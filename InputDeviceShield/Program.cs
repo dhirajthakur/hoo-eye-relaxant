@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using Hoo.InputDevice.Test;
+using Hoo.Device.Keyboard.Test;
 // Configure log4net using the .config file
 [assembly: log4net.Config.XmlConfigurator(Watch = true)]
-namespace Hoo.InputDevice
+namespace Hoo.Device.Keyboard
 {
     static class Program
     {

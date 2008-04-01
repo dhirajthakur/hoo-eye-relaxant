@@ -139,12 +139,6 @@
   <data name="cancelButton.Text" xml:space="preserve">
     <value>取消（&amp;C）</value>
   </data>
-  <data name="maxDelayLable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 13</value>
-  </data>
-  <data name="maxDelayLable.Text" xml:space="preserve">
-    <value>最大推迟时间（分钟）</value>
-  </data>
   <data name="shutdownCheck.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 17</value>
   </data>
@@ -157,12 +151,6 @@
   <data name="musicFileLabel.Text" xml:space="preserve">
     <value>播放音乐</value>
   </data>
-  <data name="terminateBreakingLable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 13</value>
-  </data>
-  <data name="terminateBreakingLable.Text" xml:space="preserve">
-    <value>可否中断休息</value>
-  </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
   </data>
@@ -171,6 +159,78 @@
   </data>
   <data name="generalTab.Text" xml:space="preserve">
     <value>常规选项</value>
+  </data>
+  <data name="terminateBreakingLable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 13</value>
+  </data>
+  <data name="terminateBreakingLable.Text" xml:space="preserve">
+    <value>可否中断休息</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 13</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>最多推迟时间（分钟）</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 13</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>最多可工作时间（分钟）</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 13</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>最少休息时间（分钟）</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 13</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>休息时间相对工作时间的最低百分比</value>
+  </data>
+  <data name="minBreakingPercentNumeric.Location" type="System.Drawing.Point, System.Drawing">
+    <value>217, 74</value>
+  </data>
+  <data name="setPasswordButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>461, 6</value>
+  </data>
+  <data name="setPasswordButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 26</value>
+  </data>
+  <data name="setPasswordButton.Text" xml:space="preserve">
+    <value>重设密码（&amp;P）</value>
+  </data>
+  <data name="passwordText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>152, 9</value>
+  </data>
+  <data name="passwordButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>342, 6</value>
+  </data>
+  <data name="passwordButton.Text" xml:space="preserve">
+    <value>验证密码（&amp;V）</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 13</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>输入密码激活本页选项</value>
+  </data>
+  <data name="adminTab.Text" xml:space="preserve">
+    <value>孩子看管选项</value>
+  </data>
+  <data name="ShutdownHotkeyLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 14</value>
+  </data>
+  <data name="ShutdownHotkeyLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 13</value>
+  </data>
+  <data name="ShutdownHotkeyLabel.Text" xml:space="preserve">
+    <value>关闭显示器热键</value>
+  </data>
+  <data name="shutdownHotkeyCombo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 10</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 13</value>

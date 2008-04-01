@@ -2,7 +2,7 @@ using System;
 using System.Management;
 using System.Windows.Forms;
 
-namespace Hoo.MonitorService {
+namespace Hoo.Device.Monitor {
 
     // This example shows asynchronous consumption of events.
     // In this example you are listening for timer events.

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Hoo.MonitorService {
+namespace Hoo.Device.Monitor {
     
     public class MonitorEventArgs : EventArgs {
         public MonitorEventArgs(String pUserName) {

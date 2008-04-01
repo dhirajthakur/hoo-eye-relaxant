@@ -1,4 +1,4 @@
-namespace Hoo.InputDevice.Test {
+namespace Hoo.Device.Keyboard.Test {
     partial class TraceForm {
         /// <summary>
         /// Required designer variable.

@@ -1,8 +1,8 @@
 
 using System;
 using System.Windows.Forms;
-using Hoo.MonitorService;
-using Hoo.Common;
+using Hoo.Device.Monitor;
+
 using Hoo.Relaxant.Properties;
 using Org.Mentalis.Multimedia;
 
@@ -30,7 +30,9 @@ namespace Hoo.Relaxant {
             WindowState = FormWindowState.Normal;
 
 #endif
-            this.Text = AboutBox.AssemblyProduct + " " + AboutBox.AssemblyVersion;
+            this.Text = AssemblyInfo.Product + " " + AssemblyInfo.Version;
+
+            turnMonitorToolStripMenuItem.ShortcutKeys = Settings.Default.ShutdownMonitorHotkey;
 
             breakingSpanBar.Properties.Maximum = Manager.PlannedSeconds;
             breakingSpanBar.Position = Manager.PendingSeconds;
@@ -116,7 +118,7 @@ namespace Hoo.Relaxant {
                 MessageBox.Show("You could not delay any longer untill a full seconds breaking!","Invalided Action",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return;
             } else if (availableSeconds < seconds) {
-                string msg = StringUtil.Join("You only have %1 seconds to delay before a full seconds breaking. Do you still want to delay?", availableSeconds);
+                string msg = String.Format("You only have {0} seconds to delay before a full seconds breaking. Do you still want to delay?", availableSeconds);
                 if (MessageBox.Show(msg, "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes) {
                     seconds = availableSeconds;
                 } else {
@@ -137,7 +139,7 @@ namespace Hoo.Relaxant {
                 closeToolStripMenuItem.Enabled = false;
                 closeButton.ForeColor = System.Drawing.Color.DimGray;
             }
-            if (Settings.Default.MaxDelayMinutes * 60 <= Manager.DelayedSeconds) {
+            if (Settings.Default.DelayMinutes * 60 <= Manager.DelayedSeconds) {
                 delayButton.Enabled = false;
                 delayToolStripMenuItem.Enabled = false;
             }

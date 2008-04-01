@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Hoo.Relaxant</RootNamespace>
     <AssemblyName>Hoo Eye Relaxant</AssemblyName>
-    <StartupObject>Hoo.Relaxant.RunningControl</StartupObject>
+    <StartupObject>Hoo.Relaxant.Program</StartupObject>
     <ApplicationIcon>
     </ApplicationIcon>
     <ManifestCertificateThumbprint>1A18AE1CBD1AD4637D5CD471135BE1168130E855</ManifestCertificateThumbprint>
@@ -73,14 +73,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Data.v7.3, Version=7.3.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL">
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.Utils.v7.3, Version=7.3.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL">
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.XtraEditors.v7.3, Version=7.3.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL">
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
     </Reference>
+    <Reference Include="DevExpress.XtraGrid.v7.3, Version=7.3.7.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v7.3, Version=7.3.7.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1" />
     <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Library\log4net-1.2.10\bin\net\2.0\release\log4net.dll</HintPath>
@@ -112,6 +117,7 @@
     </Compile>
     <Compile Include="Main\RunningControl.cs">
     </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Main\AboutBox.resx">
       <SubType>Designer</SubType>
@@ -133,7 +139,10 @@
       <DependentUpon>SettingForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Main\SettingForm.zh-CN.resx">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main\RuningForm.resx">
       <SubType>Designer</SubType>
       <DependentUpon>RuningForm.cs</DependentUpon>
@@ -142,6 +151,7 @@
       <SubType>Designer</SubType>
       <DependentUpon>SettingForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -187,10 +197,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Common\Common.csproj">
-      <Project>{B700EFE2-8300-4A57-A799-3B0860CF3425}</Project>
-      <Name>Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MediaPlayingLibrary\MediaPlayingLibrary.csproj">
       <Project>{C53418E0-0FCB-47F7-8807-81F5E7B697FB}</Project>
       <Name>MediaPlayingLibrary</Name>

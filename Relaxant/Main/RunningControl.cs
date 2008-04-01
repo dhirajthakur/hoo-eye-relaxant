@@ -2,23 +2,15 @@ using System;
 using System.ComponentModel;
 using System.Windows.Forms;
 using Hoo.Relaxant.Properties;
-using Hoo.Common;
-using Hoo.MonitorService;
-using System.Globalization;
 
-// Configure log4net using the .config file
-[assembly: log4net.Config.XmlConfigurator(Watch = true)]
+using Hoo.Device.Monitor;
+using System.Globalization;
+using System.Diagnostics;
+
+
 namespace Hoo.Relaxant {
 
-    public enum AdminModes {
-        //Administer is free to all users.
-        Free,
-        //Admin actions request password.
-        Password,
-        //Only windows administrators or specified account could administer this program.
-        WindowsIntegrated
-    }
-
+    
     public enum RestrictionLevels {
         //Function is available without restriction.
         Free,
@@ -31,32 +23,12 @@ namespace Hoo.Relaxant {
     /// <summary>
     /// Entry and manager class.
     /// </summary>
-    public partial class RunningControl {
+    public class RunningControl {
 
-        #region Initialize Program
+
 
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        public static RunningForm ManagerForm { get; set; }
-
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main() {
-
-            CultureInfo culture = Properties.Settings.Default.Language;            
-            log.Debug(StringUtil.Join("Current culture is %1", culture.Name));            
-            System.Threading.Thread.CurrentThread.CurrentUICulture = culture;                
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            ManagerForm = new RunningForm(new RunningControl());
-
-            Application.Run(ManagerForm);
-
-        }
-
-        #endregion
 
         #region Public Events
 
@@ -114,7 +86,7 @@ namespace Hoo.Relaxant {
 
         public void RefreshSettings() {
 
-            MaxDelaySeconds = Settings.Default.MaxDelayMinutes * 60;
+            MaxDelaySeconds = Settings.Default.DelayMinutes * 60;
             WorkingSeconds = Settings.Default.WorkingMinutes * 60;
             BreakingSeconds = Settings.Default.BreakingMinutes * 60;
         }
@@ -138,8 +110,8 @@ namespace Hoo.Relaxant {
             monitor.MonitorLocked += new EventHandler<MonitorEventArgs>(monitor_MonitorLocked);
             monitor.MonitorUnlocked += new EventHandler<MonitorEventArgs>(monitor_MonitorUnlocked);
             monitor.Start();
-            
-         
+
+
 
             RefreshSettings();
             CompleteBreaking();
@@ -219,7 +191,7 @@ namespace Hoo.Relaxant {
 
             } else {
                 log.Error("No enough seconds for delaying!");
-                throw new Exception(StringUtil.Join("There are %1 available delay, you could not delay %2 seconds. ", AvailableDelaySeconds, seconds));
+                throw new Exception(String.Format("There are {0} available delay, you could not delay {0} seconds. ", AvailableDelaySeconds, seconds));
             }
         }
 
@@ -228,7 +200,7 @@ namespace Hoo.Relaxant {
                 return (MaxDelaySeconds - DelayedSeconds);
             }
         }
-        
+
 
         public void QuitApplication() {
             if (Settings.Default.Resctriction4Quit == RestrictionLevels.Forbidden) return;
@@ -247,7 +219,7 @@ namespace Hoo.Relaxant {
 
         private void runningTimer_Tick(object sender, EventArgs e) {
             PendingSeconds--;
-            if (UnderDelay & State == RuningStates.Working ) DelayedSeconds++;
+            if (UnderDelay & State == RuningStates.Working) DelayedSeconds++;
 
             if (PendingSeconds <= 0) {
                 switch (this.State) {

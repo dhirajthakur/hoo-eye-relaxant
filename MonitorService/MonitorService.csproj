@@ -7,8 +7,8 @@
     <ProjectGuid>{57B37972-E5B1-4A43-AFD9-1E74175ABC51}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Hoo.MonitorService</RootNamespace>
-    <AssemblyName>Hoo.MonitorService</AssemblyName>
+    <RootNamespace>Hoo.Device.Monitor</RootNamespace>
+    <AssemblyName>Hoo.Device.Monitor</AssemblyName>
     <StartupObject>
     </StartupObject>
     <FileUpgradeFlags>
@@ -16,6 +16,7 @@
     <OldToolsVersion>2.0</OldToolsVersion>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -59,6 +60,7 @@
   <ItemGroup>
     <Compile Include="API\MonitorController.cs" />
     <Compile Include="API\MonitorMessageNotifier.cs" />
+    <Compile Include="API\Win32Helpers.cs" />
     <Compile Include="Test\TestMessage.cs" />
     <Compile Include="Test\TestSens.cs" />
     <Compile Include="WMI\EventWatcherAsync.cs" />
