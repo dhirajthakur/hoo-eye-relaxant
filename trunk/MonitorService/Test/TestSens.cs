@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Hoo.MonitorService.SENS;
-namespace Hoo.MonitorService.Test {
+using Hoo.Device.Monitor.SENS;
+namespace Hoo.Device.Monitor.Test {
     class TestSens {
 
         internal TestSens() {

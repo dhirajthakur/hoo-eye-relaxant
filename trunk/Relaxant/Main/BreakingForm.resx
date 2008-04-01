@@ -128,6 +128,9 @@
     <value>$this</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="messageLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>694, 25</value>
+  </data>
   <data name="delay1ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 22</value>
   </data>
@@ -137,8 +140,8 @@
   <data name="delayButton.Text" xml:space="preserve">
     <value>&amp;Delay</value>
   </data>
-  <data name="&gt;&gt;delay1ToolStripMenuItem.Name" xml:space="preserve">
-    <value>delay1ToolStripMenuItem</value>
+  <data name="closeButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>424, 370</value>
   </data>
   <data name="&gt;&gt;messageLabel.Parent" xml:space="preserve">
     <value>$this</value>
@@ -181,13 +184,10 @@
     <value>175, 22</value>
   </data>
   <data name="&gt;&gt;breakingSpanBar.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.ProgressBarControl, DevExpress.XtraEditors.v7.3, Version=7.3.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+    <value>DevExpress.XtraEditors.ProgressBarControl, DevExpress.XtraEditors.v7.3, Version=7.3.7.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
   </data>
   <data name="&gt;&gt;delay1ToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="messageLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
   </data>
   <data name="&gt;&gt;delayButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -195,14 +195,17 @@
   <data name="breakingSpanBar.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="contextMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 70</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Hoo Relax Your Eyes {Project.Version}</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>722, 447</value>
   </data>
-  <data name="closeButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 15.75pt</value>
+  <data name="&gt;&gt;delay4ToolStripMenuItem.Name" xml:space="preserve">
+    <value>delay4ToolStripMenuItem</value>
   </data>
   <data name="breakingSpanBar.Size" type="System.Drawing.Size, System.Drawing">
     <value>698, 5</value>
@@ -213,9 +216,6 @@
   <data name="closeToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Close</value>
   </data>
-  <data name="closeButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>424, 370</value>
-  </data>
   <data name="breakingSpanLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -225,8 +225,8 @@
   <data name="breakingSpanLabel.Text" xml:space="preserve">
     <value>00:00:00</value>
   </data>
-  <data name="breakingSpanBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left, Right</value>
+  <data name="messageLabel.Text" xml:space="preserve">
+    <value>You are working for long time, please take a break and relax your eyes.</value>
   </data>
   <data name="&gt;&gt;breakingSpanBar.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -242,9 +242,6 @@
   </data>
   <data name="&gt;&gt;breakingSpanLabel.ZOrder" xml:space="preserve">
     <value>3</value>
-  </data>
-  <data name="closeButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 50</value>
   </data>
   <data name="breakingSpanLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 27.75pt</value>
@@ -267,8 +264,8 @@
   <data name="messageLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 15.75pt</value>
   </data>
-  <data name="messageLabel.Text" xml:space="preserve">
-    <value>You are working for long time, please take a break and relax your eyes.</value>
+  <data name="&gt;&gt;closeButton.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>BreakingForm</value>
@@ -312,8 +309,8 @@
   <data name="delayButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 15.75pt</value>
   </data>
-  <data name="contextMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 70</value>
+  <data name="&gt;&gt;delay1ToolStripMenuItem.Name" xml:space="preserve">
+    <value>delay1ToolStripMenuItem</value>
   </data>
   <data name="delay2ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 22</value>
@@ -357,14 +354,17 @@
   <data name="&gt;&gt;delayButton.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="closeButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="breakingSpanLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
   <data name="delay1ToolStripMenuItem.Text" xml:space="preserve">
     <value>Delay 0.5m</value>
   </data>
-  <data name="&gt;&gt;closeButton.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="closeButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 15.75pt</value>
   </data>
   <data name="delay4ToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
     <value />
@@ -409,8 +409,8 @@
         AAAEIAAAAAAAAAAAAAAAAAAAgAEAAMADAAA=
 </value>
   </data>
-  <data name="messageLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>694, 25</value>
+  <data name="closeButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 50</value>
   </data>
   <data name="delay2ToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+2</value>
@@ -430,8 +430,8 @@
   <data name="messageLabel.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="closeButton.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="breakingSpanBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
   </data>
   <data name="&gt;&gt;delayButton.Name" xml:space="preserve">
     <value>delayButton</value>
@@ -442,8 +442,8 @@
   <data name="breakingSpanBar.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 267</value>
   </data>
-  <data name="&gt;&gt;delay4ToolStripMenuItem.Name" xml:space="preserve">
-    <value>delay4ToolStripMenuItem</value>
+  <data name="messageLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
   </data>
   <metadata name="contextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>145, 3</value>

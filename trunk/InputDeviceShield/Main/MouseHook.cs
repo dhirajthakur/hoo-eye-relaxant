@@ -2,18 +2,50 @@ using System;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Reflection;
-using Hoo.Common;
 
-namespace Hoo.InputDevice {
+
+namespace Hoo.Device.Keyboard {
 
     /// <summary>
     /// Hook process for mouse
     /// </summary>
     public class MouseHook : InputDeviceHook {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
+        #region Singleton pattern code
+
+        private static MouseHook _instance = null;
+        /// <summary>
+        /// Implements Singleton pattern
+        /// </summary>
+        /// <returns></returns>
+        public static MouseHook getInstance() {
+            if (_instance == null) {
+                _instance = new MouseHook();
+            }
+
+            return _instance;
+        }
+
+        #endregion
+
+
         public bool DisableMove { get; set; }
         public bool DisableButton { get; set; }
         public bool DisableWheel { get; set; }
+
+        
+        /// <summary>
+        /// MouseHook is Singleton object, could not be created externally.
+        /// </summary>
+        private MouseHook() {
+            HookType = HookTypeID.WH_MOUSE_LL;
+            DisableMove = false;
+            DisableWheel = false;
+            DisableButton = false;
+        }
+
+        
 
         public override bool DisableDevice {
             get { return (DisableMove & DisableButton & DisableWheel); }
@@ -24,15 +56,6 @@ namespace Hoo.InputDevice {
             }
         }
 
-        public MouseHook() {
-            _hookType = HookTypeID.WH_MOUSE_LL;
-            DisableMove = false;
-            DisableWheel = false;
-            DisableButton = false;
-
-        }
-
-        
         public event MouseEventHandler OnMouseActivity;
 
         /// <summary>
@@ -102,7 +125,7 @@ namespace Hoo.InputDevice {
                 int clickCount = 0;
                 if (button != MouseButtons.None) {
                     if (log.IsDebugEnabled)
-                        log.Debug(StringUtil.Join("Captured mouse button. code %1, wparam %2, lparam %3.", nCode, wParam, lParam));
+                        log.Debug(String.Format("Captured mouse button. code {0}, wparam {1}, lparam {2}.", nCode, wParam, lParam));
 
                     if (wParam == (int)WM_MOUSE.WM_LBUTTONDBLCLK || wParam == (int)WM_MOUSE.WM_RBUTTONDBLCLK) clickCount = 2;
                     else clickCount = 1;
@@ -114,7 +137,7 @@ namespace Hoo.InputDevice {
                 OnMouseActivity(this, e);
             }
 
-            return Win32API.CallNextHookEx(this._hook, nCode, wParam, lParam);
+            return Win32Helper.CallNextHookEx(this._hook, nCode, wParam, lParam);
         }
 
 

@@ -157,7 +157,7 @@
     <value>settingToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;spanBar.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.ProgressBarControl, DevExpress.XtraEditors.v7.3, Version=7.3.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+    <value>DevExpress.XtraEditors.ProgressBarControl, DevExpress.XtraEditors.v7.3, Version=7.3.7.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
   </data>
   <data name="aboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>149, 22</value>

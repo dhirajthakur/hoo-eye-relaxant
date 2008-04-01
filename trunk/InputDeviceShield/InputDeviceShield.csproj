@@ -7,8 +7,8 @@
     <ProjectGuid>{02CE0BC2-94CC-4346-9031-7FC6B8C165C5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Hoo.InputDevice</RootNamespace>
-    <AssemblyName>Hoo.InputDeviceShield</AssemblyName>
+    <RootNamespace>Hoo.Device.Keyboard</RootNamespace>
+    <AssemblyName>Hoo.Device.Keyboard</AssemblyName>
     <ManifestCertificateThumbprint>78E388CA5618FE4120E5B1579851B98BAD8EE3C8</ManifestCertificateThumbprint>
     <ManifestKeyFile>KeyboardHook_TemporaryKey.pfx</ManifestKeyFile>
     <GenerateManifests>false</GenerateManifests>
@@ -72,7 +72,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Main\MouseHook2.cs" />
     <Compile Include="Main\KeyboardHook.cs" />
     <Compile Include="Main\InputDeviceHook.cs" />
     <Compile Include="Main\MouseHook.cs" />
@@ -88,7 +87,7 @@
       <SubType>Designer</SubType>
       <DependentUpon>TraceForm.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="Main\Win32API.cs" />
+    <Compile Include="Main\Win32Helper.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
@@ -112,12 +111,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Common\Common.csproj">
-      <Project>{B700EFE2-8300-4A57-A799-3B0860CF3425}</Project>
-      <Name>Common</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

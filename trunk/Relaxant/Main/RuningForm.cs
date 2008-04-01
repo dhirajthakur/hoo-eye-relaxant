@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Hoo.Relaxant.Properties;
-using Hoo.Common;
+
 namespace Hoo.Relaxant {
 
 
@@ -30,6 +30,11 @@ namespace Hoo.Relaxant {
         public RunningForm(RunningControl pManager) {
             this.Manager = pManager;
             InitializeComponent();
+#if DEBUG
+            this.eyesNotifyIcon.Text += " [DEBUG] ";
+            this.Text += " [DEBUG] ";
+
+#endif
             this.Left = Screen.PrimaryScreen.WorkingArea.Width - this.Width;
             this.Top = Screen.PrimaryScreen.WorkingArea.Height - this.Height;
 

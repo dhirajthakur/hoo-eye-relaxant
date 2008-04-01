@@ -14,11 +14,8 @@
     <Setting Name="Resctriction4TerminateBreaking" Type="Hoo.Relaxant.RestrictionLevels" Scope="User">
       <Value Profile="(Default)">Free</Value>
     </Setting>
-    <Setting Name="AdminMode" Type="Hoo.Relaxant.AdminModes" Scope="Application">
-      <Value Profile="(Default)">Password</Value>
-    </Setting>
-    <Setting Name="MaxDelayMinutes" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">2</Value>
+    <Setting Name="DelayMinutes" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">10</Value>
     </Setting>
     <Setting Name="ShutdownMonitor" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
@@ -37,6 +34,24 @@
     </Setting>
     <Setting Name="Language" Type="System.Globalization.CultureInfo" Scope="User">
       <Value Profile="(Default)">Chinese (Simplified)</Value>
+    </Setting>
+    <Setting Name="MaxWorkingMinutes" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="MinBreakingMinutes" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="MaxDelayMinutes" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="MinBreakingPercent" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">0.1</Value>
+    </Setting>
+    <Setting Name="ShutdownMonitorHotkey" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">F12</Value>
+    </Setting>
+    <Setting Name="Resctrition4RestartWorking" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
     </Setting>
   </Settings>
 </SettingsFile>

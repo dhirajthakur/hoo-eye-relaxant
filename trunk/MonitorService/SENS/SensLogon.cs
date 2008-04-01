@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using SensEvents;
 
-namespace Hoo.MonitorService.SENS {
+namespace Hoo.Device.Monitor.SENS {
     public class SensLogon : IMonitorEvents {
 
         private static SensLogonInterop eventCatcher;

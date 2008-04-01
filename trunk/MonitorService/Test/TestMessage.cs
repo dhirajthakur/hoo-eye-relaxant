@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 
-namespace Hoo.MonitorService.Test {
+namespace Hoo.Device.Monitor.Test {
     public class TestMessage {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
@@ -12,7 +12,7 @@ namespace Hoo.MonitorService.Test {
             Console.WriteLine("Please press any key to Start Locking...");
             Console.ReadKey(true);
 
-            MonitorMessageNotifier notifier = new MonitorMessageNotifier();
+            MonitorMessageNotifier notifier = MonitorMessageNotifier.getInstance();
             notifier.MonitorLocked += new EventHandler<MonitorEventArgs>(notifier_MonitorLocked);
             notifier.MonitorUnlocked += new EventHandler<MonitorEventArgs>(notifier_MonitorUnlocked);
             notifier.MonitorShutdown += new EventHandler<MonitorEventArgs>(notifier_MonitorShutdown);

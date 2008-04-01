@@ -6,9 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Threading;
-using Hoo.InputDevice;
+using Hoo.Device.Keyboard;
 
-namespace Hoo.InputDevice.Test {
+namespace Hoo.Device.Keyboard.Test {
     public partial class TraceForm : Form {
         private MouseHook _mouseHook = null;
         private KeyboardHook _keyboardHook = null;
@@ -16,8 +16,8 @@ namespace Hoo.InputDevice.Test {
         public TraceForm() {
             InitializeComponent();
 
-            _mouseHook = new MouseHook();
-            _keyboardHook = new KeyboardHook();
+            _mouseHook = MouseHook.getInstance();
+            _keyboardHook = KeyboardHook.getInstance();
 
             _mouseHook.OnMouseActivity += new MouseEventHandler(hook_MainMouseMove);
             _keyboardHook.OnKeyDown += new KeyEventHandler(hook_MainKeyDown);

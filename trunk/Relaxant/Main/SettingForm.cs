@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using System.IO;
 using Hoo.Relaxant.Properties;
 using System.Globalization;
+using DevExpress.XtraEditors;
 
 namespace Hoo.Relaxant {
     public partial class SettingForm : Form {
@@ -16,7 +17,7 @@ namespace Hoo.Relaxant {
 
         public SettingForm() {
             InitializeComponent();
-            this.Text = "Settings of " + AboutBox.AssemblyProduct + " " + AboutBox.AssemblyVersion;
+            this.Text += AssemblyInfo.Product + " " + AssemblyInfo.Version;
         }
 
 
@@ -27,11 +28,41 @@ namespace Hoo.Relaxant {
             this.Close();
         }
 
+
+        private void SetTerminateBreakingRadio(RestrictionLevels restriction) {
+
+            switch(restriction) {
+                case RestrictionLevels.Free:
+                    freeTerminationRadio.Checked = true;
+                    break;
+                case RestrictionLevels.Forbidden:
+                    forbiddenTerminationRadio.Checked = true;
+                    break;
+                default:
+                    RestrcitTeminationRadio.Checked = true;
+                    break;
+            }
+        }
+
+        private RestrictionLevels GetTerminateBreakingRadio() {
+            if(freeTerminationRadio.Checked) return RestrictionLevels.Free;
+            if(forbiddenTerminationRadio.Checked) return RestrictionLevels.Forbidden;
+            return RestrictionLevels.Restricted;
+
+        }
+
         private void SettingForm_Load(object sender, EventArgs e) {
+            //Administration Settings            
+            maxWorkingNumeric.Value = Settings.Default.MaxWorkingMinutes;
+            minBreakingNumeric.Value = Settings.Default.MinBreakingMinutes;
+            minBreakingPercentNumeric.Value = Settings.Default.MinBreakingPercent;
+            maxDelayNumeric.Value = Settings.Default.MaxDelayMinutes;
+            SetTerminateBreakingRadio(Settings.Default.Resctriction4TerminateBreaking);
+
             //General Setting
             workingNumeric.Value = Settings.Default.WorkingMinutes;
             breakingNumeric.Value = Settings.Default.BreakingMinutes;
-            maxDelayNumeric.Value = Settings.Default.MaxDelayMinutes;
+            delayNumeric.Value = Settings.Default.DelayMinutes;
 
             languageCombo.Properties.Items.Clear();
             languageCombo.Properties.Items.AddRange(new object[] {
@@ -44,35 +75,45 @@ namespace Hoo.Relaxant {
             musicFileEdit.Text = Settings.Default.MusicFile;
             breakingCompletingWarnningEdit.Text = Settings.Default.Sound4CompletingBreaking;
             shutdownCheck.Checked = Settings.Default.ShutdownMonitor;
-            terminateBreakingRadioes.EditValue = Settings.Default.Resctriction4TerminateBreaking;
-            
-    
+
+            shutdownHotkeyCombo.Properties.Items.Clear();
+            shutdownHotkeyCombo.Properties.Items.AddRange(
+                new Keys[] { Keys.F1, Keys.F2, Keys.F3, Keys.F4, Keys.F5, Keys.F6, Keys.F7, Keys.F8, Keys.F9, Keys.F10, Keys.F11, Keys.F12 }
+                );
+            shutdownHotkeyCombo.EditValue = Settings.Default.ShutdownMonitorHotkey;
+
+
         }
 
 
-        
+
 
         private void saveButton_Click(object sender, EventArgs e) {
-            
+            //Administration Settings
+            Settings.Default.MaxWorkingMinutes = (int)maxWorkingNumeric.Value;
+            Settings.Default.MinBreakingMinutes = (int)minBreakingNumeric.Value;
+            Settings.Default.MinBreakingPercent = (decimal)minBreakingPercentNumeric.Value;
+            Settings.Default.MaxDelayMinutes = (int)maxDelayNumeric.Value;
+            Settings.Default.Resctriction4TerminateBreaking = GetTerminateBreakingRadio();
+
             //General Settings
             Settings.Default.WorkingMinutes = (int)workingNumeric.Value;
             Settings.Default.BreakingMinutes = (int)breakingNumeric.Value;
-            Settings.Default.MaxDelayMinutes = (int)maxDelayNumeric.Value;
+            Settings.Default.DelayMinutes = (int)delayNumeric.Value;
             Settings.Default.Language = ((MyCultureInfo)languageCombo.SelectedItem).Culture;
 
             //Breaking Settings
-
-            Settings.Default.Resctriction4TerminateBreaking = (RestrictionLevels)terminateBreakingRadioes.EditValue;
-            Settings.Default.MusicFile = musicFileEdit.Text;            
+            Settings.Default.MusicFile = musicFileEdit.Text;
             Settings.Default.ShutdownMonitor = shutdownCheck.Checked;
+            Settings.Default.ShutdownMonitorHotkey = (Keys)shutdownHotkeyCombo.SelectedItem;
             Settings.Default.Sound4CompletingBreaking = breakingCompletingWarnningEdit.Text;
 
 
             Settings.Default.Save();
 
-            MessageBox.Show("Save Sucessfully, Some settings perhaps maybe not work until restart this program.", "", MessageBoxButtons.OK);
+            MessageBox.Show(saveMessage.Text, "", MessageBoxButtons.OK);
 
-            
+
             this.Close();
         }
 
@@ -99,15 +140,37 @@ namespace Hoo.Relaxant {
             //}
         }
 
+        /// <summary>
+        /// Customize SpinEdit up/down behavior based on increment step.
+        /// For example, when increment step is 5, and current value is 13:
+        /// Click up button will set the value to 15, click down button will set valut to 10.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void integer_Spin(object sender, DevExpress.XtraEditors.Controls.SpinEventArgs e) {
+            SpinEdit spin = sender as SpinEdit;
+            int divisor = 5;
+            int compliment = 0;
+            int percent = 1;
+            if(spin.Properties.Increment < 1) {
+                //The value of spin is percentage.
+                percent = 100;
+            }
 
-        private void workingNumeric_Spin(object sender, DevExpress.XtraEditors.Controls.SpinEventArgs e) {
-            int num = (int)workingNumeric.Value % 5;
-            if (num > 0) {
-                if (e.IsSpinUp) {
-                    workingNumeric.Value -= num;
+            divisor = (int)(spin.Properties.Increment * percent);
+            compliment = (int)(spin.Value * percent) % divisor;
+
+            if(compliment > 0) {
+                if(e.IsSpinUp) {
+                    int result = (int)(spin.Value * percent) - compliment;
+                    spin.Value = result / percent;
+                    //spin.Value -= (compliment / percent);
+                    
                 } else {
                     //This event is earlier than default spin actions.
-                    workingNumeric.Value += (5 - num);
+                    int result = (int)(spin.Value * percent) + divisor - compliment;
+                    spin.Value = result / percent;
+                    //spin.Value += ((divisor - compliment) / percent);
                 }
             }
         }
@@ -128,15 +191,15 @@ namespace Hoo.Relaxant {
 
         private void musicFileEdit_Validating(object sender, CancelEventArgs e) {
             //Check whether the file's full path is correct or not
-            if (musicFileEdit.Text.Trim() != "") {
+            if(musicFileEdit.Text.Trim() != "") {
                 FileInfo f = new FileInfo(musicFileEdit.Text.Trim());
-                if (!f.Exists) {
+                if(!f.Exists) {
                     e.Cancel = true;
                     return;
                 }
                 string ext = f.Extension.ToLower();
-                if (ext != ".wav" && ext != ".mp3" && ext != ".wma") {       
-                    
+                if(ext != ".wav" && ext != ".mp3" && ext != ".wma") {
+
                     e.Cancel = true;
                     return;
                 }
@@ -145,14 +208,14 @@ namespace Hoo.Relaxant {
 
         private void breakingCompletingWarnningEdit_Validating(object sender, CancelEventArgs e) {
             //Check whether the file's full path is correct or not
-            if (breakingCompletingWarnningEdit.Text.Trim() != "") {
+            if(breakingCompletingWarnningEdit.Text.Trim() != "") {
                 FileInfo f = new FileInfo(breakingCompletingWarnningEdit.Text.Trim());
-                if (!f.Exists) {
+                if(!f.Exists) {
                     e.Cancel = true;
                     return;
                 }
                 string ext = f.Extension.ToLower();
-                if (ext != ".wav" && ext != ".mp3" && ext != ".wma") {
+                if(ext != ".wav" && ext != ".mp3" && ext != ".wma") {
 
                     e.Cancel = true;
                     return;
@@ -179,13 +242,21 @@ namespace Hoo.Relaxant {
             }
 
             public override string ToString() {
-                if (Culture.Name == "") return "System Default";
+                if(Culture.Name == "") return "System Default";
                 return Culture.NativeName;
             }
 
 
         }
 
-        
+        private void passwordButton_Click(object sender, EventArgs e) {
+
+        }
+
+        private void passwordText_KeyUp(object sender, KeyEventArgs e) {
+
+        }
+
+
     }
 }
