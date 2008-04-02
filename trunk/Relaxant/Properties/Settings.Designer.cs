@@ -134,18 +134,18 @@ namespace Hoo.Relaxant.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Sound4CompletingBreaking {
+        public string Sound4CompletingBreak {
             get {
-                return ((string)(this["Sound4CompletingBreaking"]));
+                return ((string)(this["Sound4CompletingBreak"]));
             }
             set {
-                this["Sound4CompletingBreaking"] = value;
+                this["Sound4CompletingBreak"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Chinese (Simplified)")]
+        [global::System.Configuration.DefaultSettingValueAttribute("(Default)")]
         public global::System.Globalization.CultureInfo Language {
             get {
                 return ((global::System.Globalization.CultureInfo)(this["Language"]));
@@ -224,6 +224,18 @@ namespace Hoo.Relaxant.Properties {
             }
             set {
                 this["Resctrition4RestartWorking"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Hand")]
+        public string SystemSound4CompletingBreak {
+            get {
+                return ((string)(this["SystemSound4CompletingBreak"]));
+            }
+            set {
+                this["SystemSound4CompletingBreak"] = value;
             }
         }
     }

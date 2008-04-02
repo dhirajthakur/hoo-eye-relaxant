@@ -367,7 +367,7 @@
     <value>breakingTab</value>
   </data>
   <data name="&gt;&gt;shutdownCheck.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="musicFileLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -394,7 +394,7 @@
     <value>breakingTab</value>
   </data>
   <data name="&gt;&gt;musicFileLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="musicFileEdit.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 43</value>
@@ -415,7 +415,7 @@
     <value>breakingTab</value>
   </data>
   <data name="&gt;&gt;musicFileEdit.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="xtraTabs.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -990,6 +990,75 @@
   <data name="&gt;&gt;adminTab.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="breakCompletingSystemWarningCombo.EditValue" xml:space="preserve">
+    <value />
+  </data>
+  <data name="breakCompletingSystemWarningCombo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>301, 95</value>
+  </data>
+  <data name="breakCompletingSystemWarningCombo.Properties.Items" xml:space="preserve">
+    <value />
+  </data>
+  <data name="breakCompletingSystemWarningCombo.Properties.Items1" xml:space="preserve">
+    <value>Asterisk</value>
+  </data>
+  <data name="breakCompletingSystemWarningCombo.Properties.Items2" xml:space="preserve">
+    <value>Exclamation</value>
+  </data>
+  <data name="breakCompletingSystemWarningCombo.Properties.Items3" xml:space="preserve">
+    <value>Hand</value>
+  </data>
+  <data name="breakCompletingSystemWarningCombo.Properties.Items4" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="breakCompletingSystemWarningCombo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 20</value>
+  </data>
+  <data name="breakCompletingSystemWarningCombo.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;breakCompletingSystemWarningCombo.Name" xml:space="preserve">
+    <value>breakCompletingSystemWarningCombo</value>
+  </data>
+  <data name="&gt;&gt;breakCompletingSystemWarningCombo.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v7.3, Version=7.3.7.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+  </data>
+  <data name="&gt;&gt;breakCompletingSystemWarningCombo.Parent" xml:space="preserve">
+    <value>breakingTab</value>
+  </data>
+  <data name="&gt;&gt;breakCompletingSystemWarningCombo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 102</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>284, 13</value>
+  </data>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Break-Completing Warning (System Sound by PC Speaker)</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>breakingTab</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="ShutdownHotkeyLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1015,7 +1084,7 @@
     <value>breakingTab</value>
   </data>
   <data name="&gt;&gt;ShutdownHotkeyLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="shutdownHotkeyCombo.EditValue" xml:space="preserve">
     <value>F12</value>
@@ -1075,28 +1144,28 @@
     <value>breakingTab</value>
   </data>
   <data name="&gt;&gt;shutdownHotkeyCombo.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
-  <data name="breakingCompletingWarnningEdit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>156, 69</value>
+  <data name="breakCompletingWarnningEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>142, 69</value>
   </data>
-  <data name="breakingCompletingWarnningEdit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>301, 20</value>
+  <data name="breakCompletingWarnningEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>315, 20</value>
   </data>
-  <data name="breakingCompletingWarnningEdit.TabIndex" type="System.Int32, mscorlib">
+  <data name="breakCompletingWarnningEdit.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
-  <data name="&gt;&gt;breakingCompletingWarnningEdit.Name" xml:space="preserve">
-    <value>breakingCompletingWarnningEdit</value>
+  <data name="&gt;&gt;breakCompletingWarnningEdit.Name" xml:space="preserve">
+    <value>breakCompletingWarnningEdit</value>
   </data>
-  <data name="&gt;&gt;breakingCompletingWarnningEdit.Type" xml:space="preserve">
+  <data name="&gt;&gt;breakCompletingWarnningEdit.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.ButtonEdit, DevExpress.XtraEditors.v7.3, Version=7.3.7.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
   </data>
-  <data name="&gt;&gt;breakingCompletingWarnningEdit.Parent" xml:space="preserve">
+  <data name="&gt;&gt;breakCompletingWarnningEdit.Parent" xml:space="preserve">
     <value>breakingTab</value>
   </data>
-  <data name="&gt;&gt;breakingCompletingWarnningEdit.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;breakCompletingWarnningEdit.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1105,13 +1174,13 @@
     <value>3, 72</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>147, 13</value>
+    <value>133, 13</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Breaking Completing Warning</value>
+    <value>Break-Completing Warning</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -1123,7 +1192,7 @@
     <value>breakingTab</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="breakingTab.Size" type="System.Drawing.Size, System.Drawing">
     <value>621, 169</value>
@@ -1145,9 +1214,6 @@
   </data>
   <data name="xtraTabs.Text" xml:space="preserve">
     <value>xtraTabControl1</value>
-  </data>
-  <data name="xtraTabs.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="&gt;&gt;xtraTabs.Name" xml:space="preserve">
     <value>xtraTabs</value>

@@ -9,11 +9,13 @@ using System.IO;
 using Hoo.Relaxant.Properties;
 using System.Globalization;
 using DevExpress.XtraEditors;
+using System.Media;
 
 namespace Hoo.Relaxant {
     public partial class SettingForm : Form {
         private int workingMinutes = Settings.Default.WorkingMinutes;
         private int breakingMinutes = Settings.Default.BreakingMinutes;
+        private bool loading = false;
 
         public SettingForm() {
             InitializeComponent();
@@ -52,6 +54,7 @@ namespace Hoo.Relaxant {
         }
 
         private void SettingForm_Load(object sender, EventArgs e) {
+            loading = true;
             //Administration Settings            
             maxWorkingNumeric.Value = Settings.Default.MaxWorkingMinutes;
             minBreakingNumeric.Value = Settings.Default.MinBreakingMinutes;
@@ -73,7 +76,7 @@ namespace Hoo.Relaxant {
 
             //Breaking Settings
             musicFileEdit.Text = Settings.Default.MusicFile;
-            breakingCompletingWarnningEdit.Text = Settings.Default.Sound4CompletingBreaking;
+            breakCompletingWarnningEdit.Text = Settings.Default.Sound4CompletingBreak;
             shutdownCheck.Checked = Settings.Default.ShutdownMonitor;
 
             shutdownHotkeyCombo.Properties.Items.Clear();
@@ -82,7 +85,9 @@ namespace Hoo.Relaxant {
                 );
             shutdownHotkeyCombo.EditValue = Settings.Default.ShutdownMonitorHotkey;
 
-
+            //breakCompletingSystemWarningCombo.Properties.Items.Clear();            
+            breakCompletingSystemWarningCombo.EditValue = Settings.Default.SystemSound4CompletingBreak ;
+            loading = false;
         }
 
 
@@ -106,8 +111,8 @@ namespace Hoo.Relaxant {
             Settings.Default.MusicFile = musicFileEdit.Text;
             Settings.Default.ShutdownMonitor = shutdownCheck.Checked;
             Settings.Default.ShutdownMonitorHotkey = (Keys)shutdownHotkeyCombo.SelectedItem;
-            Settings.Default.Sound4CompletingBreaking = breakingCompletingWarnningEdit.Text;
-
+            Settings.Default.Sound4CompletingBreak = breakCompletingWarnningEdit.Text;
+            Settings.Default.SystemSound4CompletingBreak = (string)breakCompletingSystemWarningCombo.SelectedItem;
 
             Settings.Default.Save();
 
@@ -184,9 +189,9 @@ namespace Hoo.Relaxant {
 
         private void breakingCompletingWarnningEdit_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e) {
             fileDialog.InitialDirectory = Application.ExecutablePath;
-            fileDialog.FileName = breakingCompletingWarnningEdit.Text;
+            fileDialog.FileName = breakCompletingWarnningEdit.Text;
             fileDialog.ShowDialog(this);
-            breakingCompletingWarnningEdit.Text = fileDialog.FileName;
+            breakCompletingWarnningEdit.Text = fileDialog.FileName;
         }
 
         private void musicFileEdit_Validating(object sender, CancelEventArgs e) {
@@ -208,8 +213,8 @@ namespace Hoo.Relaxant {
 
         private void breakingCompletingWarnningEdit_Validating(object sender, CancelEventArgs e) {
             //Check whether the file's full path is correct or not
-            if(breakingCompletingWarnningEdit.Text.Trim() != "") {
-                FileInfo f = new FileInfo(breakingCompletingWarnningEdit.Text.Trim());
+            if(breakCompletingWarnningEdit.Text.Trim() != "") {
+                FileInfo f = new FileInfo(breakCompletingWarnningEdit.Text.Trim());
                 if(!f.Exists) {
                     e.Cancel = true;
                     return;
@@ -227,7 +232,7 @@ namespace Hoo.Relaxant {
 
 
         /// <summary>
-        /// Rewrite ToString() to fit DevExpress ComboBoxEdit's item display text.
+        /// Rewrite ToString() in order to provide display text for  DevExpress ComboBoxEdit's item.
         /// </summary>
         private class MyCultureInfo {
 
@@ -254,6 +259,17 @@ namespace Hoo.Relaxant {
         }
 
         private void passwordText_KeyUp(object sender, KeyEventArgs e) {
+
+        }
+
+        private void breakCompletingSystemWarningCombo_SelectedIndexChanged(object sender, EventArgs e) {
+            if (!loading) {
+                string sound = (string)breakCompletingSystemWarningCombo.EditValue;
+                Program.PlaySystemSound(sound);
+            }
+        }
+
+        private void breakCompletingSystemWarningCombo_SelectedValueChanged(object sender, EventArgs e) {
 
         }
 

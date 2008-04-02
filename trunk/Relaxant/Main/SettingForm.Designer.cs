@@ -60,9 +60,11 @@ namespace Hoo.Relaxant {
             this.passwordButton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.breakingTab = new DevExpress.XtraTab.XtraTabPage();
+            this.breakCompletingSystemWarningCombo = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.label8 = new System.Windows.Forms.Label();
             this.ShutdownHotkeyLabel = new System.Windows.Forms.Label();
             this.shutdownHotkeyCombo = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.breakingCompletingWarnningEdit = new DevExpress.XtraEditors.ButtonEdit();
+            this.breakCompletingWarnningEdit = new DevExpress.XtraEditors.ButtonEdit();
             this.label1 = new System.Windows.Forms.Label();
             this.saveMessage = new System.Windows.Forms.Label();
             this.dxValidationProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
@@ -81,8 +83,9 @@ namespace Hoo.Relaxant {
             ((System.ComponentModel.ISupportInitialize)(this.minBreakingNumeric.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minBreakingPercentNumeric.Properties)).BeginInit();
             this.breakingTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.breakCompletingSystemWarningCombo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shutdownHotkeyCombo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.breakingCompletingWarnningEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.breakCompletingWarnningEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -261,6 +264,8 @@ namespace Hoo.Relaxant {
             this.adminTab.Controls.Add(this.passwordButton);
             this.adminTab.Controls.Add(this.label6);
             this.adminTab.Name = "adminTab";
+            this.adminTab.PageEnabled = false;
+            this.adminTab.PageVisible = false;
             resources.ApplyResources(this.adminTab, "adminTab");
             // 
             // breakingRestrictionRadioGroup
@@ -433,15 +438,38 @@ namespace Hoo.Relaxant {
             // 
             // breakingTab
             // 
+            this.breakingTab.Controls.Add(this.breakCompletingSystemWarningCombo);
+            this.breakingTab.Controls.Add(this.label8);
             this.breakingTab.Controls.Add(this.ShutdownHotkeyLabel);
             this.breakingTab.Controls.Add(this.shutdownHotkeyCombo);
-            this.breakingTab.Controls.Add(this.breakingCompletingWarnningEdit);
+            this.breakingTab.Controls.Add(this.breakCompletingWarnningEdit);
             this.breakingTab.Controls.Add(this.label1);
             this.breakingTab.Controls.Add(this.musicFileEdit);
             this.breakingTab.Controls.Add(this.musicFileLabel);
             this.breakingTab.Controls.Add(this.shutdownCheck);
             this.breakingTab.Name = "breakingTab";
             resources.ApplyResources(this.breakingTab, "breakingTab");
+            // 
+            // breakCompletingSystemWarningCombo
+            // 
+            resources.ApplyResources(this.breakCompletingSystemWarningCombo, "breakCompletingSystemWarningCombo");
+            this.breakCompletingSystemWarningCombo.Name = "breakCompletingSystemWarningCombo";
+            this.breakCompletingSystemWarningCombo.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.breakCompletingSystemWarningCombo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.breakCompletingSystemWarningCombo.Properties.Items.AddRange(new object[] {
+            resources.GetString("breakCompletingSystemWarningCombo.Properties.Items"),
+            resources.GetString("breakCompletingSystemWarningCombo.Properties.Items1"),
+            resources.GetString("breakCompletingSystemWarningCombo.Properties.Items2"),
+            resources.GetString("breakCompletingSystemWarningCombo.Properties.Items3"),
+            resources.GetString("breakCompletingSystemWarningCombo.Properties.Items4")});
+            this.breakCompletingSystemWarningCombo.SelectedIndexChanged += new System.EventHandler(this.breakCompletingSystemWarningCombo_SelectedIndexChanged);
+            this.breakCompletingSystemWarningCombo.SelectedValueChanged += new System.EventHandler(this.breakCompletingSystemWarningCombo_SelectedValueChanged);
+            // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
             // 
             // ShutdownHotkeyLabel
             // 
@@ -469,14 +497,14 @@ namespace Hoo.Relaxant {
             resources.GetString("shutdownHotkeyCombo.Properties.Items10"),
             resources.GetString("shutdownHotkeyCombo.Properties.Items11")});
             // 
-            // breakingCompletingWarnningEdit
+            // breakCompletingWarnningEdit
             // 
-            resources.ApplyResources(this.breakingCompletingWarnningEdit, "breakingCompletingWarnningEdit");
-            this.breakingCompletingWarnningEdit.Name = "breakingCompletingWarnningEdit";
-            this.breakingCompletingWarnningEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            resources.ApplyResources(this.breakCompletingWarnningEdit, "breakCompletingWarnningEdit");
+            this.breakCompletingWarnningEdit.Name = "breakCompletingWarnningEdit";
+            this.breakCompletingWarnningEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.breakingCompletingWarnningEdit.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.breakingCompletingWarnningEdit_ButtonClick);
-            this.breakingCompletingWarnningEdit.Validating += new System.ComponentModel.CancelEventHandler(this.breakingCompletingWarnningEdit_Validating);
+            this.breakCompletingWarnningEdit.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.breakingCompletingWarnningEdit_ButtonClick);
+            this.breakCompletingWarnningEdit.Validating += new System.ComponentModel.CancelEventHandler(this.breakingCompletingWarnningEdit_Validating);
             // 
             // label1
             // 
@@ -521,8 +549,9 @@ namespace Hoo.Relaxant {
             ((System.ComponentModel.ISupportInitialize)(this.minBreakingPercentNumeric.Properties)).EndInit();
             this.breakingTab.ResumeLayout(false);
             this.breakingTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.breakCompletingSystemWarningCombo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.shutdownHotkeyCombo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.breakingCompletingWarnningEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.breakCompletingWarnningEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -546,7 +575,7 @@ namespace Hoo.Relaxant {
         private DevExpress.XtraTab.XtraTabControl xtraTabs;
         private DevExpress.XtraTab.XtraTabPage generalTab;
         private DevExpress.XtraTab.XtraTabPage breakingTab;
-        private DevExpress.XtraEditors.ButtonEdit breakingCompletingWarnningEdit;
+        private DevExpress.XtraEditors.ButtonEdit breakCompletingWarnningEdit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.ComboBoxEdit languageCombo;
@@ -572,5 +601,7 @@ namespace Hoo.Relaxant {
         private System.Windows.Forms.RadioButton forbiddenTerminationRadio;
         private System.Windows.Forms.RadioButton freeTerminationRadio;
         private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider dxValidationProvider1;
+        private System.Windows.Forms.Label label8;
+        private DevExpress.XtraEditors.ComboBoxEdit breakCompletingSystemWarningCombo;
     }
 }

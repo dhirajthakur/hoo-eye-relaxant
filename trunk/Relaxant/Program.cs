@@ -83,6 +83,32 @@ namespace Hoo.Relaxant {
             }
 
         }
+
+        internal static void PlaySystemSound(string sound) {
+            System.Media.SystemSound s = null;
+            switch (sound.ToLower().Trim()) {
+                case "hand":
+                    s = System.Media.SystemSounds.Hand;
+                    break;
+                case "exclamation":
+                    s = System.Media.SystemSounds.Exclamation;
+                    break;
+                case "asterisk":
+                    s = System.Media.SystemSounds.Asterisk;
+                    break;
+                case "question":
+                    s = System.Media.SystemSounds.Question;
+                    break;
+            }
+
+            if (s != null) {
+                s.Play();
+                System.Threading.Thread.Sleep(1000);
+                s.Play();
+                System.Threading.Thread.Sleep(1000);
+                s.Play();
+            }
+        }
     }
 
 }

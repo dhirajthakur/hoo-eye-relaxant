@@ -139,6 +139,12 @@
   <data name="cancelButton.Text" xml:space="preserve">
     <value>取消（&amp;C）</value>
   </data>
+  <data name="delayLable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 13</value>
+  </data>
+  <data name="delayLable.Text" xml:space="preserve">
+    <value>可延长工作时间（分钟）</value>
+  </data>
   <data name="shutdownCheck.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 17</value>
   </data>
@@ -151,14 +157,38 @@
   <data name="musicFileLabel.Text" xml:space="preserve">
     <value>播放音乐</value>
   </data>
+  <data name="generalTab.Text" xml:space="preserve">
+    <value>常规选项</value>
+  </data>
+  <data name="adminTab.Text" xml:space="preserve">
+    <value>孩子看管选项</value>
+  </data>
+  <data name="breakingTab.Text" xml:space="preserve">
+    <value>休息模式</value>
+  </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>语言</value>
   </data>
-  <data name="generalTab.Text" xml:space="preserve">
-    <value>常规选项</value>
+  <data name="RestrcitTeminationRadio.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 17</value>
+  </data>
+  <data name="RestrcitTeminationRadio.Text" xml:space="preserve">
+    <value>需要密码</value>
+  </data>
+  <data name="forbiddenTerminationRadio.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 17</value>
+  </data>
+  <data name="forbiddenTerminationRadio.Text" xml:space="preserve">
+    <value>否</value>
+  </data>
+  <data name="freeTerminationRadio.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 17</value>
+  </data>
+  <data name="freeTerminationRadio.Text" xml:space="preserve">
+    <value>是</value>
   </data>
   <data name="terminateBreakingLable.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 13</value>
@@ -217,8 +247,11 @@
   <data name="label6.Text" xml:space="preserve">
     <value>输入密码激活本页选项</value>
   </data>
-  <data name="adminTab.Text" xml:space="preserve">
-    <value>孩子看管选项</value>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 13</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>休息结束提醒音效（系统喇叭）</value>
   </data>
   <data name="ShutdownHotkeyLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>111, 14</value>
@@ -238,8 +271,11 @@
   <data name="label1.Text" xml:space="preserve">
     <value>休息结束提醒音效</value>
   </data>
-  <data name="breakingTab.Text" xml:space="preserve">
-    <value>休息模式</value>
+  <data name="saveMessage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 13</value>
+  </data>
+  <data name="saveMessage.Text" xml:space="preserve">
+    <value>保存成功！部分设置可能需要重启程序才会生效。</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
