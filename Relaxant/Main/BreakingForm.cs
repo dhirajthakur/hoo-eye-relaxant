@@ -48,7 +48,10 @@ namespace Hoo.Relaxant {
         }
 
         void Manager_BreakingTerminating(object sender, EventArgs e) {
-            if (!Manager.IsForceTeminate) PlayWarningSound();
+            if (!Manager.IsForceTeminate) {
+                Program.PlaySystemSound(Settings.Default.SystemSound4CompletingBreak);
+                PlayWarningSound();
+            }
             this.Close();
         }
 
@@ -98,7 +101,7 @@ namespace Hoo.Relaxant {
         }
 
         private void PlayWarningSound() {
-            String soundFile = Properties.Settings.Default.Sound4CompletingBreaking;
+            String soundFile = Properties.Settings.Default.Sound4CompletingBreak;
             if (soundFile != "") {
                 try {
                     SoundFile sound = new SoundFile(soundFile);                    

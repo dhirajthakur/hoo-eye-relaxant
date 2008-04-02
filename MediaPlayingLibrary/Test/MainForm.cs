@@ -94,11 +94,12 @@ namespace Voice_Test {
         }
 
         void Button2Click(object sender, EventArgs e) {
-            System.Media.SystemSounds.Asterisk.Play();
+            System.Media.SystemSounds.Hand.Play();
             System.Threading.Thread.Sleep(1000);
-            System.Media.SystemSounds.Asterisk.Play();
+            System.Media.SystemSounds.Hand.Play();
             System.Threading.Thread.Sleep(1000);
-            System.Media.SystemSounds.Asterisk.Play();
+            System.Media.SystemSounds.Hand.Play();
+            
         }
 
         void Button3Click(object sender, EventArgs e) {

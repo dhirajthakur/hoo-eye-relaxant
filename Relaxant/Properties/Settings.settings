@@ -29,11 +29,11 @@
     <Setting Name="MusicFile" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Sound4CompletingBreaking" Type="System.String" Scope="User">
+    <Setting Name="Sound4CompletingBreak" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Language" Type="System.Globalization.CultureInfo" Scope="User">
-      <Value Profile="(Default)">Chinese (Simplified)</Value>
+      <Value Profile="(Default)">(Default)</Value>
     </Setting>
     <Setting Name="MaxWorkingMinutes" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">50</Value>
@@ -52,6 +52,9 @@
     </Setting>
     <Setting Name="Resctrition4RestartWorking" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="SystemSound4CompletingBreak" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Hand</Value>
     </Setting>
   </Settings>
 </SettingsFile>

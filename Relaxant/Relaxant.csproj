@@ -139,10 +139,6 @@
       <DependentUpon>SettingForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main\SettingForm.zh-CN.resx">
-      <DependentUpon>SettingForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Main\RuningForm.resx">
       <SubType>Designer</SubType>
       <DependentUpon>RuningForm.cs</DependentUpon>
