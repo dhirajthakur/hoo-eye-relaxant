@@ -4,9 +4,9 @@ A brief guildline to this application.
 = Quick Guideline =
 
 This is a green program. There are serveral simple steps to run it.
-  # Download and unzip newest version of _Hoo Eye Relaxant_.
-  # Download third party DLL: _3P.zip_
-  # Unzip _3P.zip_ to _Hoo Eye Relaxant_ folder too.
+# Download and unzip newest version of _Hoo Eye Relaxant_.
+# Download third party DLL: _3P.zip_
+# Unzip _3P.zip_ to _Hoo Eye Relaxant_ folder too.
   # Execute _Hoo Eye Relaxant.exe_
   # One notify icon will be laughed.
   # Right click notify icon and setting it.
