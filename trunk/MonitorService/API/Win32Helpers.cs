@@ -268,7 +268,7 @@ namespace Hoo.Device.Monitor {
          *including disabled or invisible unowned windows, overlapped windows, and pop-up windows; 
          *but the message is not sent to child windows.
          */
-        public static readonly IntPtr HWND_BROADCAST = new IntPtr(0xffff); 
+		public static readonly IntPtr HWND_BROADCAST = new IntPtr(0xffff); 
    
         // constants that can be passed for the dwFlags parameter, from winuser.h
         public const int NOTIFY_FOR_THIS_SESSION = 0;
@@ -285,6 +285,9 @@ namespace Hoo.Device.Monitor {
 
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, uint Msg, int wParam, int lParam);
+
+		[DllImport("user32.dll")]
+		public static extern int PostMessage(IntPtr hWnd, uint Msg, int wParam, int lParam);
 
         [DllImport("wtsapi32.dll", SetLastError = true)]
         public static extern bool WTSRegisterSessionNotification(IntPtr hWnd, [MarshalAs(UnmanagedType.U4)] int dwFlags);

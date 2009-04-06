@@ -125,7 +125,7 @@ namespace Hoo.Device.Monitor {
         /// Many system message API request a form. So a background model form will be loaded by a sub thread.
         /// </remarks>
         public void Start() {
-            log.Debug("Starting listening thread");
+            log.Info("Starting listening thread");
             //ThreadStart entry = new ThreadStart(StartEntry);
             listenThread = new Thread(
                 delegate() {
@@ -148,7 +148,7 @@ namespace Hoo.Device.Monitor {
         /// </remarks>
         public void Stop() {
             try {
-                log.Debug("Stopping listening thread");
+                log.Info("Stopping listening thread");
 
                 MethodInvoker invoker = new MethodInvoker(
                     delegate() {    //Anonymous method for closing form.

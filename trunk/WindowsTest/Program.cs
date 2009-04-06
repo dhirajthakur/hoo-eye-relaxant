@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using Hoo.Relaxant.Test;
 
 [assembly: log4net.Config.XmlConfigurator(Watch = true)]
 namespace Hoo.Relaxant {
@@ -12,7 +13,7 @@ namespace Hoo.Relaxant {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new MonitorServiceForm());
             
         }
     }

@@ -59,9 +59,12 @@ namespace Hoo.Device.Monitor {
                                     (Environment.OSVersion.Version.Major == 5 &&
                                      Environment.OSVersion.Version.Minor >= 1));
 
-            if (haveXp)
+            
+            if (haveXp) {
+                log.Info("Registering session notification to WindowsXP");
                 registered = Win32Helper.WTSRegisterSessionNotification(Handle, Win32Helper.NOTIFY_FOR_THIS_SESSION);
-            Console.WriteLine("Start HWND: " + Handle.ToString());
+            }
+            log.Debug("Start HWND: " + Handle.ToString());
 
             return;
         }
@@ -72,7 +75,7 @@ namespace Hoo.Device.Monitor {
         protected override void Dispose(bool disposing) {
             if (registered) {
                 IntPtr hwnd = Handle;
-                Console.WriteLine("End HWND: " + hwnd.ToString());
+                log.Debug("End HWND: " + hwnd.ToString());
                 Win32Helper.WTSUnRegisterSessionNotification(hwnd);
                 registered = false;
             }
@@ -96,22 +99,25 @@ namespace Hoo.Device.Monitor {
 
             // check for session change notifications
             if (msg == WindowsMessages.WM_WTSSESSION_CHANGE) {
-                if (wparam == (int)WTS.WTS_SESSION_LOCK)
+                log.Info("Get system message: Monitor session changed: wparam" + m.ToString());
+                if (wparam == (int)WTS.WTS_SESSION_LOCK) {
                     manager.OnMonitorLocked(args);
-                else if (wparam == (int)WTS.WTS_SESSION_UNLOCK)
+                } else if (wparam == (int)WTS.WTS_SESSION_UNLOCK) {
                     manager.OnMonitorUnlocked(args);
-            } else if (msg == WindowsMessages.WM_SYSCOMMAND && wparam == (int)SysCommands.SC_MONITORPOWER) {
+                }
+            } else if (msg == WindowsMessages.WM_SYSCOMMAND) {
                 if (wparam == (int)SysCommands.SC_MONITORPOWER) {
+                    log.Info("Get system message: Monitor Power. Lparam: " + m.ToString());
                     if (m.LParam.ToInt32() == Win32Helper.MONITOR_ON_PARAM)
                         manager.OnMonitorOpened(args);
                     else if (m.LParam.ToInt32() == Win32Helper.MONITOR_OFF_PARAM)
                         manager.OnMonitorShutdown(args);
                 } else if (wparam == (int)SysCommands.SC_SCREENSAVE) {
-                    log.Debug("Screen Saver messages: " + m.ToString());
+                    log.Info("Get system message: Monitor PowerScreen Saver. " + m.ToString());
                 }
             }
 
-            //log.Debug("messages: " + m.ToString());
+            log.Debug("messages: " + m.ToString());
             base.WndProc(ref m);
             return;
         }
