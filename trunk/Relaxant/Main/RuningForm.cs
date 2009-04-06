@@ -28,11 +28,13 @@ namespace Hoo.Relaxant {
         /// </summary>
         /// <param name="pManager">This is mandantory</param>
         public RunningForm(RunningControl pManager) {
+			log.Debug("Initialize new RunningForm");
             this.Manager = pManager;
             InitializeComponent();
 #if DEBUG
             this.eyesNotifyIcon.Text += " [DEBUG] ";
             this.Text += " [DEBUG] ";
+			SetDebugProperties();
 
 #endif
             this.Left = Screen.PrimaryScreen.WorkingArea.Width - this.Width;
@@ -45,9 +47,18 @@ namespace Hoo.Relaxant {
             Manager_BreakingTerminated(this, null);
         }
 
+		private void SetDebugProperties() {
+			Settings.Default.MinBreakingMinutes = 0;
+			Settings.Default.BreakingMinutes = 1;			
+			Settings.Default.DelayMinutes = 1;
+			Settings.Default.WorkingMinutes = 1;
+			//Settings.Default.ShutdownMonitor = false;
+			Settings.Default.Save();
+		}
+
         
         void Manager_BreakingTerminated(object sender, EventArgs e) {
-               
+			log.Debug("Event Raised: BreakingTerminated");   
             TimeSpan span = TimeSpan.FromSeconds(Manager.PendingSeconds);
             spanLabel.Text = span.ToString();
             spanBar.Properties.Maximum = Manager.PlannedSeconds;
@@ -59,10 +70,16 @@ namespace Hoo.Relaxant {
                 TimeSpan span = TimeSpan.FromSeconds(Manager.PendingSeconds);
                 spanLabel.Text = span.ToString();
                 spanBar.Decrement(1);
+				
+				//10 seconds before breaking, show this form to warn user.
+				if (Manager.PendingSeconds == 10) {
+					ShowForm();
+				}
             }
         }
 
         void Manager_BreakingStarted(object sender, EventArgs e) {
+			log.Debug("Event Raised: BreakingStarted");
             ShowBreakingForm();
         }
 
@@ -114,17 +131,21 @@ namespace Hoo.Relaxant {
 
         }
 
+		private void ShowForm() {
+			//e.X & e.Y cound not work
+			//this.Left = e.X - this.Width;
+			//this.Top = e.Y - this.Height;
+			this.Left = Cursor.Position.X - this.Width;
+			this.Top = Cursor.Position.Y - this.Height;
+			this.Show();
+			this.Activate(); // Precondition of trigger Deactivate event.
+		}
+
 
         private void eyesNotifyIcon_MouseClick(object sender, MouseEventArgs e) {
             if (e.Button == MouseButtons.Left) {
-
-                //e.X & e.Y cound not work
-                //this.Left = e.X - this.Width;
-                //this.Top = e.Y - this.Height;
-                this.Left = Cursor.Position.X - this.Width;
-                this.Top = Cursor.Position.Y - this.Height;
-                this.Show();
-                this.Activate(); // Precondition of trigger Deactivate event.
+				ShowForm();
+                
             } else if (e.Button == MouseButtons.Right) {
                 //this.Hide();
             }

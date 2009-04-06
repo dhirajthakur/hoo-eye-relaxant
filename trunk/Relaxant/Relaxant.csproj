@@ -2,7 +2,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{8836AC36-8C24-4AA7-8399-4CBA4B8AA033}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -10,8 +10,7 @@
     <RootNamespace>Hoo.Relaxant</RootNamespace>
     <AssemblyName>Hoo Eye Relaxant</AssemblyName>
     <StartupObject>Hoo.Relaxant.Program</StartupObject>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>swan.ico</ApplicationIcon>
     <ManifestCertificateThumbprint>1A18AE1CBD1AD4637D5CD471135BE1168130E855</ManifestCertificateThumbprint>
     <ManifestKeyFile>Hush RelaxEyes_TemporaryKey.pfx</ManifestKeyFile>
     <GenerateManifests>true</GenerateManifests>
@@ -22,7 +21,7 @@
     <OldToolsVersion>2.0</OldToolsVersion>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
     <SignAssembly>false</SignAssembly>
     <PublishUrl>http://code.google.com/p/hoo-eye-relaxant/</PublishUrl>
     <Install>true</Install>
@@ -42,6 +41,8 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -72,29 +73,25 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Data.v7.3, Version=7.3.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
+    <Reference Include="DevExpress.Data.v8.2, Version=8.2.6.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Utils.v7.3, Version=7.3.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
+    <Reference Include="DevExpress.Utils.v8.2, Version=8.2.6.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraEditors.v7.3, Version=7.3.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
+    <Reference Include="DevExpress.XtraEditors.v8.2, Version=8.2.6.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraGrid.v7.3, Version=7.3.7.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v7.3, Version=7.3.7.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1" />
+    <Reference Include="Hoo.MediaPlayingLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Hoo.MediaPlayingLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Library\log4net-1.2.10\bin\net\2.0\release\log4net.dll</HintPath>
+      <HintPath>lib\log4net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
-    <Reference Include="System.Core">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Design" />
@@ -193,13 +190,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MediaPlayingLibrary\MediaPlayingLibrary.csproj">
-      <Project>{C53418E0-0FCB-47F7-8807-81F5E7B697FB}</Project>
-      <Name>MediaPlayingLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MonitorService\MonitorService.csproj">
+    <Content Include="swan.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MonitorService\MonitorServiceSimple.csproj">
       <Project>{57B37972-E5B1-4A43-AFD9-1E74175ABC51}</Project>
-      <Name>MonitorService</Name>
+      <Name>MonitorServiceSimple</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

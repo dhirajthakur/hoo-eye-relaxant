@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Windows.Forms;
 
+
 namespace Hoo.Relaxant {
     /// <summary>
     /// Only launch one runtime instantce.
@@ -72,17 +73,21 @@ namespace Hoo.Relaxant {
             } else {
                 // Exit() only teminate this application. However, it could not terminate this function. 
                 // So "else" is neccessary here.
+				log.Debug("Start Hoo Relaxant");
                 CultureInfo culture = Properties.Settings.Default.Language;
                 log.Debug(String.Format("Current culture is {0}", culture.Name));
                 System.Threading.Thread.CurrentThread.CurrentUICulture = culture;
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
+
                 ManagerForm = new RunningForm(new RunningControl());
 
                 Application.Run(ManagerForm);
             }
 
         }
+
+		
 
         internal static void PlaySystemSound(string sound) {
             System.Media.SystemSound s = null;

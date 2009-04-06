@@ -6,22 +6,22 @@
       <Value Profile="(Default)">20</Value>
     </Setting>
     <Setting Name="AdminPassword" Type="System.String" Scope="User">
-      <Value Profile="(Default)">1234</Value>
+      <Value Profile="(Default)">hjx1234</Value>
     </Setting>
     <Setting Name="Resctriction4Configuration" Type="Hoo.Relaxant.RestrictionLevels" Scope="User">
       <Value Profile="(Default)">Free</Value>
     </Setting>
     <Setting Name="Resctriction4TerminateBreaking" Type="Hoo.Relaxant.RestrictionLevels" Scope="User">
-      <Value Profile="(Default)">Free</Value>
+      <Value Profile="(Default)">Restricted</Value>
     </Setting>
     <Setting Name="DelayMinutes" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">10</Value>
+      <Value Profile="(Default)">8</Value>
     </Setting>
     <Setting Name="ShutdownMonitor" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="BreakingMinutes" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">3</Value>
+      <Value Profile="(Default)">5</Value>
     </Setting>
     <Setting Name="Resctriction4Quit" Type="Hoo.Relaxant.RestrictionLevels" Scope="User">
       <Value Profile="(Default)">Free</Value>

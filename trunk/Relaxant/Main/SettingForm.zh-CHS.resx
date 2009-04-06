@@ -157,20 +157,20 @@
   <data name="musicFileLabel.Text" xml:space="preserve">
     <value>播放音乐</value>
   </data>
-  <data name="generalTab.Text" xml:space="preserve">
-    <value>常规选项</value>
+  <data name="childPasswordLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
   </data>
-  <data name="adminTab.Text" xml:space="preserve">
-    <value>孩子看管选项</value>
-  </data>
-  <data name="breakingTab.Text" xml:space="preserve">
-    <value>休息模式</value>
+  <data name="childPasswordLabel.Text" xml:space="preserve">
+    <value>中断密码</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>语言</value>
+  </data>
+  <data name="generalTab.Text" xml:space="preserve">
+    <value>常规选项</value>
   </data>
   <data name="RestrcitTeminationRadio.Size" type="System.Drawing.Size, System.Drawing">
     <value>73, 17</value>
@@ -247,6 +247,9 @@
   <data name="label6.Text" xml:space="preserve">
     <value>输入密码激活本页选项</value>
   </data>
+  <data name="adminTab.Text" xml:space="preserve">
+    <value>孩子看管选项</value>
+  </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 13</value>
   </data>
@@ -270,6 +273,9 @@
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>休息结束提醒音效</value>
+  </data>
+  <data name="breakingTab.Text" xml:space="preserve">
+    <value>休息模式</value>
   </data>
   <data name="saveMessage.Size" type="System.Drawing.Size, System.Drawing">
     <value>271, 13</value>

@@ -66,6 +66,7 @@ namespace Hoo.Relaxant {
             workingNumeric.Value = Settings.Default.WorkingMinutes;
             breakingNumeric.Value = Settings.Default.BreakingMinutes;
             delayNumeric.Value = Settings.Default.DelayMinutes;
+			adminPassowordText.Text = Settings.Default.AdminPassword;
 
             languageCombo.Properties.Items.Clear();
             languageCombo.Properties.Items.AddRange(new object[] {
@@ -106,6 +107,14 @@ namespace Hoo.Relaxant {
             Settings.Default.BreakingMinutes = (int)breakingNumeric.Value;
             Settings.Default.DelayMinutes = (int)delayNumeric.Value;
             Settings.Default.Language = ((MyCultureInfo)languageCombo.SelectedItem).Culture;
+			Settings.Default.AdminPassword = adminPassowordText.Text.Trim();
+
+			//This is a temporary behavior before implementing comprehensive child care features.
+			if (Settings.Default.AdminPassword == "") {
+				Settings.Default.Resctriction4TerminateBreaking = RestrictionLevels.Free;
+			} else {
+				Settings.Default.Resctriction4TerminateBreaking = RestrictionLevels.Restricted;
+			}
 
             //Breaking Settings
             Settings.Default.MusicFile = musicFileEdit.Text;
@@ -272,6 +281,8 @@ namespace Hoo.Relaxant {
         private void breakCompletingSystemWarningCombo_SelectedValueChanged(object sender, EventArgs e) {
 
         }
+
+		
 
 
     }
