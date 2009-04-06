@@ -172,7 +172,7 @@
     <value>generalTab</value>
   </data>
   <data name="&gt;&gt;workingLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="breakingLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -199,7 +199,7 @@
     <value>generalTab</value>
   </data>
   <data name="&gt;&gt;breakingLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="cancelButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom</value>
@@ -253,13 +253,13 @@
     <value>workingNumeric</value>
   </data>
   <data name="&gt;&gt;workingNumeric.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v7.3, Version=7.3.7.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v8.2, Version=8.2.6.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
   </data>
   <data name="&gt;&gt;workingNumeric.Parent" xml:space="preserve">
     <value>generalTab</value>
   </data>
   <data name="&gt;&gt;workingNumeric.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="breakingNumeric.EditValue" type="System.Decimal, mscorlib">
     <value>3</value>
@@ -280,13 +280,13 @@
     <value>breakingNumeric</value>
   </data>
   <data name="&gt;&gt;breakingNumeric.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v7.3, Version=7.3.7.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v8.2, Version=8.2.6.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
   </data>
   <data name="&gt;&gt;breakingNumeric.Parent" xml:space="preserve">
     <value>generalTab</value>
   </data>
   <data name="&gt;&gt;breakingNumeric.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="delayNumeric.EditValue" type="System.Decimal, mscorlib">
     <value>8</value>
@@ -307,13 +307,13 @@
     <value>delayNumeric</value>
   </data>
   <data name="&gt;&gt;delayNumeric.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v7.3, Version=7.3.7.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v8.2, Version=8.2.6.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
   </data>
   <data name="&gt;&gt;delayNumeric.Parent" xml:space="preserve">
     <value>generalTab</value>
   </data>
   <data name="&gt;&gt;delayNumeric.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="delayLable.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -340,7 +340,7 @@
     <value>generalTab</value>
   </data>
   <data name="&gt;&gt;delayLable.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="shutdownCheck.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -409,7 +409,7 @@
     <value>musicFileEdit</value>
   </data>
   <data name="&gt;&gt;musicFileEdit.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.ButtonEdit, DevExpress.XtraEditors.v7.3, Version=7.3.7.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+    <value>DevExpress.XtraEditors.ButtonEdit, DevExpress.XtraEditors.v8.2, Version=8.2.6.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
   </data>
   <data name="&gt;&gt;musicFileEdit.Parent" xml:space="preserve">
     <value>breakingTab</value>
@@ -423,11 +423,78 @@
   <data name="xtraTabs.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="adminPassowordText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>116, 74</value>
+  </data>
+  <data name="adminPassowordText.MaxLength" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="adminPassowordText.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="adminPassowordText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 20</value>
+  </data>
+  <data name="adminPassowordText.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="adminPassowordText.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="adminPassowordText.WordWrap" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;adminPassowordText.Name" xml:space="preserve">
+    <value>adminPassowordText</value>
+  </data>
+  <data name="&gt;&gt;adminPassowordText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adminPassowordText.Parent" xml:space="preserve">
+    <value>generalTab</value>
+  </data>
+  <data name="&gt;&gt;adminPassowordText.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="childPasswordLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="childPasswordLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="childPasswordLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 77</value>
+  </data>
+  <data name="childPasswordLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 13</value>
+  </data>
+  <data name="childPasswordLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="childPasswordLabel.Text" xml:space="preserve">
+    <value>Password to Child</value>
+  </data>
+  <data name="&gt;&gt;childPasswordLabel.Name" xml:space="preserve">
+    <value>childPasswordLabel</value>
+  </data>
+  <data name="&gt;&gt;childPasswordLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;childPasswordLabel.Parent" xml:space="preserve">
+    <value>generalTab</value>
+  </data>
+  <data name="&gt;&gt;childPasswordLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="languageCombo.EditValue" xml:space="preserve">
     <value>Default</value>
   </data>
   <data name="languageCombo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 89</value>
+    <value>70, 43</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v8.2" name="DevExpress.Utils.v8.2, Version=8.2.6.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1" />
+  <data name="languageCombo.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.2">
+    <value>Combo</value>
   </data>
   <data name="languageCombo.Properties.Items" xml:space="preserve">
     <value>Default</value>
@@ -448,13 +515,13 @@
     <value>languageCombo</value>
   </data>
   <data name="&gt;&gt;languageCombo.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v7.3, Version=7.3.7.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v8.2, Version=8.2.6.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
   </data>
   <data name="&gt;&gt;languageCombo.Parent" xml:space="preserve">
     <value>generalTab</value>
   </data>
   <data name="&gt;&gt;languageCombo.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -463,7 +530,7 @@
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 92</value>
+    <value>9, 46</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 13</value>
@@ -484,7 +551,7 @@
     <value>generalTab</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="generalTab.Size" type="System.Drawing.Size, System.Drawing">
     <value>621, 169</value>
@@ -496,7 +563,7 @@
     <value>generalTab</value>
   </data>
   <data name="&gt;&gt;generalTab.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v7.3, Version=7.3.7.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v8.2, Version=8.2.6.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
   </data>
   <data name="&gt;&gt;generalTab.Parent" xml:space="preserve">
     <value>xtraTabs</value>
@@ -628,7 +695,7 @@
     <value>terminateBreakingLable</value>
   </data>
   <data name="&gt;&gt;terminateBreakingLable.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v7.3, Version=7.3.7.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v8.2, Version=8.2.6.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
   </data>
   <data name="&gt;&gt;terminateBreakingLable.Parent" xml:space="preserve">
     <value>adminTab</value>
@@ -685,7 +752,7 @@
     <value>maxDelayNumeric</value>
   </data>
   <data name="&gt;&gt;maxDelayNumeric.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v7.3, Version=7.3.7.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v8.2, Version=8.2.6.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
   </data>
   <data name="&gt;&gt;maxDelayNumeric.Parent" xml:space="preserve">
     <value>adminTab</value>
@@ -712,7 +779,7 @@
     <value>maxWorkingNumeric</value>
   </data>
   <data name="&gt;&gt;maxWorkingNumeric.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v7.3, Version=7.3.7.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v8.2, Version=8.2.6.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
   </data>
   <data name="&gt;&gt;maxWorkingNumeric.Parent" xml:space="preserve">
     <value>adminTab</value>
@@ -799,7 +866,7 @@
     <value>minBreakingNumeric</value>
   </data>
   <data name="&gt;&gt;minBreakingNumeric.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v7.3, Version=7.3.7.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v8.2, Version=8.2.6.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
   </data>
   <data name="&gt;&gt;minBreakingNumeric.Parent" xml:space="preserve">
     <value>adminTab</value>
@@ -856,7 +923,7 @@
     <value>minBreakingPercentNumeric</value>
   </data>
   <data name="&gt;&gt;minBreakingPercentNumeric.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v7.3, Version=7.3.7.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v8.2, Version=8.2.6.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
   </data>
   <data name="&gt;&gt;minBreakingPercentNumeric.Parent" xml:space="preserve">
     <value>adminTab</value>
@@ -982,7 +1049,7 @@
     <value>adminTab</value>
   </data>
   <data name="&gt;&gt;adminTab.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v7.3, Version=7.3.7.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v8.2, Version=8.2.6.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
   </data>
   <data name="&gt;&gt;adminTab.Parent" xml:space="preserve">
     <value>xtraTabs</value>
@@ -995,6 +1062,9 @@
   </data>
   <data name="breakCompletingSystemWarningCombo.Location" type="System.Drawing.Point, System.Drawing">
     <value>301, 95</value>
+  </data>
+  <data name="breakCompletingSystemWarningCombo.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.2">
+    <value>Combo</value>
   </data>
   <data name="breakCompletingSystemWarningCombo.Properties.Items" xml:space="preserve">
     <value />
@@ -1021,7 +1091,7 @@
     <value>breakCompletingSystemWarningCombo</value>
   </data>
   <data name="&gt;&gt;breakCompletingSystemWarningCombo.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v7.3, Version=7.3.7.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v8.2, Version=8.2.6.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
   </data>
   <data name="&gt;&gt;breakCompletingSystemWarningCombo.Parent" xml:space="preserve">
     <value>breakingTab</value>
@@ -1092,6 +1162,9 @@
   <data name="shutdownHotkeyCombo.Location" type="System.Drawing.Point, System.Drawing">
     <value>354, 9</value>
   </data>
+  <data name="shutdownHotkeyCombo.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.2">
+    <value>Combo</value>
+  </data>
   <data name="shutdownHotkeyCombo.Properties.Items" xml:space="preserve">
     <value>F1</value>
   </data>
@@ -1138,7 +1211,7 @@
     <value>shutdownHotkeyCombo</value>
   </data>
   <data name="&gt;&gt;shutdownHotkeyCombo.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v7.3, Version=7.3.7.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v8.2, Version=8.2.6.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
   </data>
   <data name="&gt;&gt;shutdownHotkeyCombo.Parent" xml:space="preserve">
     <value>breakingTab</value>
@@ -1159,7 +1232,7 @@
     <value>breakCompletingWarnningEdit</value>
   </data>
   <data name="&gt;&gt;breakCompletingWarnningEdit.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.ButtonEdit, DevExpress.XtraEditors.v7.3, Version=7.3.7.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+    <value>DevExpress.XtraEditors.ButtonEdit, DevExpress.XtraEditors.v8.2, Version=8.2.6.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
   </data>
   <data name="&gt;&gt;breakCompletingWarnningEdit.Parent" xml:space="preserve">
     <value>breakingTab</value>
@@ -1204,7 +1277,7 @@
     <value>breakingTab</value>
   </data>
   <data name="&gt;&gt;breakingTab.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v7.3, Version=7.3.7.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v8.2, Version=8.2.6.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
   </data>
   <data name="&gt;&gt;breakingTab.Parent" xml:space="preserve">
     <value>xtraTabs</value>
@@ -1212,14 +1285,11 @@
   <data name="&gt;&gt;breakingTab.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="xtraTabs.Text" xml:space="preserve">
-    <value>xtraTabControl1</value>
-  </data>
   <data name="&gt;&gt;xtraTabs.Name" xml:space="preserve">
     <value>xtraTabs</value>
   </data>
   <data name="&gt;&gt;xtraTabs.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabControl, DevExpress.XtraEditors.v7.3, Version=7.3.7.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+    <value>DevExpress.XtraTab.XtraTabControl, DevExpress.XtraEditors.v8.2, Version=8.2.6.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
   </data>
   <data name="&gt;&gt;xtraTabs.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1319,7 +1389,7 @@
     <value>dxValidationProvider1</value>
   </data>
   <data name="&gt;&gt;dxValidationProvider1.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider, DevExpress.XtraEditors.v7.3, Version=7.3.7.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
+    <value>DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider, DevExpress.XtraEditors.v8.2, Version=8.2.6.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>SettingForm</value>

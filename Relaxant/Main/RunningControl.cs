@@ -145,6 +145,7 @@ namespace Hoo.Relaxant {
         /// 
         /// </summary>
         public void StartBreaking() {
+			log.Debug("Start Breaking");
             RunningTimer.Stop();
             State = RuningStates.Breaking;
             PlannedSeconds = BreakingSeconds;
@@ -158,6 +159,7 @@ namespace Hoo.Relaxant {
         /// The breaking form will be closed.
         /// </summary>
         public void CompleteBreaking() {
+			log.Debug("Complete Breaking");
             if (BreakingTerminating != null) BreakingTerminating(this, new EventArgs());
             UnderDelay = false;
             IsForceTeminate = false;
@@ -169,8 +171,10 @@ namespace Hoo.Relaxant {
         /// Force exit breaking status and return working status.
         /// </summary>
         public void TerminateBreaking() {
+			log.Debug("Terminate Breaking");
             if (BreakingTerminating != null) BreakingTerminating(this, new EventArgs());
             IsForceTeminate = true;
+			log.Debug("Breaking Terminated, Start Working Again...");
             StartWorking(WorkingSeconds);
         }
 
