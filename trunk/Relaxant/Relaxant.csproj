@@ -206,4 +206,11 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <PropertyGroup>
+    <PreBuildEvent>IF EXIST "%25VCB_Home%25" (
+    "%25VCB_Home%25" "$(SolutionDir) " "$(ProjectDir)Properties\AssemblyInfo.cs" $(ConfigurationName)
+) ELSE (
+    ECHO ***Warning: Version Building is cancelled because enviroment viariable VCB_HOME is missed or incorrect.***
+)</PreBuildEvent>
+  </PropertyGroup>
 </Project>
